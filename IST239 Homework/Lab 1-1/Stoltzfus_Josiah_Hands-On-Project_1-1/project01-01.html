@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      Josiah Stoltzfus, June 1, 2025, IST239-W01, Hands-On Project 1-1
+
+      In Hands-On Project 1-1, we are learning how to create a script inside of an html document, and we
+      use the document.write() function. The function receives a string argument and can be used to output HTML content to a webpage.
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Hands-on Project 1-1</title>
+   <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+   <header>
+      <h1>
+         Hands-on Project 1-1
+      </h1>
+   </header>
+
+   <article>
+      <h2>Financial Planning Tips</h2>
+
+      <!-- The script tag below is used to write JavaScript code for this HTML document. The document.write() method receives a string
+       as its argument, and can be used to write content to the web page. In the code below, an ordered list has been added to the webpage
+       using JavaScript. -->
+      <script>
+         // Create ordered list.
+         document.write("<ol>"); // this is the opening tag for an ordered list
+         document.write("<li>Reduce spending on non-necessities.</li>"); // this is a tag for list item in the ordered list
+         document.write("<li>Use extra money to pay off debt, starting with highest-interest credit cards.</li>"); // list item
+         document.write("<li>Continue paying off debts until you are debt free.</li>"); // list item
+         document.write("<li>Put a fixed percent of your pay aside every payday.</li>"); // list item
+         document.write("</ol>"); // closing tag for the ordered list
+      </script>
+
+   </article>
+</body>
+</html>

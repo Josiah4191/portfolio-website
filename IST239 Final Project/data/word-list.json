@@ -1,0 +1,58 @@
+[
+    {
+        "category": "Fruits",
+        "words": "Apple, Apricot, Avocado, Banana, Blackberry, Blueberry, Cantaloupe, Cherry, Clementine, Coconut, Cranberry, Dragonfruit, Fig, Grape, Grapefruit, Guava, Kiwi, Lemon, Lime, Mango, Nectarine, Orange, Papaya, Passionfruit, Peach, Pear, Pineapple, Plum, Pomegranate, Raspberry, Strawberry, Tangerine, Watermelon"
+    },
+
+    {
+        "category": "Cities",
+        "words": "Ainsworth, LongPine, NewYork, Houston, Dallas, Denver, Boston"
+    },
+
+    {
+        "category": "Ocean Animals",
+        "words": "Angelfish, Barracuda, Blue Whale, Clownfish, Crab, Dolphin, Eel, Flounder, Hammerhead, Jellyfish, Lobster, Manatee, Manta Ray, Narwhal, Octopus, Orca, Otter, Pufferfish, Seahorse, Sea Lion, Sea Turtle, Shrimp, Squid, Starfish, Stingray, Swordfish, Tuna, Walrus, Whale Shark"
+    },
+
+    {
+        "category": "Space",
+        "words": "Asteroid, Atmosphere, Aurora, Black Hole, Celestial, Comet, Constellation, Cosmos, Crater, Eclipse, Exoplanet, Galaxy, Gravity, Jupiter, Lightyear, Mars, Mercury, Meteor, Meteorite, Moon, Nebula, Orbit, Planet, Pluto, Quasar, Rocket, Satellite, Saturn, Solar Flare, Solar System, Spacecraft, Star, Sun, Telescope, Universe, Uranus, Venus"
+    },
+
+    {
+        "category": "Weather",
+        "words": "Blizzard, Breeze, Cloud, Cyclone, Drought, Drizzle, Flurry, Fog, Forecast, Frost, Gust, Hail, Heatwave, Humidity, Hurricane, Ice, Lightning, Mist, Monsoon, Overcast, Precipitation, Rain, Rainbow, Sleet, Snow, Storm, Sunshine, Tempest, Thunder, Thunderstorm, Tornado, Wind, Windchill"
+    },
+
+    {
+        "category": "Musical Instruments",
+        "words": "Accordion, Bagpipes, Banjo, Bass, Bassoon, Bongos, Cello, Clarinet, Conga, Cymbals, Drum Kit, Drums, Flute, Guitar, Harmonica, Harp, Kazoo, Keyboard, Mandolin, Maracas, Oboe, Organ, Pan Flute, Piano, Recorder, Saxophone, Synthesizer, Tambourine, Triangle, Trombone, Trumpet, Tuba, Ukulele, Viola, Violin, Xylophone"
+    },
+
+    {
+        "category": "Fantasy Creatures",
+        "words": "Basilisk, Centaur, Chimera, Cyclops, Demon, Djinn, Dragon, Dryad, Elf, Fairy, Gargoyle, Giant, Goblin, Golem, Griffin, Hydra, Imp, Leprechaun, Mermaid, Minotaur, Nymph, Ogre, Orc, Pegasus, Phoenix, Satyr, Selkie, Siren, Sprite, Troll, Unicorn, Vampire, Werewolf, Wraith, Zombie"
+    },
+
+    {
+        "category": "Sports",
+        "words": "Archery, Badminton, Baseball, Basketball, Bowling, Boxing, Canoeing, Cheerleading, Climbing, Cricket, Cycling, Diving, Fencing, Figure Skating, Football, Golf, Gymnastics, Handball, Hiking, Hockey, Ice Skating, Judo, Karate, Kayaking, Lacrosse, Rowing, Rugby, Running, Skateboarding, Skiing, Snowboarding, Soccer, Softball, Surfing, Swimming, Table Tennis, Tennis, Track, Volleyball, Wrestling"
+    },
+
+    {
+        "category": "Colors",
+        "words": "Amber, Aqua, Beige, Black, Blue, Bronze, Brown, Burgundy, Charcoal, Coral, Crimson, Cyan, Emerald, Fuchsia, Gold, Gray, Green, Indigo, Ivory, Lavender, Lime, Magenta, Maroon, Mint, Navy, Olive, Orange, Peach, Pink, Plum, Purple, Red, Rose, Ruby, Salmon, Sapphire, Scarlet, Silver, Tan, Teal, Turquoise, Violet, White, Yellow"
+    },
+
+    {
+        "category": "Insects",
+        "words": "Ant, Aphid, Bee, Beetle, Butterfly, Caterpillar, Centipede, Cicada, Cricket, Dragonfly, Earwig, Firefly, Flea, Fly, Grasshopper, Gnat, Hornet, Ladybug, Locust, Mantid, Mayfly, Midge, Mosquito, Moth, Termite, Tick, Wasp, Weevil"
+    },
+
+    {
+        "category": "Jobs",
+        "words": "Actor, Architect, Artist, Astronaut, Author, Baker, Barber, Bartender, Butcher, Carpenter, Cashier, Chef, Coach, Dancer, Dentist, Doctor, Electrician, Engineer, Farmer, Firefighter, Florist, Gardener, Janitor, Judge, Lawyer, Librarian, Mechanic, Nurse, Optometrist, Painter, Pharmacist, Photographer, Pilot, Plumber, Professor, Programmer, Reporter, Scientist, Soldier, Tailor, Teacher, Veterinarian, Waiter, Welder, Writer"
+    }
+]
+
+

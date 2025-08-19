@@ -1,0 +1,31 @@
+[
+    {
+        "title" : "Project Lab 1: First Draft of Final Exam",
+        "date" : "2025-06-29",
+        "content": "This week, the first five steps of the IST239 Final Exam Project will be completed. There will be an external CSS style sheet and HTML page that provides the basic framework for the project. The first five steps are to create a landing page that contains a header, body, and footer. The header will include a picture of me, my name, and my GTC email address.",
+        "category": "Assignment"
+    },
+
+    {
+        "title" : "Project Lab 2: List of IST239 Lab Projects and Footer",
+        "date" : "2025-07-13",
+        "content": "This week, the landing page will be updated to include links to all 36 lab projects I completed in the course, along with a brief description for each project. The footer of the landing page should contain the last date the project was updated, the course number and section, the college name, and other pertinent information.",
+        "category": "Assignment"
+    },
+
+    {
+        "title" : "Project Lab 3: First Draft of Final Exam",
+        "date" : "2025-07-20",
+        "content": "This week, the final project will be updated to include five new features that are implemented using JavaScript: Navigation system for the website, interactive graphic feature, interactive game, static news or announcement, and a component that accepts user input and produces output.",
+        "category": "Assignment"
+    },
+
+    {
+        "title" : "Final Submission",
+        "date" : "2025-08-03",
+        "content": "The project is officially complete and has been submitted! This final version includes all core features: a custom preferences panel, an interactive word search game, a fully structured contact form, and personalized styling options. Thank you for following along with the development process!",
+        "category": "Assignment"
+    }
+
+
+]

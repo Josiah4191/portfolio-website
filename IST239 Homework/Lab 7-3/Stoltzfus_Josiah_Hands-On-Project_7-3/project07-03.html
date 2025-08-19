@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      Josiah Stoltzfus, July 5, 2025, IST239-W01, Hands-On Project 7-3
+
+      In Hands-On Project 7-3, I added a script tag to link the project07-03.js file to the HTML document and included the defer attribute to ensure it loads after the page content.
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Hands-on Project 7-3</title>
+   <link rel="stylesheet" href="styles.css" />
+   <!--
+      Linked the JavaScript file project07-03.js using the script tag. The defer attribute will cause the script to load after the html document is fully parsed.
+   -->
+   <script src="project07-03.js" defer></script>
+</head>
+
+<body>
+   <header>
+      <h1>
+         Hands-on Project 7-3
+      </h1>
+   </header>
+
+   <section>
+      <h1>Countdown to the New Year</h1>
+      
+      <div id="timeBox">It is currently: <span id="currentTime"></span></div>
+      <div id="clock">      
+         <figure>
+            <span id="days">00</span>
+            <figcaption>Days</figcaption>
+         </figure>
+         <figure>
+            <span id="hours">00</span>
+            <figcaption>Hours</figcaption>
+         </figure>
+         <figure>
+            <span id="minutes">00</span>
+            <figcaption>Minutes</figcaption>
+         </figure>  
+         <figure>
+            <span id="seconds">00</span>
+            <figcaption>Seconds</figcaption>
+         </figure>         
+      </div>
+   </section>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      Josiah Stoltzfus, June 1, 2025, IST239-W01, Hands-On Project 1-5
+
+      In Hands-On Exercise 1-5, we learn how to debug errors found in the html document. This execise tests our 
+      understanding of common errors related to syntax, case sensitivity, function use, and string formatting in JavaScript.
+      All required changes have been completed and documented in the code comments.
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Hands-on Project 1-5</title>
+   <link rel="stylesheet" href="styles.css" />
+   <script>
+      // Error 1: The let keyword for defining the variable is capitalized, and it should be lower-case.
+      // Error 2: There was no closing quotation for the "September 8th" string.
+      // The errors have been corrected.
+      let reopenDate = "September 8th";
+   </script>
+</head>
+
+<body>
+   <header>
+      <h1>
+         Hands-on Project 1-5
+      </h1>
+   </header>
+
+   <article>
+      <script>
+
+         // Error 1: The comment below was being closed improperly. It was using the /* tag to begin a new comment and closing with //. I changed the // to */ to close the comment properly.
+         // Error 2: Document.write should also be lower-case, and should say document.write. 
+         // Erorr 3: The write function is using brackets[] but it should be using parentheses() because it is a function.
+         // Error 4: reopendate should be reopenDate, because that is the correct name of the variable.
+         // The errors have been corrected.
+
+         /* Create a custom reopening message */
+         document.write("<p>We are closed for the holiday and will reopen on " + reopenDate + "</p>");
+      </script>
+   </article>
+</body>
+</html>

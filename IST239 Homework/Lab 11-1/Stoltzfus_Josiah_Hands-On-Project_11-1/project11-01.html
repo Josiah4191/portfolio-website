@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      Josiah Stoltzfus, July 27, 2025, IST239-W01, Hands-On Project 11-1
+
+      In Hands-On Project 11-1, I added a script tag to link the project11-01.js file to the HTML document and included the defer attribute to ensure it loads after the page content.
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Hands-on Project 11-1</title>
+   <link rel="stylesheet" href="styles.css" />
+   <!--
+      Linked the JavaScript file project11-01.js using the script tag. The defer attribute will cause the script to load after the html document is fully parsed.
+   -->
+   <script src="project11-01.js" defer></script>
+</head>
+
+<body>
+   <header>
+      <h1>
+         Hands-on Project 11-1
+      </h1>
+   </header>
+
+   <section>
+      <h1>Astronomy Picture of the Day</h1>
+      <div id="dateContainer">
+         <label for="photoDate">Picture Date</label>
+         <input type="date" id="dateBox" /><br />
+         <div id="nasaImage" alt=""></div>
+      </div>
+
+</section>
+</body>
+</html>

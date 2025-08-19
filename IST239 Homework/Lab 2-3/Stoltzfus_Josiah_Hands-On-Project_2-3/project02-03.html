@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      Josiah Stoltzfus, June 8, 2025, IST239-W01, Hands-On Project 2-3
+
+      In Hands-On Project 2-3, I linked an external JavaScript file to the HTML document and used the defer attribute to ensure the script runs after the page finishes loading.
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Hands-on Project 2-3</title>
+   <link rel="stylesheet" href="styles.css" />
+   <!--
+      Linked the JavaScript file project02-03.js using the script tag. The defer attribute will cause the script to load after the html document is fully parsed.
+   -->
+   <script src="project02-03.js" defer></script>
+</head>
+
+<body>
+   <header>
+      <h1>
+         Hands-on Project 2-3
+      </h1>
+   </header>
+
+   <article>
+      <h2>Pick a shape</h2>
+      <div id="square">&nbsp;</div> <!-- This is where the square shape is located with an id of "square"-->
+      <div id="triangle">&nbsp;</div> <!-- This is where the triangle shape is located with an id of "triangle"-->
+      <div id="circle">&nbsp;</div> <!-- This is where the circle shape is located with an id of "circle"-->
+   </article>
+   
+   <!-- This is where the empty paragraph is at with the id "feedback"-->
+   <p id="feedback"></p>
+</body>
+</html>

@@ -1,0 +1,1073 @@
+/* ===== Import Fonts ===== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Quicksand&family=Roboto&family=Lato&display=swap');
+
+/*
+    Define root-level CSS variables for colors and fonts
+*/
+:root {
+    --bg-color: #f7f5ee;
+    --ui-text-color: rgba(251, 192, 147);
+    --text-color: #1e293b;
+    --highlight-color: #f7f5ee;
+    --header-footer-color: rgba(69, 69, 69, 0.7);
+    --font-family: 'Quicksand', sans-serif;
+}
+
+/* ===== Header Content and Profile Info ===== */
+
+/* Align and space header content elements horizontally */
+.header-content {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+/* Align name/email info to the right of the header */
+.my-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-align: right;
+}
+
+/* ===== Main Layout ===== */
+
+/* Let the main section grow to fill vertical space between header and footer */
+main {
+    flex: 1;
+}
+
+/*
+    Base layout settings and default body font
+*/
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+}
+
+/* Set default paragraph font size */
+p {
+    font-size: 1.2rem;
+}
+
+/* Style anchor links */
+a {
+    color: var(--ui-text-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* Hover effect for links */
+a:hover {
+    color: var(--highlight-color);
+    cursor: pointer;
+}
+
+/* ===== Header and Footer ===== */
+
+/* Style header and footer appearance */
+header, footer {
+    background-color: var(--header-footer-color);
+    color: var(--ui-text-color);
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Make header text and link text larger */
+header p, header p a {
+    font-size: 2rem;
+}
+
+/* Style main title in home section */
+.home-title p {
+    font-size: 3rem;
+}
+
+/* Set footer text and link font size */
+footer p, a {
+    font-size: 2rem;
+}
+
+/* Layout for footer inner content */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+
+/* ===== Navigation Styles ===== */
+
+/* Horizontal navigation list */
+#nav-list {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+/* Nav item spacing and position */
+.nav-item {
+    position: relative;
+    padding: 0.25em;
+}
+
+
+/* Hover animation for nav items */
+.nav-item:hover {
+    color: var(--highlight-color);
+    transform: translateY(-1px);
+    transition: all 0.2s ease;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Click effect for nav items */
+.nav-item:active {
+    transform: scale(0.95);
+}
+
+/* Style for active navigation item */
+.active {
+    color: var(--bg-color);
+    background-color: var(--ui-text-color);
+    border-radius: 6px;
+    box-shadow: 0 0 10px var(--ui-text-color), 0 0 20px rgba(251, 192, 147, 0.5);
+    transition: all 0.2s ease-in-out;
+}
+
+/* ===== Section Display Styles ===== */
+
+/* Hide all sections by default */
+.section {
+    display: none;
+}
+
+/* Show section when "visible" class is added */
+.section.visible {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Center align section headers */
+.section-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 2em 0 2em;
+}
+
+/* Style section description boxes */
+.section-description {
+    color: var(--text-color);
+    width: 40%;
+    padding: 2em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    margin: 2em;
+}
+
+/* Style paragraph inside section headers */
+.section-header p {
+    font-size: 2em;
+    margin-bottom: 1em;
+    line-height: 1.5em;
+}
+
+/* Style main section titles */
+h1 {
+    color: var(--ui-text-color);
+    display: inline-block;
+    font-size: 3em;
+    text-align: center;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background-color: var(--header-footer-color);
+}
+
+/* ===== Home Section ===== */
+
+/* Style container in the home section with centered layout */
+#home-content {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+/* Style paragraphs in the home section */
+#home-content p {
+    font-size: 2em;
+    margin-bottom: 1em;
+    line-height: 1.5em;
+}
+
+/* Add spacing around the image and text containers */
+#img-box, #text-box {
+    padding: 1em;
+    margin: 1em;
+}
+
+/* Style the image box with shadow and rounded edges */
+#img-box {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 20%;
+}
+
+/* Style the profile image */
+#profile-img {
+    width: 300px;
+    height: auto;
+    border-radius: 20%;
+    filter: grayscale(10%);
+}
+
+/* Style the text box in the home section */
+#text-box {
+    color: var(--text-color);
+    width: 45%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+/* ===== Labs, News, Game, Preferences Content Sections ===== */
+
+/* Apply vertical layout to all main content sections */
+#labs-content, #news-content, #game-content, #preferences-content, #contact-content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Add margin around the Labs section */
+#labs-content {
+    margin: 2em;
+}
+
+
+/* ===== News Section ===== */
+
+/* Center align content inside the News section */
+#news-content {
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style the container for news entries */
+.news-box {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 1000px;
+}
+
+/* Style each news entry item */
+.news-entry {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    margin: 0.5em;
+    padding: 1em;
+    color: var(--text-color);
+}
+
+/* Adjust padding for custom bullet styling */
+.news-entry {
+  position: relative;
+  padding-left: 1.5em;
+}
+
+/* Add a vertical colored line at the start of each entry */
+.news-entry::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10%;
+  bottom: 10%;
+  width: 6px;
+  background-color: var(--ui-text-color);
+  border-radius: 4px;
+}
+
+/* Style horizontal rules as gradient dividers */
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, var(--ui-text-color), #f7f5ee, var(--ui-text-color));
+    margin: 2em 0;
+    border-radius: 2px;
+}
+
+
+/* ===== Labs Section and Columns ===== */
+
+/* Arrange columns side by side with spacing between them */
+.columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+/* Style each individual column */
+.column {
+    flex: 1;
+    padding: 0.5rem;
+}
+
+/* Style each lab container */
+.lab {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--header-footer-color);
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.4);
+    color: var(--highlight-color);
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    flex: 1;
+}
+
+/* Style the lab title element */
+.lab-title {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color:  var(--ui-text-color);
+    text-align: left;
+}
+
+/* Add a triangle icon before each lab title */
+.lab-title::before {
+    content: "▶";
+    display: inline-block;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+}
+
+/* Change the triangle to a down-arrow when the checkbox is checked */
+.lab-checkbox:checked + .lab-title::before {
+    content: "▼";
+}
+
+/* Change text color and cursor on hover */
+.lab-title:hover { 
+    color: var(--highlight-color);
+    cursor: pointer;
+}
+
+/* Hide the lab details by default */
+.lab-info { 
+    display: none;
+}
+
+/* Style the "Open Lab" link */
+.lab-info a {
+    background-color: var(--highlight-color);
+    font-weight: bold;
+    margin: 1em;
+    padding: 1em;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    text-align: center;
+    border-radius: 6px;            
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.4);
+    width: max-content;
+    align-self: center;
+}
+
+/* Style the lab description paragraph */
+.lab-info p {
+    background-color: var(--highlight-color);
+    line-height: 1.2em;
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.4);
+    padding: 0.5em;
+    border-radius: 8px;
+    color: var(--text-color);
+}
+
+/* Add slight lift on hover for link */
+.lab-info a:hover {
+    cursor: pointer;
+    transform: translateY(-1px);
+}
+
+/* Add pressed effect on click */
+.lab-info a:active {
+    transform: scale(0.98);
+}
+
+/* Show the lab info when checkbox is checked */
+.lab-checkbox:checked + label + .lab-info {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ===== Game Section Word Search ===== */
+
+/* Text color for the game container */
+.game-box {
+    color: var(--text-color);
+}
+
+/* Center the game content */
+#game-content {
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Container for outer word list box with shadow and rounded edges */
+#words-outer-container {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+/* Stack word list items vertically */
+#words-inner-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style the current category title bar */
+#category-title {
+    font-size: 2em;
+    color: var(--ui-text-color);
+    background-color: var(--header-footer-color);
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 8px 8px 0px 0px;
+    padding: .5em;
+}
+
+/* Wrapper to position dropdown below title */
+#category-title-wrapper {
+    position: relative;
+}
+
+/* Show dropdown on hover */
+#category-title-wrapper:hover .category-list-box {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Show pointer cursor when hovering over category title */
+#category-title:hover {
+    cursor: pointer;
+}
+
+/* Add hamburger icon before the category title */
+#category-title::before {
+    content: "☰";
+    display: inline-block;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+}
+
+/* Dropdown container for categories */
+.category-list-box {
+opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+
+    display: block;
+    background-color: var(--highlight-color);
+    color: var(--text-color);
+    font-size: 1.1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 8px 8px;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+/* Layout for the category items inside the dropdown */
+.category-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Each category item block */
+.category-item {
+    padding: 0.5em;
+    margin: 0.4em;
+    border-radius: 6px;
+}
+
+/* Add hover effect to category items */
+.category-item:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    transform: translateY(-2px);
+    transition: all 0.2s ease;
+}
+
+/* Slight shrink on click */
+.category-item:active {
+    transform: scale(0.95);
+}
+
+/* Word list display container */
+#words-container {
+    font-size: 1.3em;
+    color: var(--text-color);
+    margin: 1em;
+}
+
+/* Style each word in the list */
+#words-container span {
+    margin: 1em;
+}
+
+/* Margin for game grid */
+#grid {
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+/* Wrapper for the letter grid */
+#wrapper {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    justify-content: center;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin: 1em;
+    padding: 1em;
+    user-select: none;
+}
+
+/* Style for each individual letter cell */
+.letter-span {
+    aspect-ratio: 1/1;
+    width: 1em;
+    display: flex;
+    padding: 1em;
+    margin: 0.2em;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace;
+    font-size: 1.5em;
+    border-radius: 20px;
+}
+
+/* Highlight effect for selected letters */
+.selected-letter {
+    outline: 2px solid var(--text-color);
+    outline-offset: -2px;
+    transform: scale(1.05);
+    transition: transform 0.2s, outline 0.2s;
+}
+
+
+/* ===== Preferences Section ===== */
+
+/* Layout for the preferences content section */
+#preferences-content {
+    display: flex;
+    align-items: center;
+}
+
+/* Container for preferences controls */
+.preferences-section {
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin: 2em;
+}
+
+/* Style for large section headers */
+.preferences-section h2 {
+    font-size: 2.5em;
+}
+
+/* Style for subsection headers */
+.preferences-section h3 {
+    font-size: 2em;
+}
+
+/* Paragraph styling inside preferences section */
+.preferences-section p {
+    font-size: 1.5em;
+}
+
+/* Label styling for color pickers, radio buttons, etc. */
+.preferences-section label {
+    font-size: 1.5em;
+}
+
+/* Title bar for preferences section */
+.preferences-title {
+    background-color: var(--header-footer-color);
+    color: var(--ui-text-color);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding: 2em;
+}
+
+/* ===== Settings Section ===== */
+
+/* Layout for each row of settings */
+.setting-row {
+    color: var(--text-color);
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap: 0.5em;
+    margin-bottom: 1em;
+    padding: 2em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 0.75em;
+    margin-bottom: 0.75em;
+}
+
+/* Remove bottom border for last row */
+.setting-row:last-child {
+    border-bottom: none;
+}
+
+/* Style color input boxes in settings */
+.setting-row input[type="color"] {
+    border: 2px solid black;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    padding: 0;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+/* Add hover effect to color pickers */
+input[type="color"]:hover {
+  transform: translateY(-2px);
+}
+
+/* Style setting labels for clean alignment */
+.setting-row label {
+    min-width: 0;
+    white-space: nowrap;
+}
+
+/*
+.reset-icon {
+    background: none;
+    border: none;
+    font-size: 1.6em;
+    cursor: pointer;
+    transform: translateY(-3px);
+    transition: transform 0.2s ease;
+}
+
+.reset-icon:hover {
+    transform: rotate(-20deg);
+}
+*/
+
+/* ===== Theme Selection (Radio Group) ===== */
+
+/* Add padding around the radio button group */
+.radio-group {
+    padding: 1em;
+}
+
+/* Hide the default radio input circles */
+.radio-group input[type="radio"] {
+    display: none;
+}
+
+/* Disable interaction and text selection on color picker labels */
+label[for="bg-color"], label[for="ui-text-color"], label[for="text-color"], label[for="highlight-color"], label[for="header-footer-color"] {
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Style all visible radio labels */
+.radio-group label {
+    display: inline-block;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    background-color: var(--highlight-color);
+    margin: 0.5em;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+/* Slight hover lift effect for labels */
+.radio-group label:hover {
+    transform: translateY(-2px);
+}
+
+/* ===== Checked Theme Label Styles ===== */
+
+/* Highlight the label for the 'default' theme when selected */
+input[type="radio"]:checked + #default-label {
+    background-color: var(--header-footer-color);
+    color: var(--ui-text-color);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Highlight the label for the 'sunset' theme when selected */
+input[type="radio"]:checked + #sunset-label {
+    background-color: var(--header-footer-color);
+    color: var(--ui-text-color);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Highlight the label for the 'midnight' theme when selected */
+.radio-group input[type="radio"]:checked + #midnight-label {
+    background-color: var(--header-footer-color);
+    color: var(--ui-text-color);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+}
+
+/* Highlight the label for the 'ocean' theme when selected */
+.radio-group input[type="radio"]:checked + #ocean-label {
+    background: var(--header-footer-color);
+    color: var(--ui-text-color);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== Font Menu Section ===== */
+
+/* Style the main font selector box */
+.font-selection {
+    display: inline-block;
+    background-color: var(--header-footer-color);
+    color: var(--ui-text-color);
+    padding: 1em;
+    cursor: pointer;
+    margin: 1em;                            
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+    user-select: none;
+    position: relative;
+}
+
+/* Style the dropdown menu that appears under font selector */
+.font-menu {
+    opacity: 0%;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background-color: var(--highlight-color);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    color: var(--text-color);
+    border-radius: 8px;
+    transition: all 0.5s ease;
+    pointer-events: none;
+    padding: 0.5em;
+    width: fit-content;
+}
+
+/* Style for each font option in the menu */
+.font-menu p {
+    padding: 0.5em;
+    border-radius: 8px;
+}
+
+/* Show the dropdown when the font selection is hovered */
+.font-selection:hover .font-menu {
+    opacity: 100%;
+    transition: all 0.5s ease;
+    pointer-events: auto;
+}
+
+/* Hover effect for font options */
+.font-menu p:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    transform: translateY(-2px);
+    transition: all 0.2s ease;
+}
+
+/* Highlight selected font option */
+.selected-font {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    transform: translateY(-2px);
+    transition: all 0.2s ease;
+}
+
+/* ===== Reset Button Section ===== */
+
+/* Style for the Reset button used in Preferences section */
+.reset-button {
+    justify-self: center;
+    margin-bottom: 1em;
+    border-radius: 8px;
+    background-color: var(--highlight-color);
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    font-size: 1.5em;
+    font-family: var(--font-family);
+    transition: transform 0.2s ease;
+    padding: 0.3em 0.7em;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+/* Add hover effect to lift the button slightly */
+.reset-button:hover {
+    transform: translateY(-2px);
+}
+
+
+/* ===== Contact Info Section ===== */
+
+/* Align contact section vertically */
+#contact-content {
+    align-items: center;
+}
+
+/* Set heading size for contact section */
+#contact-content h2 {
+    font-size: 2.5em;
+}
+
+/* Layout for info and form side by side */
+.contact-wrapper {
+    display: flex;
+}
+
+/* Style contact info panel */
+.contact-info-section {
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin: 2em;
+}
+
+/* Style contact form panel */
+.contact-form-section {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin: 2em;
+}
+
+/* Wrapper for all contact info items */
+.contact-info-items {
+    margin: 2em;
+    color: var(--text-color);
+}
+
+/* Layout for a single contact info item */
+.contact-info-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    align-items: center;
+    gap: 1.5em;
+    margin-bottom: 1em;
+    padding: 2em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 0.75em;
+    margin-bottom: 0.75em;
+    user-select: none;
+}
+
+/* Remove border from last contact item */
+.contact-info-item:last-child {
+    border: none;
+}
+
+/* Style the top title bar of contact panel */
+.contact-info-title-container {
+    background-color: var(--header-footer-color);
+    color: var(--ui-text-color);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding: 2em;
+}
+
+/* Style tooltip for copy icons */
+.tooltip {
+    opacity: 0%;
+    white-space: nowrap;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    padding: 0.5em;
+    pointer-events: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    color: var(--text-color);
+    border-radius: 8px;
+    transition: all 0.5s ease;
+    transform: translateX(-50%);
+    background-color: var(--highlight-color);
+    z-index: 10;
+}
+
+/* Container for copy icon + tooltip */
+.copy-container {
+    position: relative;
+    cursor: pointer;
+}
+
+/* Show tooltip on hover */
+.copy-container:hover .tooltip {
+    opacity: 100%;
+    pointer-events: auto;
+}
+
+/* ===== Contact Form Section ===== */
+
+/* Style the title bar of the contact form */
+.contact-form-title-container {
+    background-color: var(--header-footer-color);
+    color: var(--ui-text-color);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding: 2em;
+}
+
+/* Center the contact form on the page */
+.contact-form-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Define layout and spacing for the form fields */
+.contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 2em;
+    gap: 1em;
+    color: var(--text-color);
+}
+
+/* Display labels above inputs */
+.contact-form-item label {
+    display: block;
+    padding-bottom: 0.5em;
+}
+
+/* Make form elements fill available width */
+.contact-form-item input, .contact-form-item textarea, .contact-form-item button {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Style input and textarea padding and size */
+.contact-form-item input, textarea {
+    padding: 0.5em;
+    max-width: 600px;
+}
+
+/* Style the message textarea */
+textarea {
+    resize: none;
+    overflow: auto;
+    height: 8em;
+}
+
+/* Allow elements to span both columns */
+.contact-form-item.full-width {
+    grid-column: span 2;
+}
+
+/* Style the topic dropdown container */
+.topic-selection {
+    display: inline-block;
+    background-color: var(--header-footer-color);
+    color: var(--ui-text-color);
+    padding: 1em;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+    user-select: none;
+    position: relative;
+    white-space: nowrap;
+}
+
+/* Style the dropdown menu */
+.topic-menu {
+    opacity: 0%;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background-color: var(--highlight-color);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    color: var(--text-color);
+    border-radius: 8px;
+    transition: all 0.5s ease;
+    pointer-events: none;
+    padding: 0.5em;
+    width: fit-content;
+}
+
+/* Show dropdown menu on hover */
+.topic-selection:hover .topic-menu {
+    opacity: 100%;
+    transition: all 0.5s ease;
+    pointer-events: auto;
+}
+
+/* Style each item in the dropdown */
+.topic-menu p {
+    padding: 0.5em;
+    border-radius: 8px;
+}
+
+/* Highlight dropdown item on hover */
+.topic-menu p:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    transform: translateY(-2px);
+    transition: all 0.2s ease;
+}
+
+/* Highlight the selected topic */
+.selected-topic {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    transform: translateY(-2px);
+    transition: all 0.2s ease;
+}
+
+/* Style the submit button */
+#submit-button {
+    margin-bottom: 1em;
+    border-radius: 8px;
+    background-color: var(--highlight-color);
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    font-size: 1.5em;
+    font-family: var(--font-family);
+    transition: transform 0.2s ease;
+    padding: 0.2em;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+/* Add hover animation to submit button */
+#submit-button:hover {
+    transform: translateY(-2px);
+}
+
+
+
