@@ -4,28 +4,28 @@ This project was created as a final assignment for IST 239. It showcases the use
 
 ## Features
 
-### 🏠 Home
+### Home
 - Introduction to the project and navigation.
 
-### 🧪 Labs
+### Labs
 - Demonstrations of JavaScript labs completed during the course.
 
-### 📰 News
+### News
 - A blog-style section for project updates.
 - Each update has a title, date, and content.
 - Displays updates dynamically from a JSON file.
 
-### 🎮 Game
+### Game
 - A word search puzzle built with JavaScript.
 - Words are dynamically generated and displayed on a grid.
 - Players can select words by clicking/dragging over letters.
 
-### 🎨 Preferences
+### Preferences
 - A customizable panel where users can:
   - Change colors, fonts, and visual effects.
   - Preferences are saved automatically using localStorage.
 
-### 📬 Contact
+### Contact
 - Contact form styled with CSS Grid and Flexbox.
 - Copy-to-clipboard feature for contact details.
 
