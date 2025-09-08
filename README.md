@@ -49,4 +49,15 @@ This project demonstrates:
 2. Open `index.html` in any modern web browser.
 3. Navigate through the sections using the menu at the top.
 
+## Possible Improvements
+I coded the majority of this project myself, and if I were to revisit it, several areas could be improved:
+
+- Refactoring for SOLID principles: While I aimed to follow SOLID, there are clear violations. Some packages and classes would benefit from restructuring, and certain code should be extracted into interfaces to better support dependency inversion.
+
+- Client/Server architecture: The networking code was rushed, and much of it could be refactored into smaller methods to better follow the Single Responsibility Principle.
+
+- Exception handling: There are still some handled exceptions being thrown occasionally in the server class that would need investigation.
+
+Overall, this application isn’t highly polished, but it was a valuable learning experience. The key takeaway for me is how I can apply what I’ve learned here to future projects.
+
 ---
