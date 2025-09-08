@@ -5,7 +5,6 @@
 ## Project Overview
 This project was created as a final assignment for IST 239. It showcases the use of HTML, CSS, and JavaScript to build an interactive, single-page website with multiple features.
 
----
 ## Features
 
 ### Home
