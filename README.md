@@ -62,6 +62,6 @@ This project demonstrates:
 
 - Server-side functionality: While adding server-side code was beyond the scope of this class project, it’s something I want to implement in my next web application.
 
-- Responsive design: I didn’t include media queries to make the site mobile-friendly. This wasn’t a requirement, but it’s a key improvement I’ll be including in future projects.
+- Responsive design: I didn’t include media queries to make the site mobile-friendly. I've done it in the past, but it wasn’t a requirement. It’s a key improvement I’ll be including in future projects.
 
 ---
