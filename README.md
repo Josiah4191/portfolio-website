@@ -34,7 +34,6 @@ This project was created as a final assignment for IST 239. It showcases the use
 - Uses **DOM manipulation** to create and manage dynamic content.
 - Employs **localStorage** for saving preferences.
 - Structured code with separate classes and modular design.
-- Accessibility considered with ARIA attributes for navigation.
 
 ## Purpose
 This project demonstrates:
