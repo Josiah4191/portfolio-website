@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!--
+      Josiah Stoltzfus, August 3, 2025, IST239-W01, Hands-On Project 12-5
+
+      In Hands-On Project 12-5, I added a script tag to link the project12-05.js file to the HTML document and included the defer attribute to ensure it loads after the page content. I also added a script to load the latest minified build of the jQuery library.
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Hands-on Project 12-5</title>
+   <link rel="stylesheet" href="styles.css" />
+
+   <!--
+      Load the latest minified build of the jQuery library.
+   -->
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+   <!--
+      Linked the JavaScript file project12-05.js using the script tag. The defer attribute will cause the script to load after the html document is fully parsed.
+   -->
+   <script src="project12-05.js" defer></script>
+
+</head>
+
+<body>
+   <header>
+      <h1>
+         Hands-on Project 12-5
+      </h1>
+   </header>
+
+   <section>
+      <form id="userform" name="userform" method="get" action="formsubmit.html">
+         <h1>User Form</h1>
+
+         <fieldset>
+            <legend>Member Information</legend>
+
+            <label for="username">Username</label>
+            <input name="username" id="username" required />
+            <span>*</span>
+
+            <label for="email">Email Address</label>
+            <input name="email" id="email" type="email" required />
+            <span>*</span>
+
+            <label for="pwd">Password</label>
+            <input name="pwd" id="pwd" type="password" required />
+            <span>*</span>
+
+            <label for="pwd2">Confirm Password</label>
+            <input name="pwd2" id="pwd2" type="password" required />
+            <span>*</span>
+            <div>Your password must have at least 8 characters <br> with at least 1
+               uppercase letter, 1 lowercase letter, and 1 number
+
+            </div>
+         </fieldset>
+
+         <input id="submitButton" type="submit" value="Submit" />
+      </form>
+   </section>
+</body>
+
+</html>
