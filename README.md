@@ -29,17 +29,12 @@ This project was created as a final assignment for IST 239. It showcases the use
 - Contact form styled with CSS Grid and Flexbox.
 - Copy-to-clipboard feature for contact details.
 
-## Technical Highlights
+## Highlights
 - Built entirely with **vanilla JavaScript**, HTML, and CSS.
 - Uses **DOM manipulation** to create and manage dynamic content.
 - Employs **localStorage** for saving preferences.
 - Structured code with separate classes and modular design.
 - Accessibility considered with ARIA attributes for navigation.
-
-## Setup
-1. Clone or download the repository.
-2. Open `index.html` in any modern web browser.
-3. Navigate through the sections using the menu at the top.
 
 ## Purpose
 This project demonstrates:
@@ -49,5 +44,10 @@ This project demonstrates:
 - Local storage management
 - CSS Grid and Flexbox for layout
 - Accessible and responsive design
+
+## Setup
+1. Clone or download the repository.
+2. Open `index.html` in any modern web browser.
+3. Navigate through the sections using the menu at the top.
 
 ---
