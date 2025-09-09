@@ -43,7 +43,6 @@ This project demonstrates:
 - Dynamic content rendering
 - Local storage management
 - CSS Grid and Flexbox for layout
-- Accessible and responsive design
 
 ## Setup
 1. Clone or download the repository.
