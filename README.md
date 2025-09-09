@@ -51,16 +51,16 @@ This project demonstrates:
 3. Navigate through the sections using the menu at the top.
 
 ## Possible Improvements
-- Accessibility: I didn’t add much support such as ARIA labels. This is something I want to prioritize in future projects to make sites more inclusive.
+- **Accessibility**: I didn’t add much support such as ARIA labels. This is something I want to prioritize in future projects to make sites more inclusive.
 
-- Code structure: The main script manages too many responsibilities. For example, it defines methods for loading lab data, which would be better extracted into a dedicated class.
+- **Code structure:** The main script manages too many responsibilities. For example, it defines methods for loading lab data, which would be better extracted into a dedicated class.
 
-- Word search interactivity: Currently, users click letters to select words. I wanted to add canvas-based interaction so players could draw around words, and I plan to revisit that idea.
+- **Word search interactivity:** Currently, users click letters to select words. I wanted to add canvas-based interaction so players could draw around words, and I plan to revisit that idea.
 
-- CSS consistency: Toward the end I started using CSS variables for properties. It would have been better to adopt that from the beginning for a more consistent style.
+- **CSS consistency:** Toward the end I started using CSS variables for properties. It would have been better to adopt that from the beginning for a more consistent style.
 
-- Server-side functionality: While adding server-side code was beyond the scope of this class project, it’s something I want to implement in my next web application.
+- **Server-side functionality:** While adding server-side code was beyond the scope of this class project, it’s something I want to implement in my next web application.
 
-- Responsive design: I didn’t include media queries to make the site mobile-friendly. I've done it in the past, but it wasn’t a requirement. It’s a key improvement I’ll be including in future projects.
+- **Responsive design:** I didn’t include media queries to make the site mobile-friendly. I've done it in the past, but it wasn’t a requirement. It’s a key improvement I’ll be including in future projects.
 
 ---
