@@ -23,7 +23,8 @@ This project was created as a final assignment for IST 239. It showcases the use
 - Players can select words by clicking/dragging over letters.
 
 ### Preferences
-- A customizable panel where users can change colors, fonts, and visual effects. Preferences are saved automatically using localStorage.
+- A customizable panel where users can change colors, fonts, and visual effects.
+- Preferences are saved automatically using localStorage.
 
 ### Contact
 - Contact form styled with CSS Grid and Flexbox.
