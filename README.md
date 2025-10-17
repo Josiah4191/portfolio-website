@@ -1,6 +1,6 @@
 # Personal Portfolio Website
 
-A personal website built with HTML, CSS, and JavaScript to showcase projects and development progress.  
+A raw HTML, CSS, and JavaScript website built to showcase projects and development progress.  
 Includes a simple word search game implemented with HTML elements and class-based highlighting logic.
 
 ## Technologies
