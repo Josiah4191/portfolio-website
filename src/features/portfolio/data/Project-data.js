@@ -29,7 +29,7 @@ export const PROJECTS = [
             links: [
                 {
                     label: "GitHub",
-                    url: "https://github.com/Josiah4191/portfolio",
+                    url: "https://github.com/Josiah4191/portfolio-website",
                 }
             ],
             lessonsLearned: [
