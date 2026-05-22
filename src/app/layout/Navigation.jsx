@@ -9,12 +9,25 @@ export default function Navigation() {
     const [isProjectsOpen, setIsProjectsOpen] = useState(false);
 
     function toggleMenu() {
-        setisNavMenuOpen(!isNavMenuOpen);
+        if (isNavMenuOpen) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    }
+
+    function closeMenu() {
+        setisNavMenuOpen(false);
+        setIsProjectsOpen(false);
+    }
+
+    function openMenu() {
+        setisNavMenuOpen(true);
     }
 
     return (
         <nav className="nav-section">
-            <div className={`nav-overlay ${isNavMenuOpen ? "open" : ""}`} onClick={toggleMenu}></div>
+            <div className={`nav-overlay ${isNavMenuOpen ? "open" : ""}`} onClick={closeMenu}></div>
 
             <div className="grid page-margin">
                 <p className="nav-name"><NavLink to="/">Josiah Stoltzfus</NavLink></p>
@@ -23,7 +36,8 @@ export default function Navigation() {
                     <li><NavLink to="/#stack">Stack</NavLink></li>
                     <li className="projects-nav"><NavLink to="/#projects">Projects ▾</NavLink>
                         <ul className="projects-dropdown">
-                            {PROJECTS.map((project) => <li key={project.title}><NavLink to={project.route}>{project.title}</NavLink></li>)}
+                            {PROJECTS.map((project) => <li key={project.title}><NavLink
+                                to={project.route}>{project.title}</NavLink></li>)}
                         </ul>
                     </li>
                 </ul>
@@ -39,9 +53,10 @@ export default function Navigation() {
                     <li className="nav-mobile-link">
                         <button onClick={() => setIsProjectsOpen(!isProjectsOpen)}>Projects ▾</button>
                         {isProjectsOpen ?
-                        <ul className="projects-mobile-dropdown">
-                            {PROJECTS.map((project) => <li key={project.title}><NavLink to={project.route}>{project.title}</NavLink></li>)}
-                        </ul> : null}
+                            <ul className="projects-mobile-dropdown">
+                                {PROJECTS.map((project) => <li key={project.title}><NavLink
+                                    to={project.route}>{project.title}</NavLink></li>)}
+                            </ul> : null}
                     </li>
                 </ul>
             </div>
