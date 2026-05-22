@@ -1,6 +1,6 @@
 import EmailIcon from "../../../icons/EmailIcon.jsx";
 import PhoneIcon from "../../../icons/PhoneIcon.jsx";
-import GithubIcon from "../../../icons/GithubIcon.jsx";
+import GithubIcon from "../../../icons/GitHubIcon.jsx";
 import LinkedInIcon from "../../../icons/LinkedInIcon.jsx";
 
 // need a list of contact information
