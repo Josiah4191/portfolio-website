@@ -64,7 +64,7 @@ export const PROJECTS = [
             links: [
                 {
                     label: "GitHub",
-                    url: "https://github.com/Josiah4191/portfolio-website",
+                    url: "https://github.com/Josiah4191/portfolio-website-original",
                 }
             ],
             lessonsLearned: [
