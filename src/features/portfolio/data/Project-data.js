@@ -176,7 +176,7 @@ export const PROJECTS = [
             links: [
                 {
                     label: "GitHub",
-                    url: "https://github.com/Josiah4191/portfolio-website/tree/main/src/game",
+                    url: "https://github.com/Josiah4191/portfolio-website-original/tree/main/src/game",
                 }
             ],
             lessonsLearned: [
