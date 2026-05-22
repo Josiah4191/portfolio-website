@@ -106,7 +106,7 @@ export const PROJECTS = [
                 },
                 {
                     label: "Live Demo",
-                    url: "http://localhost:5173/squirrels"
+                    url: "/squirrels"
                 }
             ],
             lessonsLearned: [
