@@ -33,7 +33,7 @@ export default function Navigation() {
             </div>
 
             <div className={`nav-mobile-menu ${isNavMenuOpen ? "open" : ""}`}>
-                <ul className="nav-mobile-group">
+                <ul className="nav-mobile-group" onClick={(e) => e.stopPropagation()}>
                     <li className="nav-mobile-link"><NavLink to="/#about">About</NavLink></li>
                     <li className="nav-mobile-link"><NavLink to="/#stack">Stack</NavLink></li>
                     <li className="nav-mobile-link">
