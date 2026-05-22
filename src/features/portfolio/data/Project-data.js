@@ -65,6 +65,10 @@ export const PROJECTS = [
                 {
                     label: "GitHub",
                     url: "https://github.com/Josiah4191/portfolio-website-original",
+                },
+                {
+                    label: "Live Demo",
+                    url: "https://portfolio-website-original-eta.vercel.app"
                 }
             ],
             lessonsLearned: [
