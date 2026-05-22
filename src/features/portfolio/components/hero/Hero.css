@@ -1,0 +1,27 @@
+.hero-section {
+    min-height: 80vh;
+}
+
+.hero-title, .hero-description, .hero-intro {
+    grid-column: 1/-1;
+    width: 100%;
+    max-width: 560px;
+    justify-self: center;
+    text-align: start;
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding-top: var(--mobile-section-spacing);
+        padding-bottom: var(--mobile-section-spacing);
+    }
+
+    .hero-title, .hero-description {
+        text-align: center;
+    }
+
+    .hero-intro {
+        max-width: 300px;
+    }
+
+}

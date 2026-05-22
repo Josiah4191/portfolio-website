@@ -1,0 +1,96 @@
+.item-card {
+    padding: var(--padding-md);
+    border: 1px solid var(--squirrel-600);
+    background-color: var(--squirrel-100);
+    transition: 0.2s ease;
+    text-align: center;
+    width: 100%;
+
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: var(--gap-md);
+}
+
+.item-add-card {
+    justify-content: center;
+}
+
+.item-add-card:hover {
+    cursor: pointer;
+}
+
+.item-action-card {
+    background: var(--squirrel-300);
+    flex-direction: column;
+}
+
+.item-edit-card {
+    background: var(--squirrel-300);
+    flex-direction: column;
+}
+
+.item-card-name {
+    padding: var(--padding-xs);
+}
+
+.item-card-display {
+    display: flex;
+    flex-direction: column;
+    min-width: 140px;
+    max-width: 140px;
+    align-items: center;
+    border: 1px solid var(--squirrel-600);
+    padding: var(--padding-sm);
+}
+
+.item-selection-card {
+    transition: 0.2s ease;
+    min-height: 120px;
+    max-height: 120px;
+}
+
+.item-selection-card:hover {
+    cursor: pointer;
+}
+
+.item-selection-card-selected {
+    gap: var(--gap-md);
+    max-height: 200px;
+}
+
+.item-selection-card-selected:hover {
+    cursor: default;
+}
+
+.quantity-input {
+    border: 1px solid var(--squirrel-600);
+    text-align: center;
+    width: 80px;
+    outline: none;
+}
+
+.item-selection-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--gap-md);
+    padding-bottom: var(--padding-lg);
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    appearance: textfield;
+}
+
+.item-card-image {
+    width: 72px;
+    height: 72px;
+}

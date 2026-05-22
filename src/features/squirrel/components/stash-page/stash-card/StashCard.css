@@ -1,0 +1,56 @@
+.stash-card {
+    border: 1px solid var(--squirrel-600);
+    background: var(--squirrel-100);
+    padding: var(--padding-md);
+    transition: 0.2s ease;
+    min-width: 300px;
+    max-width: 300px;
+    min-height: 210px;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stash-card:hover {
+    cursor: pointer;
+}
+
+.stash-action-card {
+    flex-direction: row;
+    background: var(--squirrel-300);
+    justify-content: center;
+    gap: var(--gap-md);
+}
+
+.stash-edit-card {
+    background: var(--squirrel-300);
+    justify-content: center;
+    gap: var(--gap-md);
+}
+
+.stash-action-card:hover, .stash-edit-card:hover {
+    cursor: default;
+}
+
+.stash-card-location {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.stash-card-label {
+    font-family: var(--font-squirrel), var(--font-portfolio), sans-serif;
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+}
+
+.stash-card img {
+    width: 100px;
+    height: auto;
+}

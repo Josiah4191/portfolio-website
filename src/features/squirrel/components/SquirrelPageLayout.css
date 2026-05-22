@@ -1,0 +1,73 @@
+.squirrel-page-header {
+    background-color: var(--squirrel-100);
+    grid-column: 1/-1;
+    border: 1px solid var(--squirrel-600);
+    justify-self: center;
+    width: 100%;
+    max-width: 900px;
+    padding: var(--padding-md);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.squirrel-page-title {
+    width: fit-content;
+    border-bottom: 1px solid var(--squirrel-600);
+    font-family: var(--font-squirrel), var(--font-portfolio), sans-serif;
+    font-size: var(--font-size-xxl);
+    font-weight: var(--font-weight-bold);
+}
+
+.squirrel-page-description {
+    font-family: var(--font-squirrel), var(--font-portfolio), sans-serif;
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+}
+
+.squirrel-section-title {
+    grid-column: 1/-1;
+    width: 100%;
+    max-width: 560px;
+    justify-self: center;
+    text-align: center;
+    font-family: var(--font-squirrel), var(--font-portfolio), sans-serif;
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+}
+
+.card-list {
+    grid-column: 1/-1;
+    width: 100%;
+    max-width: 700px;
+    justify-self: center;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--gap-md);
+}
+
+.breadcrumb {
+    grid-column: 1/-1;
+    width: 100%;
+    max-width: 900px;
+    justify-self: center;
+}
+
+.breadcrumb ol {
+    display: flex;
+    gap: var(--gap-sm);
+}
+
+.breadcrumb a {
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    color: var(--color-accent-hover);
+}
+
+@media (max-width: 480px) {
+}

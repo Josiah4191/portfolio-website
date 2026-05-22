@@ -1,0 +1,26 @@
+.about-title {
+    grid-column: 1/-1;
+    width: 100%;
+    max-width: 560px;
+    justify-self: center;
+    text-align: start;
+}
+
+.about-body {
+    grid-column: 1/-1;
+    width: 100%;
+    max-width: 560px;
+    justify-self: center;
+    text-align: start;
+}
+
+@media (max-width: 480px) {
+    .about-title {
+        text-align: center;
+        font-size: var(--font-size-xl);
+    }
+
+    .about-body {
+        max-width: 300px;
+    }
+}

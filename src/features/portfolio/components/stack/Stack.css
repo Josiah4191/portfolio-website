@@ -1,0 +1,63 @@
+.stack-title {
+    grid-column: 1/-1;
+    width: 100%;
+    max-width: 560px;
+    justify-self: center;
+    text-align: start;
+}
+
+.stack-description {
+    grid-column: 1/-1;
+    width: 100%;
+    max-width: 560px;
+    justify-self: center;
+    text-align: start;
+}
+
+.stack-cards-list {
+    grid-column: 1/-1;
+    grid-template-columns: repeat(4, minmax(80px, 1fr));
+    width: 100%;
+    max-width: 560px;
+    justify-self: center;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-md);
+}
+
+.stack-card {
+    min-width: 120px;
+    min-height: 80px;
+    padding: var(--padding-sm);
+    box-shadow: var(--shadow-sm);
+    background: var(--slate-50);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--slate-200);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-sm);
+}
+
+.stack-card-label {
+    font-size: var(--font-size-sm);
+}
+
+@media (max-width: 480px) {
+    .stack-description {
+        max-width: 300px;
+    }
+
+    .stack-cards-list {
+        max-width: 300px;
+    }
+
+
+    .stack-title {
+        text-align: center;
+        font-size: var(--font-size-xl);
+    }
+}
