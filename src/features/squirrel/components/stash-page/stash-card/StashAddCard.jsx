@@ -3,6 +3,7 @@ import {STASH_LOCATIONS} from "../../../data/Stash-locations.js";
 import {useNavigate} from "react-router-dom";
 import empty from "../../../assets/stash-empty.png";
 import StashAddFormCard from "./StashAddFormCard.jsx";
+import {API_BASE_URL} from "../../../../../config/api.js";
 
 export default function StashAddCard({squirrelId}) {
 
@@ -11,7 +12,7 @@ export default function StashAddCard({squirrelId}) {
     const navigate = useNavigate();
 
     async function addStash() {
-        await fetch(`http://localhost:8080/squirrels/${squirrelId}/stashes`, {
+        await fetch(`${API_BASE_URL}/squirrels/${squirrelId}/stashes`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

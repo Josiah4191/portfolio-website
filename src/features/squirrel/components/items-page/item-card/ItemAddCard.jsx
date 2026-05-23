@@ -5,6 +5,7 @@ import {useNavigate} from "react-router-dom";
 import ItemAddFormCard from "./ItemAddFormCard.jsx";
 import ItemAddSelectionCard from "./ItemAddSelectionCard.jsx";
 import ItemAddSelectionGrid from "./ItemAddSelectionGrid.jsx";
+import {API_BASE_URL} from "../../../../../config/api.js";
 
 export default function ItemAddCard({items, stashId}) {
 
@@ -17,7 +18,7 @@ export default function ItemAddCard({items, stashId}) {
     const availableItems = ITEMS.filter(item => !currentItemIds.includes(item.id));
 
     async function addItem() {
-        await fetch(`http://localhost:8080/stashes/${stashId}`, {
+        await fetch(`${API_BASE_URL}/stashes/${stashId}`, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({

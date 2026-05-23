@@ -3,6 +3,7 @@ import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {SQUIRREL_NAMES} from "../../../data/Squirrel-names.js";
 import SquirrelAddFormCard from "./SquirrelAddFormCard.jsx";
+import {API_BASE_URL} from "../../../../../config/api.js";
 
 export default function SquirrelAddCard() {
 
@@ -11,7 +12,7 @@ export default function SquirrelAddCard() {
     const navigate = useNavigate();
 
     async function addSquirrel() {
-        await fetch('http://localhost:8080/squirrels', {
+        await fetch(`${API_BASE_URL}/squirrels`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
