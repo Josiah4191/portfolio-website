@@ -4,6 +4,7 @@ import {useState} from "react";
 import StashNormalCard from "./StashNormalCard.jsx";
 import StashActionCard from "./StashActionCard.jsx";
 import StashEditCard from "./StashEditCard.jsx";
+import {API_BASE_URL} from "../../../../../config/api.js";
 
 export default function StashCard({id, location, squirrelId}) {
     const navigate = useNavigate();
@@ -14,8 +15,7 @@ export default function StashCard({id, location, squirrelId}) {
         if (!window.confirm("Delete this stash?")) {
             return;
         }
-
-        await fetch(`http://localhost:8080/stashes/${id}`, {
+        await fetch(`${API_BASE_URL}/stashes/${id}`, {
             method: 'DELETE'
         })
 
@@ -25,7 +25,7 @@ export default function StashCard({id, location, squirrelId}) {
     }
 
     async function changeLocation() {
-        await fetch(`http://localhost:8080/stashes/${id}`, {
+        await fetch(`${API_BASE_URL}/stashes/${id}`, {
             method: 'PUT',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({location: selectedLocation})

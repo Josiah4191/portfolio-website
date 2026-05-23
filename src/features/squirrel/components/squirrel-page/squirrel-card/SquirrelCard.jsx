@@ -4,6 +4,7 @@ import {useState} from "react";
 import SquirrelNormalCard from "./SquirrelNormalCard.jsx";
 import SquirrelActionCard from "./SquirrelActionCard.jsx";
 import SquirrelEditCard from "./SquirrelEditCard.jsx";
+import {API_BASE_URL} from "../../../../../config/api.js";
 
 export default function SquirrelCard({id, name, isEdit, setIsEdit}) {
     const navigate = useNavigate();
@@ -14,14 +15,14 @@ export default function SquirrelCard({id, name, isEdit, setIsEdit}) {
         if (!window.confirm("Delete this squirrel?")) {
             return;
         }
-        await fetch(`http://localhost:8080/squirrels/${id}`, {
+        await fetch(`${API_BASE_URL}/squirrels/${id}`, {
             method: 'DELETE'
         });
         navigate(`/squirrels`, { replace: true });
     }
 
     async function renameSquirrel() {
-        await fetch(`http://localhost:8080/squirrels/${id}`, {
+        await fetch(`${API_BASE_URL}/squirrels/${id}`, {
             method: 'PUT',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({name: selectedName})

@@ -5,6 +5,7 @@ import {useNavigate} from "react-router-dom";
 import ItemActionCard from "./ItemActionCard.jsx";
 import ItemNormalCard from "./ItemNormalCard.jsx";
 import ItemEditCard from "./ItemEditCard.jsx";
+import {API_BASE_URL} from "../../../../../config/api.js";
 
 export default function ItemCard({stashId, item}) {
 
@@ -19,7 +20,7 @@ export default function ItemCard({stashId, item}) {
             return;
         }
 
-        await fetch(`http://localhost:8080/stash_lines/${item.stashLineId}`, {
+        await fetch(`${API_BASE_URL}/stash_lines/${item.stashLineId}`, {
             method: 'DELETE'
         })
         navigate(`/stashes/${stashId}`, {replace: true});
@@ -28,7 +29,7 @@ export default function ItemCard({stashId, item}) {
     }
 
     async function updateItem() {
-        await fetch(`http://localhost:8080/stash_lines/${item.stashLineId}`, {
+        await fetch(`${API_BASE_URL}/stash_lines/${item.stashLineId}`, {
             method: 'PATCH',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({quantity: selectedValue})

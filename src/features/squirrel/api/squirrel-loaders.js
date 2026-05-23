@@ -1,6 +1,8 @@
+import {API_BASE_URL} from "../../../config/api.js";
+
 export async function loadSquirrels() {
     try {
-        const response = await fetch("http://localhost:8080/squirrels");
+        const response = await fetch(`${API_BASE_URL}/squirrels`);
 
         if (!response.ok) {
             throw new Error("Failed to load squirrels.");
@@ -18,8 +20,8 @@ export async function loadStashes({params}) {
     const squirrelId = params.id;
 
     try {
-        const stashesResponse = await fetch(`http://localhost:8080/squirrels/${squirrelId}/stashes`);
-        const squirrelResponse = await fetch(`http://localhost:8080/squirrels/${squirrelId}`);
+        const stashesResponse = await fetch(`${API_BASE_URL}/squirrels/${squirrelId}/stashes`);
+        const squirrelResponse = await fetch(`${API_BASE_URL}/squirrels/${squirrelId}`);
 
         if (!stashesResponse.ok) {
             throw new Error("Failed to load stashes.");
@@ -45,7 +47,7 @@ export async function loadStashes({params}) {
 export async function loadStashItems({params}) {
     const stashId = params.id;
     try {
-        const response = await fetch(`http://localhost:8080/stashes/${stashId}/items`);
+        const response = await fetch(`${API_BASE_URL}/stashes/${stashId}/items`);
 
         if (!response.ok) {
             throw new Error("Failed to load stash items.");
