@@ -48,7 +48,58 @@ import mobile_view from '../assets/screenshots/portfolio/mobile_view.png'
 import stack_section from '../assets/screenshots/portfolio/stack_section.png'
 import portfolio_page from '../assets/screenshots/portfolio/portfolio_page.png'
 
+
+/* Uno Rebuild Screenshots */
+import create_game from '../assets/screenshots/uno-rebuild/create_game.png'
+import draw_card from '../assets/screenshots/uno-rebuild/draw_card.png'
+import play_card from '../assets/screenshots/uno-rebuild/play_card.png'
+
+/* Word Search Rebuild Screenshots */
+import grid from '../assets/screenshots/word-search-rebuild/grid.png'
+import grid_select from '../assets/screenshots/word-search-rebuild/grid_select.png'
+import start_current_cell from '../assets/screenshots/word-search-rebuild/start_current_cell.png'
+
 export const SCREENSHOT_MAP = {
+    "uno-rebuild": [
+        {
+            id: "create-game-endpoint",
+            image: create_game,
+            alt: "Create game endpoint response screenshot",
+            description: "Postman response from the create game endpoint showing the generated game state and initial player/game information."
+        },
+        {
+            id: "draw-card-endpoint",
+            image: draw_card,
+            alt: "Draw card endpoint response screenshot",
+            description: "Postman response from the draw card endpoint demonstrating player hand size updates after drawing a card."
+        },
+        {
+            id: "play-card-endpoint",
+            image: play_card,
+            alt: "Play card endpoint response screenshot",
+            description: "Postman response from the play card endpoint showing updated game state, played card information, and reduced player hand size."
+        }
+    ],
+    "word-search-rebuild": [
+        {
+            id: "canvas-grid",
+            image: grid,
+            alt: "Canvas grid rendering screenshot",
+            description: "Initial canvas rendering system displaying a dynamically generated word search grid."
+        },
+        {
+            id: "grid-selection",
+            image: grid_select,
+            alt: "Grid selection interaction screenshot",
+            description: "Interactive drag-selection system highlighting selected cells across the puzzle grid."
+        },
+        {
+            id: "start-current-cell-tracking",
+            image: start_current_cell,
+            alt: "Console coordinate tracking screenshot",
+            description: "Console output demonstrating tracking of start and current cell coordinates during drag interactions."
+        }
+    ],
     "portfolio": [
         {
             id: "hero-section",

@@ -3,6 +3,95 @@ import {SCREENSHOT_MAP} from "./Screenshot-data.js";
 
 export const PROJECTS = [
         {
+            slug: 'uno-rebuild',
+            title: "UNO Rebuild",
+
+            summary: "An in-progress full-stack UNO platform built with Spring Boot and React.",
+
+            fullDescription:
+                "This project is an ongoing rebuild and expansion of a previous UNO game into a modern full-stack architecture using Java, Spring Boot, and React. " +
+                "Current work focuses on modular game-state management, REST API design, frontend/backend separation, multiplayer-oriented architecture concepts, and interactive browser-based gameplay systems. " +
+                "The project is also serving as a deeper learning experience for scalable application architecture, event-driven systems, interactive front-end rendering, and full-stack game development concepts.",
+
+            route: "/projects/uno-rebuild",
+
+            badges: [
+                BADGE_MAP.java,
+                BADGE_MAP.spring,
+                BADGE_MAP.react,
+                BADGE_MAP.javascript,
+                BADGE_MAP.html,
+                BADGE_MAP.css,
+            ],
+
+            screenshots: SCREENSHOT_MAP["uno-rebuild"],
+
+            features: [
+                "Modular UNO game engine with separated game-state management",
+                "REST API architecture using Spring Boot",
+                "Planned React frontend for browser-based gameplay interactions",
+                "Multiplayer-oriented architecture and event-driven game flow concepts",
+                "Frontend/backend separation designed for scalable expansion",
+                "Ongoing development focused on interactive gameplay systems and multiplayer support"
+            ],
+
+            links: [
+                {
+                    label: "GitHub",
+                    url: "https://github.com/Josiah4191/uno-game-api",
+                }
+            ],
+
+            lessonsLearned: [
+                "This project has strengthened my understanding of large-scale application architecture, domain modeling, and backend game-state management.",
+                "I gained experience designing modular systems, REST APIs, event-driven game logic, and frontend/backend separation patterns.",
+                "The ongoing rebuild is also improving my understanding of interactive UI systems, multiplayer-oriented architecture concepts, and scalable full-stack application design."
+            ]
+        },
+        {
+            slug: 'word-search-rebuild',
+            title: "Word Search Rebuild",
+            summary: "An in-progress React and Canvas word search game with custom rendering and drag-selection interactions.",
+
+            fullDescription:
+                "This project is an ongoing rebuild of a previous word search game using React, JavaScript, and the HTML Canvas API. " +
+                "The current focus is on building custom rendering systems, drag-based word selection mechanics, dynamic puzzle generation, and coordinate-based interaction logic using canvas rendering techniques. " +
+                "The project is also being used as a deeper learning experience for interactive front-end systems, state-driven rendering, React hooks, and game-style UI architecture.",
+
+            route: "/projects/word-search-rebuild",
+
+            badges: [
+                BADGE_MAP.react,
+                BADGE_MAP.javascript,
+                BADGE_MAP.html,
+                BADGE_MAP.css,
+            ],
+
+            screenshots: SCREENSHOT_MAP["word-search-rebuild"],
+
+            features: [
+                "Custom HTML Canvas rendering system for puzzle visualization",
+                "Interactive click-and-drag word selection mechanics",
+                "Dynamic word puzzle generation and grid management",
+                "Coordinate-based mouse interaction and directional selection logic",
+                "State-driven rendering updates using React hooks",
+                "Ongoing development focused on expanding gameplay interactions and UI polish"
+            ],
+
+            links: [
+                {
+                    label: "GitHub",
+                    url: "https://github.com/Josiah4191/word-search-rebuild",
+                }
+            ],
+
+            lessonsLearned: [
+                "This project has significantly improved my understanding of canvas rendering, coordinate systems, and interactive front-end architecture.",
+                "I gained experience translating mouse input into grid-based interaction systems using React state and canvas rendering techniques.",
+                "The rebuild is also strengthening my understanding of drag interactions, rendering pipelines, state-driven UI updates, and game-style interaction design."
+            ]
+        },
+        {
             slug: 'portfolio',
             title: "Portfolio Website",
             summary: "A responsive React portfolio website built to showcase projects, UI design, and front-end development work.",
