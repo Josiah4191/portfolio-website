@@ -57,7 +57,7 @@ import play_card from '../assets/screenshots/uno-rebuild/play_card.png'
 /* Word Search Rebuild Screenshots */
 import grid from '../assets/screenshots/word-search-rebuild/grid.png'
 import grid_select from '../assets/screenshots/word-search-rebuild/grid_select.png'
-import start_current_cell from '../assets/screenshots/word-search-rebuild/start_current_cell.png'
+import word_placement_data from '../assets/screenshots/word-search-rebuild/word_placement_data.png'
 
 export const SCREENSHOT_MAP = {
     "uno-rebuild": [
@@ -82,6 +82,12 @@ export const SCREENSHOT_MAP = {
     ],
     "word-search-rebuild": [
         {
+            id: "word-placement-data",
+            image: word_placement_data,
+            alt: "Word placement metadata console output screenshot",
+            description: "Console output showing generated puzzle metadata including placed words, start and end coordinates, directions, and tracked cell paths used for puzzle validation."
+        },
+        {
             id: "canvas-grid",
             image: grid,
             alt: "Canvas grid rendering screenshot",
@@ -92,12 +98,6 @@ export const SCREENSHOT_MAP = {
             image: grid_select,
             alt: "Grid selection interaction screenshot",
             description: "Interactive drag-selection system highlighting selected cells across the puzzle grid."
-        },
-        {
-            id: "start-current-cell-tracking",
-            image: start_current_cell,
-            alt: "Console coordinate tracking screenshot",
-            description: "Console output demonstrating tracking of start and current cell coordinates during drag interactions."
         }
     ],
     "portfolio": [
