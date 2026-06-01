@@ -126,45 +126,6 @@ export const PROJECTS = [
             ]
         },
         {
-            slug: 'portfolio-original',
-            title: "Portfolio Original",
-            summary: "An earlier personal portfolio website built with HTML, CSS, and JavaScript that includes several small projects and experiments.",
-            fullDescription: "Portfolio Original is an earlier version of my personal portfolio website built with HTML, CSS, and vanilla JavaScript. " +
-                "The project was used to practice front-end fundamentals such as responsive layout design, DOM manipulation, navigation systems, " +
-                "styling organization, and interactive UI features. It also served as a home for several smaller JavaScript projects and experiments, " +
-                "including the original version of the Word Search game.",
-            route: "/projects/portfolio-original",
-            badges: [
-                BADGE_MAP.javascript,
-                BADGE_MAP.html,
-                BADGE_MAP.css,
-            ],
-            screenshots: SCREENSHOT_MAP["portfolio-original"],
-            features: [
-                "Multi-section portfolio website layout",
-                "Responsive design using HTML and CSS",
-                "JavaScript-driven navigation and interaction",
-                "Project showcase and experiment sections",
-                "Preferences/settings functionality",
-                "Original Word Search game implementation"
-            ],
-            links: [
-                {
-                    label: "GitHub",
-                    url: "https://github.com/Josiah4191/portfolio-website-original",
-                },
-                {
-                    label: "Live Demo",
-                    url: "https://portfolio-website-original-eta.vercel.app"
-                }
-            ],
-            lessonsLearned: [
-                "This project helped me build a stronger understanding of core front-end web development concepts using HTML, CSS, and JavaScript.",
-                "I gained experience organizing larger front-end projects, working with DOM interaction, building responsive layouts, and creating reusable " +
-                "UI structures before transitioning into React-based development."
-            ]
-        },
-        {
             slug: 'squirrel-tracker-java',
             title: "Squirrel Tracker (Java)",
             summary: "An app that lets squirrels track their food supply, built in Java and React.",

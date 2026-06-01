@@ -3,13 +3,6 @@ import diagram from '../assets/screenshots/birdhouse/diagram.png'
 import structure from '../assets/screenshots/birdhouse/structure.png'
 import swagger from '../assets/screenshots/birdhouse/swagger.png'
 
-/* Portfolio Original Screenshots */
-import contact from '../assets/screenshots/portfolio-original/contact.png'
-import home from '../assets/screenshots/portfolio-original/home.png'
-import labs from '../assets/screenshots/portfolio-original/labs.png'
-import news from '../assets/screenshots/portfolio-original/news.png'
-import preferences from '../assets/screenshots/portfolio-original/preferences.png'
-
 /* Squirrel C# Screenshots */
 import add_items from '../assets/screenshots/squirrel-csharp/add_items.png'
 import home_page_csharp from '../assets/screenshots/squirrel-csharp/home_page_csharp.png'
@@ -153,39 +146,6 @@ export const SCREENSHOT_MAP = {
             image: swagger,
             alt: "Swagger API screenshot",
             description: "Swagger/OpenAPI documentation showing available REST API endpoints."
-        }
-    ],
-
-    "portfolio-original": [
-        {
-            id: "contact",
-            image: contact,
-            alt: "Portfolio contact page screenshot",
-            description: "Contact section from the original portfolio website."
-        },
-        {
-            id: "home",
-            image: home,
-            alt: "Portfolio home page screenshot",
-            description: "Main landing page of the original portfolio project."
-        },
-        {
-            id: "labs",
-            image: labs,
-            alt: "Portfolio labs page screenshot",
-            description: "Labs section used for experimenting with smaller JavaScript features and projects."
-        },
-        {
-            id: "news",
-            image: news,
-            alt: "Portfolio news page screenshot",
-            description: "News/blog style section used for project updates and announcements."
-        },
-        {
-            id: "preferences",
-            image: preferences,
-            alt: "Portfolio preferences page screenshot",
-            description: "Preferences panel allowing customization and interaction with the site."
         }
     ],
 
