@@ -14,9 +14,9 @@ export default function ControlPanel({
 
     return (
         <div className="word-search-control-panel">
-            <DropdownSelect label={"Difficulty"} value={difficulty} setValue={setDifficulty}
+            <DropdownSelect value={difficulty} setValue={setDifficulty} width={"small"}
                             options={difficultyOptions}/>
-            <DropdownSelect label={"Category"} value={category} setValue={setCategory}
+            <DropdownSelect value={category} setValue={setCategory} width={"large"}
                             options={categoryOptions}/>
             <button className="word-search-new-puzzle-button" onClick={buildPuzzle}>New Puzzle</button>
         </div>

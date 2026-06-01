@@ -1,13 +1,15 @@
 import {useState} from "react";
 import './DropdownSelect.css'
 
-export default function DropdownSelect({label, value, setValue, options}) {
+export default function DropdownSelect({value, setValue, options, width}) {
     const [isOpen, setIsOpen] = useState(false);
     return (
-        <div className="word-search-dropdown-select">
+        <div className={`word-search-dropdown-select ${width}`}>
             <button className="word-search-dropdown-button" onClick={() => {
                 setIsOpen(!isOpen);
-            }}>{label} ▾
+            }}>
+                <span className="word-search-dropdown-text">{value.charAt(0).toUpperCase() + value.slice(1)}</span>
+                <span className="word-search-dropdown-arrow">▾</span>
             </button>
 
             {isOpen && <div className="word-search-dropdown-overlay" onClick={() => setIsOpen(false)}/>}

@@ -4,7 +4,16 @@
     cursor: pointer;
 }
 
+.word-search-dropdown-select.small {
+    width: 100px;
+}
+
+.word-search-dropdown-select.large {
+    width: 200px;
+}
+
 .word-search-dropdown-button {
+    width: 100%;
     border-left: 1px solid var(--wordsearch-300);
     border-right: 1px solid var(--wordsearch-300);
     border-top: 1px solid var(--wordsearch-300);
@@ -14,6 +23,21 @@
     background: var(--wordsearch-50);
     cursor: pointer;
     font-size: var(--font-size-sm);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-sm);
+}
+
+.word-search-dropdown-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.word-search-dropdown-arrow {
+    flex-shrink: 0;
 }
 
 .word-search-dropdown-button:hover {
@@ -67,3 +91,12 @@
     background: var(--wordsearch-accent);
     color: var(--wordsearch-100);
 }
+
+@media (max-width: 768px) {
+    .word-search-dropdown-select,
+    .word-search-new-puzzle-button {
+        flex: 1 1 0;
+        min-width: 0;
+    }
+}
+

@@ -16,7 +16,11 @@
     box-shadow: var(--shadow-sm);
     color: var(--wordsearch-100);
     font-size: var(--font-size-sm);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+
 
 .word-search-new-puzzle-button:hover {
     background: var(--wordsearch-accent-hover);

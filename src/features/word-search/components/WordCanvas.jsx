@@ -128,7 +128,7 @@ export default function WordCanvas() {
     useEffect(() => {
         // eslint-disable-next-line react-hooks/set-state-in-effect
         buildPuzzle();
-    }, []);
+    }, [difficulty, category]);
 
     useEffect(() => {
         const context = canvas.current.getContext("2d");
