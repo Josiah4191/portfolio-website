@@ -36,10 +36,6 @@ import game_play from '../assets/screenshots/uno/game_play.png'
 import settings_selection from '../assets/screenshots/uno/settings_selection.png'
 import game_selection from '../assets/screenshots/uno/game_selection.png'
 
-/* Word Search Screenshots */
-import word_search1 from '../assets/screenshots/word-search/word_search1.png'
-import word_search2 from '../assets/screenshots/word-search/word_search2.png'
-
 /* Portfolio Screenshots */
 import dropdown from '../assets/screenshots/portfolio/dropdown.png'
 import hero_section from '../assets/screenshots/portfolio/hero_section.png'
@@ -48,16 +44,16 @@ import mobile_view from '../assets/screenshots/portfolio/mobile_view.png'
 import stack_section from '../assets/screenshots/portfolio/stack_section.png'
 import portfolio_page from '../assets/screenshots/portfolio/portfolio_page.png'
 
-
 /* Uno Rebuild Screenshots */
 import create_game from '../assets/screenshots/uno-rebuild/create_game.png'
 import draw_card from '../assets/screenshots/uno-rebuild/draw_card.png'
 import play_card from '../assets/screenshots/uno-rebuild/play_card.png'
 
-/* Word Search Rebuild Screenshots */
-import grid from '../assets/screenshots/word-search-rebuild/grid.png'
-import grid_select from '../assets/screenshots/word-search-rebuild/grid_select.png'
-import word_placement_data from '../assets/screenshots/word-search-rebuild/word_placement_data.png'
+/* Word Search Screenshots */
+import word_search_board from '../assets/screenshots/word-search/word_search_board.png'
+import word_search_difficulty from '../assets/screenshots/word-search/word_search_difficulty.png'
+import word_search_category from '../assets/screenshots/word-search/word_search_category.png'
+
 
 export const SCREENSHOT_MAP = {
     "uno-rebuild": [
@@ -80,24 +76,24 @@ export const SCREENSHOT_MAP = {
             description: "Postman response from the play card endpoint showing updated game state, played card information, and reduced player hand size."
         }
     ],
-    "word-search-rebuild": [
+    "word-search": [
         {
-            id: "word-placement-data",
-            image: word_placement_data,
-            alt: "Word placement metadata console output screenshot",
-            description: "Console output showing generated puzzle metadata including placed words, start and end coordinates, directions, and tracked cell paths used for puzzle validation."
+            id: "word-search-board",
+            image: word_search_board,
+            alt: "Word Search game board",
+            description: "Completed word search puzzle featuring custom canvas rendering, drag-to-select gameplay, progress tracking, and found-word highlighting."
         },
         {
-            id: "canvas-grid",
-            image: grid,
-            alt: "Canvas grid rendering screenshot",
-            description: "Initial canvas rendering system displaying a dynamically generated word search grid."
+            id: "word-search-difficulty",
+            image: word_search_difficulty,
+            alt: "Difficulty selection menu",
+            description: "Custom dropdown interface for selecting puzzle difficulty levels with varying directional complexity."
         },
         {
-            id: "grid-selection",
-            image: grid_select,
-            alt: "Grid selection interaction screenshot",
-            description: "Interactive drag-selection system highlighting selected cells across the puzzle grid."
+            id: "word-search-category",
+            image: word_search_category,
+            alt: "Category selection menu",
+            description: "Category selection system allowing players to generate puzzles from different themed word collections."
         }
     ],
     "portfolio": [
@@ -320,20 +316,5 @@ export const SCREENSHOT_MAP = {
             alt: "UNO menu screenshot",
             description: "Main menu interface for navigating game options and settings."
         },
-    ],
-
-    "word-search": [
-        {
-            id: "word-search-1",
-            image: word_search1,
-            alt: "Word Search gameplay screenshot",
-            description: "Gameplay view showing the generated word search puzzle and word list."
-        },
-        {
-            id: "word-search-2",
-            image: word_search2,
-            alt: "Word Search game interface screenshot",
-            description: "Close-up screenshot showing the category selection interface for the Word Search game."
-        }
     ],
 }

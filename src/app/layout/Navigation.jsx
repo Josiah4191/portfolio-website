@@ -40,6 +40,7 @@ export default function Navigation() {
                                 to={project.route}>{project.title}</NavLink></li>)}
                         </ul>
                     </li>
+                    <li><NavLink to="/word-search">Word Search</NavLink></li>
                 </ul>
                 <div className="nav-menu" onClick={toggleMenu}>
                     <MenuIcon className="nav-menu-icon"/>
@@ -58,6 +59,7 @@ export default function Navigation() {
                                     to={project.route}>{project.title}</NavLink></li>)}
                             </ul> : null}
                     </li>
+                    <li className="nav-mobile-link"><NavLink to="/word-search">Word Search</NavLink></li>
                 </ul>
             </div>
         </nav>

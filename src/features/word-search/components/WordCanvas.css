@@ -1,0 +1,58 @@
+.word-search-board {
+    display: flex;
+    flex-direction: column;
+    width: min(600px, 100%);
+}
+
+.word-search-title-wrapper {
+    width: 100%;
+    margin-bottom: var(--gap-md);
+}
+
+.word-search-divider {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, var(--wordsearch-accent), var(--wordsearch-100));
+}
+
+.word-search-canvas {
+    touch-action: none;
+}
+
+.word-search-canvas-wrapper {
+    grid-area: board;
+    width: 100%;
+    background-color: var(--wordsearch-50);
+    box-shadow: var(--shadow-md);
+    margin-bottom: var(--gap-md);
+    border: 1px solid var(--wordsearch-300);
+    cursor: pointer;
+}
+
+.found {
+    text-decoration: line-through;
+    color: var(--wordsearch-accent);
+}
+
+.settings {
+    display: flex;
+    padding: var(--padding-md);
+    gap: var(--gap-md);
+}
+
+.active-category, .settings-title {
+    text-align: center;
+}
+
+.word-search-title {
+    font-size: var(--font-size-md);
+}
+
+.word-search-difficulty-title, .word-search-progress-title {
+    font-size: var(--font-size-sm);
+    opacity: 0.7;
+}
+
+.divider.word-search-divider {
+    background: linear-gradient(to right, var(--color-accent), var(--wordsearch-100) , var(--color-accent));
+}

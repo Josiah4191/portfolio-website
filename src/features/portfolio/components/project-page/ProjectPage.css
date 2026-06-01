@@ -27,15 +27,18 @@
     background-color: var(--slate-100);
     border-radius: var(--radius-sm);
     box-shadow: var(--shadow-sm);
-    transition: 0.2s ease;
     width: 160px;
-
+    transition:
+            background-color 0.2s ease,
+            color 0.2s ease,
+            border-color 0.2s ease,
+            transform 0.3s ease;
     display: flex;
     justify-content: center;
 }
 
 .project-link-arrow {
-    transition: 0.2s ease;
+    transition: transform 0.2s ease;
 }
 
 .project-link-card:hover .project-link-arrow {
@@ -44,6 +47,8 @@
 
 .project-link-card:hover {
     background-color: var(--color-accent-hover);
+    border-color: var(--color-accent-hover);
+    color: var(--color-text-alt);
     text-decoration: none;
 }
 

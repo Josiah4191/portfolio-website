@@ -11,6 +11,7 @@ import {loadSquirrels, loadStashes, loadStashItems} from "../features/squirrel/a
 import SquirrelPageError from "../features/squirrel/components/squirrel-page/SquirrelPageError.jsx";
 import StashPageError from "../features/squirrel/components/stash-page/StashPageError.jsx";
 import ItemsPageError from "../features/squirrel/components/items-page/ItemsPageError.jsx";
+import WordSearchPage from "../features/word-search/pages/WordSearchPage.jsx";
 
 const router = createBrowserRouter(
     [
@@ -54,6 +55,13 @@ const router = createBrowserRouter(
             element: <RootLayout theme={THEMES.portfolio}/>,
             children: [
                 {index: true, element: <ProjectDetails/>},
+            ]
+        },
+        {
+            path: "/word-search",
+            element: <RootLayout theme={THEMES["word-search"]}/>,
+            children: [
+                {index: true, element: <WordSearchPage/>},
             ]
         },
     ]

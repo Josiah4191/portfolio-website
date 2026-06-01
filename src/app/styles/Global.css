@@ -1,4 +1,12 @@
 @import url("../../../public/fonts/Inter/inter.css");
+/*
+Background      #F6F2E8
+Cards           #FFFDF8
+Board           #FFFDF8
+Text            #4B5563
+Accent          #6B8E6E
+Accent Hover    #557558
+ */
 
 :root {
     /*========== Font and typography ==========*/
@@ -42,6 +50,17 @@
     --squirrel-600: #3c3328; /* your current text */
     --squirrel-accent: #8ca88a;
     --squirrel-accent-hover: #C08968;
+
+    /* Word Search palette */
+    --wordsearch-50: #fffdf8; /* almost white paper */
+    --wordsearch-100: #f9f5ec; /* light paper */
+    --wordsearch-200: #f2ebdc; /* page background */
+    --wordsearch-300: #e4d8c0; /* borders/dividers */
+    --wordsearch-400: #cbb89a; /* secondary accents */
+    --wordsearch-500: #8f7a5c; /* muted brown */
+    --wordsearch-600: #4b5563; /* primary text */
+    --wordsearch-accent: #8b4b5a;
+    --wordsearch-accent-hover: #6f3947;
 
     /*========== Spacing ==========*/
     /*
@@ -103,6 +122,7 @@
     --color-header: var(--slate-200);
     --color-border: var(--slate-300);
     --color-text: var(--slate-600);
+    --color-text-alt: var(--slate-50);
     --color-accent: var(--accent-peach);
     --color-accent-hover: var(--accent-peach-hover);
 }
@@ -112,8 +132,19 @@
     --color-header: var(--squirrel-300);
     --color-border: var(--squirrel-400);
     --color-text: var(--squirrel-600);
+    --color-text-alt: var(--squirrel-50);
     --color-accent: var(--squirrel-accent);
     --color-accent-hover: var(--squirrel-accent-hover);
+}
+
+.page-word-search {
+    --color-background: var(--wordsearch-100);
+    --color-header: var(--wordsearch-200);
+    --color-border: var(--wordsearch-300);
+    --color-text: var(--wordsearch-600);
+    --color-text-alt: var(--wordsearch-50);
+    --color-accent: var(--wordsearch-accent);
+    --color-accent-hover: var(--wordsearch-accent-hover);
 }
 
 .page-portfolio, .page-squirrel {

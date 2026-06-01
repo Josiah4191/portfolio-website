@@ -1,0 +1,23 @@
+.word-search-control-panel {
+    width: 100%;
+    display: flex;
+    gap: var(--gap-md);
+}
+
+.word-search-new-puzzle-button {
+    padding: var(--padding-sm);
+    border-bottom: 1px solid var(--wordsearch-accent);
+    border-left: 1px solid var(--wordsearch-accent);
+    border-right: 1px solid var(--wordsearch-accent);
+    border-top: 1px solid var(--wordsearch-accent);
+    border-top-right-radius: var(--radius-sm);
+    border-top-left-radius: var(--radius-sm);
+    background: var(--wordsearch-accent);
+    box-shadow: var(--shadow-sm);
+    color: var(--wordsearch-100);
+    font-size: var(--font-size-sm);
+}
+
+.word-search-new-puzzle-button:hover {
+    background: var(--wordsearch-accent-hover);
+}

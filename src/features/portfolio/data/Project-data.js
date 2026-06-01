@@ -49,46 +49,44 @@ export const PROJECTS = [
             ]
         },
         {
-            slug: 'word-search-rebuild',
-            title: "Word Search Rebuild",
-            summary: "An in-progress React and Canvas word search game with custom rendering and drag-selection interactions.",
-
-            fullDescription:
-                "This project is an ongoing rebuild of a previous word search game using React, JavaScript, and the HTML Canvas API. " +
-                "The current focus is on building custom rendering systems, drag-based word selection mechanics, dynamic puzzle generation, and coordinate-based interaction logic using canvas rendering techniques. " +
-                "The project is also being used as a deeper learning experience for interactive front-end systems, state-driven rendering, React hooks, and game-style UI architecture.",
-
-            route: "/projects/word-search-rebuild",
-
+            slug: 'word-search',
+            title: "Word Search",
+            summary: "A React and HTML Canvas word search game featuring procedural puzzle generation, drag-to-select gameplay, and responsive design.",
+            fullDescription: "Word Search is a word search game built with React, JavaScript, and the HTML Canvas API. Players solve dynamically " +
+                "generated puzzles using drag-based word selection, custom canvas rendering, and interactive UI controls. The project focuses on game-style " +
+                "front-end development, reusable React components, and responsive design while serving as a platform for future gameplay and puzzle-generation " +
+                "features.",
+            route: "/projects/word-search",
             badges: [
                 BADGE_MAP.react,
                 BADGE_MAP.javascript,
                 BADGE_MAP.html,
                 BADGE_MAP.css,
             ],
-
-            screenshots: SCREENSHOT_MAP["word-search-rebuild"],
-
+            screenshots: SCREENSHOT_MAP["word-search"],
             features: [
+                "Procedural puzzle generation from categorized word banks",
+                "Drag-to-select gameplay with directional word detection",
                 "Custom HTML Canvas rendering system for puzzle visualization",
-                "Interactive click-and-drag word selection mechanics",
-                "Dynamic word puzzle generation and grid management",
-                "Coordinate-based mouse interaction and directional selection logic",
-                "State-driven rendering updates using React hooks",
-                "Ongoing development focused on expanding gameplay interactions and UI polish"
+                "Difficulty settings with varying puzzle complexity",
+                "Responsive layout supporting desktop and mobile devices",
+                "Progress tracking with completed-word highlighting",
+                "Component-based React architecture with reusable UI systems"
             ],
-
             links: [
                 {
                     label: "GitHub",
-                    url: "https://github.com/Josiah4191/word-search-rebuild",
+                    url: "https://github.com/Josiah4191/word-search-rebuild"
+                },
+                {
+                    label: "Live Demo",
+                    url: "/word-search"
                 }
             ],
-
             lessonsLearned: [
-                "This project has significantly improved my understanding of canvas rendering, coordinate systems, and interactive front-end architecture.",
-                "I gained experience translating mouse input into grid-based interaction systems using React state and canvas rendering techniques.",
-                "The rebuild is also strengthening my understanding of drag interactions, rendering pipelines, state-driven UI updates, and game-style interaction design."
+                "This project strengthened my understanding of React state management, reusable component design, and front-end architecture.",
+                "I gained practical experience working with the HTML Canvas API, coordinate systems, mouse interactions, and custom rendering techniques.",
+                "Building the selection and validation systems improved my understanding of event handling, game-style user interactions, and state-driven rendering workflows.",
             ]
         },
         {
@@ -243,42 +241,6 @@ export const PROJECTS = [
                 "The project also improved my understanding of organizing larger applications into separate layers and components."
             ]
         },
-        {
-            slug: 'word-search',
-            title: "Word Search",
-            summary: "A responsive word search game built with JavaScript, HTML, and CSS.",
-            fullDescription: "Word Search is a browser-based game built with HTML, CSS, and vanilla JavaScript. The project " +
-                "focuses on generating and displaying a word search grid, handling user interaction with letters, and practicing " +
-                "DOM manipulation and event handling. The current version is intentionally simple, with future plans to rebuild or " +
-                "expand it with React and Canvas-based drawing features.",
-            route: "/projects/word-search",
-            badges: [
-                BADGE_MAP.html,
-                BADGE_MAP.css,
-                BADGE_MAP.javascript,
-            ],
-            screenshots: SCREENSHOT_MAP["word-search"],
-            features: [
-                "Word search grid rendered in the browser",
-                "Interactive letter selection using JavaScript events",
-                "Word list display for the player",
-                "Basic game logic for placing and finding words",
-                "Responsive layout and styling with CSS",
-                "Planned Canvas upgrade for drawing around selected words"
-            ],
-            links: [
-                {
-                    label: "GitHub",
-                    url: "https://github.com/Josiah4191/portfolio-website-original/tree/main/src/game",
-                }
-            ],
-            lessonsLearned: [
-                "This project helped me practice core JavaScript concepts such as DOM manipulation, event handling, arrays, grid-based layout, and basic game logic.",
-                "It also gave me a better understanding of how browser interaction works without relying on a framework.",
-                "I plan to revisit this project later to improve the interaction system and add Canvas-based drawing features.",
-            ]
-        }
-        ,
         {
             slug: 'uno',
             title: "UNO",

@@ -1,5 +1,4 @@
 import './ProjectPage.css'
-import StackCard from "../stack/StackCard.jsx";
 import ProjectLinkCard from "./ProjectLinkCard.jsx";
 import ProjectFeatureCard from "./ProjectFeatureCard.jsx";
 import ProjectScreenshotCard from "./ProjectScreenshotCard.jsx";
