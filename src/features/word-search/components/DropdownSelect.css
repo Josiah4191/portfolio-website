@@ -63,8 +63,8 @@
     border-bottom-right-radius: var(--radius-sm);
     border: 1px solid var(--wordsearch-300);
     border-top: none;
+    width: 100%;
     background: var(--wordsearch-50);
-    width: 160px;
     overflow: hidden;
     color: var(--color-text);
 

@@ -1,4 +1,3 @@
-import ActionToggle from "../../ActionToggle.jsx";
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {SQUIRREL_NAMES} from "../../../data/Squirrel-names.js";
