@@ -1,9 +1,0 @@
-.word-search-section {
-    padding-top: var(--padding-xl);
-}
-
-.word-search-wrapper {
-    grid-column: 1/-1;
-    display: flex;
-    justify-content: center;
-}

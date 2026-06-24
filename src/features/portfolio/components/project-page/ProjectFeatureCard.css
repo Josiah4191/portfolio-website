@@ -1,0 +1,12 @@
+.project-feature-card {
+    width: 100%;
+    border: 1px solid var(--slate-200);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+    background-color: var(--slate-50);
+    padding: var(--padding-md);
+}
+
+.project-feature-card::before {
+    content: "✓ ";
+}

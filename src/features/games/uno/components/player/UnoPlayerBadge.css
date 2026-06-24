@@ -1,0 +1,134 @@
+.uno-player-badge {
+    display: flex;
+    background: transparent;
+    flex-direction: column;
+    width: var(--uno-opponent-badge-width);
+    font-size: var(--uno-player-font-size);
+    color: var(--color-text-muted);
+    transition: transform 0.2s ease-in-out;
+    align-items: flex-start;
+    gap: 5px;
+    position: relative;
+}
+
+.uno-player-label {
+    white-space: nowrap;
+    font-weight: 700;
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    letter-spacing: 0.02em;
+    min-width: 80px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out, border 0.2s ease-in-out;
+    cursor: default;
+    position: relative;
+    overflow: hidden;
+    opacity: 0.8;
+}
+
+.uno-player-label-text {
+    position: relative;
+    z-index: 1;
+}
+
+.uno-player-card-count {
+    display: flex;
+    gap: 2px;
+    align-items: center;
+    position: relative;
+}
+
+.uno-player-action-text {
+    animation: float-up-player 1.4s ease-in-out 1 forwards;
+    position: absolute;
+    bottom: 0;
+    font-size: 16px;
+    pointer-events: none;
+    width: 100%;
+    text-align: center;
+    font-weight: var(--font-weight-bold);
+}
+
+.uno-player-card-count-label {
+    font-size: var(--uno-player-font-size);
+    opacity: 0.6;
+    position: absolute;
+    left: 100%;
+    margin-left: 6px;
+}
+
+.uno-player-card-count-card {
+    width: 10px;
+    height: 18px;
+    background-color: var(--color-border);
+    border-radius: 1px;
+}
+
+.uno-player-label.uno-player-badge-has-action {
+    animation: pulse-white 1s ease-in-out infinite;
+}
+
+.uno-player-label.uno-player-badge-has-countdown:hover,
+.uno-player-label.uno-player-badge-has-action:hover {
+    cursor: pointer;
+    animation: none;
+    transition: border 0.2s ease-in-out;
+    border: var(--color-text-muted) 1px solid;
+}
+
+.uno-player-label.uno-player-badge-has-countdown::before {
+    content: "";
+    position: absolute;
+    background: var(--color-border);
+    inset: 0;
+    z-index: 0;
+    transform-origin: left;
+    animation: uno-countdown-drain 2s linear forwards;
+}
+
+@keyframes pulse-white {
+    0% {
+        border: var(--color-border) 1px solid;
+    }
+
+    50% {
+        border: var(--color-text-muted) 1px solid;
+    }
+
+    100% {
+        border: var(--color-border) 1px solid;
+    }
+}
+
+@keyframes float-up-player {
+    0% {
+        transform: translateY(8px);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+}
+
+@keyframes uno-countdown-drain {
+    from {
+        transform: scaleX(1);
+    }
+
+    to {
+        transform: scaleX(0);
+    }
+}

@@ -1,0 +1,48 @@
+.action-area {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(calc(var(--uno-card-width) + 32px), -50%);
+    z-index: 1000;
+}
+
+.action-area-message {
+    animation: float-up 1.8s ease-in-out 1 forwards;
+    font-weight: var(--font-weight-bold);
+}
+
+.action-color.red {
+    color: var(--game-accent-red);
+}
+
+.action-color.blue {
+    color: var(--game-accent-blue);
+}
+
+.action-color.green {
+    color: var(--game-accent-green);
+}
+
+.action-color.yellow {
+    color: var(--game-accent-yellow);
+}
+
+@keyframes float-up {
+    0% {
+        transform: translateY(8px);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+}

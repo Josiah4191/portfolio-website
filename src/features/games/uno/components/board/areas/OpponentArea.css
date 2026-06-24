@@ -1,0 +1,16 @@
+.opponent-area-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.opponent-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--gap-xl);
+    margin-top: var(--gap-xxl);
+    width: calc(
+            (var(--uno-opponent-badge-width) * var(--uno-opponent-columns)) +
+            (var(--gap-xl) * (var(--uno-opponent-columns) - 1))
+    );
+}

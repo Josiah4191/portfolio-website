@@ -1,0 +1,7 @@
+.uno-player-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap-xxl);
+    padding-bottom: var(--padding-xxl);
+}

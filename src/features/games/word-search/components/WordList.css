@@ -1,0 +1,36 @@
+.word-search-word-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--gap-sm);
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+}
+
+.word-search-word-list-item {
+    transition: color 0.25s ease, opacity 0.25s ease;
+}
+
+.word-search-word-check {
+    opacity: 0;
+    padding: var(--padding-sm);
+    transition: opacity 0.25s ease;
+}
+
+.found {
+    color: var(--color-text);
+}
+
+.word-search-word-list-item.found-item .word-search-word-check {
+    opacity: 1;
+}
+
+.word-search-word-list-item .found {
+    color: var(--color-text-subtle);
+    text-decoration: line-through;
+}
+
+@media (max-width: 768px) {
+    .word-search-word-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

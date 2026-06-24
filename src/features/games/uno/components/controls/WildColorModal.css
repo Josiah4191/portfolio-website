@@ -1,0 +1,48 @@
+.wild-color-modal {
+    position: relative;
+    display: flex;
+    gap: 10px;
+}
+
+.wild-card {
+    width: 40px;
+    height: 50px;
+    background-color: var(--color-surface);
+    border: var(--color-border) 1px solid;
+    border-radius: 3px;
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+    cursor: pointer;
+}
+
+.wild-card:hover {
+    transition: border 0.2s ease-in-out;
+    border: var(--color-text) 1px solid;
+}
+
+.wild-card.red {
+    background-color: var(--game-accent-red);
+}
+
+.wild-card.blue {
+    background-color: var(--game-accent-blue);
+}
+
+.wild-card.green {
+    background-color: var(--game-accent-green);
+}
+
+.wild-card.yellow {
+    background-color: var(--game-accent-yellow);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

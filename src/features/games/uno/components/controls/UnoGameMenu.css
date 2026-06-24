@@ -1,0 +1,149 @@
+.uno-game-menu {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.uno-menu-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.uno-game-title {
+    font-size: 32px;
+}
+
+.uno-start-game-button {
+    padding: 10px;
+    background-color: var(--color-surface);
+    color: var(--color-text-muted);
+    border: var(--color-border) 1px solid;
+    transition: border 0.2s ease-in-out;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 3px;
+    width: 120px;
+}
+
+.uno-start-game-button:hover {
+    border: var(--color-text-muted) 1px solid;
+}
+
+.uno-player-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.uno-player-count-options {
+    display: flex;
+    position: relative;
+}
+
+.uno-player-count {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 48px;
+    height: 72px;
+    border-radius: 5px;
+    gap: 5px;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.uno-player-count:hover .uno-player-dot {
+    background: var(--color-text);
+    box-shadow:
+            0 0 8px rgba(255,255,255,.8),
+            0 0 16px rgba(255,255,255,.4);
+}
+
+.uno-player-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+
+.uno-player-dot.selected {
+    background: var(--color-text);
+    box-shadow:
+            0 0 8px rgba(255,255,255,.8),
+            0 0 16px rgba(255,255,255,.4);
+}
+
+.uno-player-number, .uno-player-count-title {
+    font-size: 16px;
+    color: var(--color-text-muted);
+}
+
+.corner {
+    position: absolute;
+    width: 12px;
+    height: 2px;
+    background-color: var(--color-border);
+}
+
+.corner.top-left {
+    top: 0;
+    left: 0;
+}
+
+.corner.top-left::after {
+    content: "";
+    position: absolute;
+    background-color: var(--color-border);
+    height: 12px;
+    width: 2px;
+    top: 0;
+}
+
+.corner.top-right {
+    top: 0;
+    right: 0;
+}
+
+.corner.top-right::after {
+    content: "";
+    position: absolute;
+    background-color: var(--color-border);
+    height: 12px;
+    width: 2px;
+    right: 0;
+}
+
+.corner.bottom-left {
+    bottom: 0;
+    left: 0;
+}
+
+.corner.bottom-left::after {
+    content: "";
+    position: absolute;
+    background-color: var(--color-border);
+    height: 12px;
+    width: 2px;
+    bottom: 0;
+}
+
+.corner.bottom-right {
+    bottom: 0;
+    right: 0;
+}
+
+.corner.bottom-right::after {
+    content: "";
+    position: absolute;
+    background-color: var(--color-border);
+    height: 12px;
+    width: 2px;
+    bottom: 0;
+    right: 0;
+}
+

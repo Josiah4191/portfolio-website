@@ -1,0 +1,47 @@
+.word-search-page {
+    display: flex;
+    flex-direction: column;
+}
+
+.word-search-game {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 20px 10px;
+}
+
+.word-search-game-card {
+    display: flex;
+    flex-direction: column;
+    width: min(600px, 100%);
+}
+
+.word-search-game-header {
+    width: 100%;
+    margin-bottom: var(--gap-md);
+    padding: var(--padding-sm);
+}
+
+.word-search-board-wrapper {
+    grid-area: board;
+    width: 100%;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-surface);
+    box-shadow: var(--shadow-md);
+    margin-bottom: var(--gap-md);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+}
+
+.word-search-board {
+    touch-action: none;
+}
+
+.word-search-title {
+    font-size: var(--font-size-md);
+}
+
+.word-search-progress {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-subtle);
+}

@@ -1,0 +1,19 @@
+.stack-card {
+    min-width: 120px;
+    min-height: 80px;
+    padding: var(--padding-sm);
+    box-shadow: var(--shadow-sm);
+    background: var(--slate-50);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--slate-200);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-sm);
+}
+
+.stack-card-label {
+    font-size: var(--font-size-sm);
+}

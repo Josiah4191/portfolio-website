@@ -1,8 +1,11 @@
+import './ProjectScreenshotCard.css'
 
-export default function ProjectScreenshotCard({id, image, alt, onClick}) {
+export default function ProjectScreenshotCard({image, alt}) {
     return (
-        <div className="project-screenshot-card card-interactive" onClick={onClick}>
+        <article
+            type="button"
+            className="project-screenshot-card">
             <img src={image} alt={alt}/>
-        </div>
+        </article>
     )
 }

@@ -2,26 +2,19 @@
     min-height: 80vh;
 }
 
-.hero-title, .hero-description, .hero-intro {
-    grid-column: 1/-1;
-    width: 100%;
-    max-width: 560px;
-    justify-self: center;
-    text-align: start;
+.hero-name {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-regular);
+}
+
+.hero-section-links {
+    display: flex;
+    gap: var(--gap-sm);
 }
 
 @media (max-width: 480px) {
-    .hero-section {
-        padding-top: var(--mobile-section-spacing);
-        padding-bottom: var(--mobile-section-spacing);
+    .hero-section-links {
+        flex-direction: column;
     }
-
-    .hero-title, .hero-description {
-        text-align: center;
-    }
-
-    .hero-intro {
-        max-width: 300px;
-    }
-
 }
+

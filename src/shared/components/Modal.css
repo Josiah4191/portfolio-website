@@ -1,0 +1,38 @@
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: var(--padding-lg);
+    backdrop-filter: blur(1px);
+}
+
+.modal-panel {
+    max-width: calc(100vw - (2 * var(--padding-lg)));
+    max-height: calc(100vh - (2 * var(--padding-lg)));
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 101;
+    position: relative;
+}
+
+.modal-panel::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-panel::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.modal-panel::-webkit-scrollbar-thumb {
+    background-color: var(--color-border);
+    border-radius: 999px;
+}
+
+.modal-panel::-webkit-scrollbar-thumb:hover {
+    background: var(--color-text-subtle);
+}

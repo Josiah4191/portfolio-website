@@ -1,0 +1,118 @@
+.gallery-carousel {
+    position: relative;
+}
+
+.gallery-carousel-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.gallery-carousel-slide {
+    width: 100%;
+    max-width: 900px;
+    height: 420px;
+
+    border: 1px solid var(--slate-200);
+}
+
+.gallery-carousel-slide.is-exiting {
+    animation: gallery-fade-out 0.25s ease forwards;
+}
+
+.gallery-carousel-slide.is-entering {
+    position: absolute;
+    inset: 0;
+    animation: gallery-fade-in 0.25s ease forwards;
+}
+
+@keyframes gallery-fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.gallery-carousel-button {
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: var(--slate-300);
+    font-size: var(--font-size-xxl);
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background 0.2s ease-in-out;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-carousel-icon {
+    height: 32px;
+    width: 32px;
+}
+
+.gallery-carousel-icon-left {
+    transform: rotate(180deg);
+}
+
+.gallery-carousel-button:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.gallery-carousel-previous-button {
+    left: -50px;
+}
+
+.gallery-carousel-next-button {
+    right: -50px;
+}
+
+.gallery-carousel-dots {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 5px;
+}
+
+.gallery-carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 9999px;
+    border: 1px solid var(--slate-300);
+}
+
+.gallery-carousel-dot.active {
+    background-color: var(--slate-300);
+    border: none;
+}
+
+@media (max-width: 480px) {
+
+    .gallery-carousel-slide {
+        height: 280px;
+    }
+
+    .gallery-carousel-button {
+        top: unset;
+        bottom: -45px;
+        transform: none;
+    }
+
+    .gallery-carousel-previous-button {
+        left: 24px;
+    }
+
+    .gallery-carousel-next-button {
+        right: 24px;
+    }
+}

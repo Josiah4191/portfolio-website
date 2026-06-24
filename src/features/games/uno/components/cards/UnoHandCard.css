@@ -1,0 +1,40 @@
+.uno-hand-card {
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+}
+
+.uno-hand-card.uno-hand-card-is-hidden {
+    opacity: 0;
+}
+
+.uno-hand-card.uno-hand-card-is-pending .uno-card-face {
+    animation: pulse-white-card 1s infinite;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .uno-hand-card .uno-card-face:hover {
+        transform: translateY(-4px);
+        transition: transform 0.2s ease-in-out;
+    }
+}
+
+.uno-hand-card.uno-hand-card-is-pending .uno-card-face:hover {
+    border: var(--color-text) 1px solid;
+    animation: none;
+    transition: transform 0.2s ease-in-out;
+}
+
+@keyframes pulse-white-card {
+    0% {
+        border: var(--color-border) 1px solid;
+    }
+
+    50% {
+        border: var(--color-text) 1px solid;
+    }
+
+    100% {
+        border: var(--color-border) 1px solid;
+    }
+}
