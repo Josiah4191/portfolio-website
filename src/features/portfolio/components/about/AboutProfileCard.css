@@ -1,5 +1,6 @@
 .about-profile-card {
     padding: var(--space-lg);
+    height: 100%;
 
     box-shadow: var(--surface-card);
     background-color: var(--color-surface);

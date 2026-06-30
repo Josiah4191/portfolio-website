@@ -6,7 +6,6 @@
     border-radius: var(--radius-md);
     box-shadow: var(--surface-card);
 
-
     display: flex;
     gap: var(--space-md);
     text-align: center;

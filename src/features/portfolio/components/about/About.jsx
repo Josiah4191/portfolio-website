@@ -7,7 +7,7 @@ import AboutProfileCard from "./AboutProfileCard.jsx";
 export default function About() {
     return (
         <section id="about" className="section" aria-labelledby="about-title">
-            <div className="grid page-margin about-grid">
+            <div className="grid page-margin about-section">
 
                 <div className="about-intro">
                     <SectionHeader
