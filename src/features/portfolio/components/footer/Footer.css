@@ -1,6 +1,5 @@
 .footer-section {
-    padding: var(--space-lg);
-
+    padding-block: 1rem;
     background: var(--color-background);
     box-shadow: var(--surface-card);
     color: var(--color-text);

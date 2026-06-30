@@ -15,7 +15,7 @@
 
     /* Page Layout */
     --section-spacing: 7.5rem;
-    --nav-section-spacing: 1.5rem;
+    --nav-section-spacing: 1rem;
     --page-margin: 10rem;
     --nav-margin: 3rem;
     --grid-gutter: 2rem;
@@ -45,10 +45,6 @@
 
 .page-margin {
     margin-inline: var(--page-margin);
-}
-
-.page-margin-media {
-    margin-inline: var(--page-margin-media);
 }
 
 .nav-page-margin {
