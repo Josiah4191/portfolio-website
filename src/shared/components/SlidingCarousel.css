@@ -27,7 +27,7 @@
     color: var(--color-accent);
     font-size: var(--font-size-2xl);
     background: var(--color-surface);
-    box-shadow: var(--surface-button);
+    box-shadow: var(--surface-icon-wrapper);
 
     position: absolute;
     top: 50%;
@@ -68,7 +68,7 @@
     }
 
     .sliding-carousel-button:hover {
-        background: var(--color-hover-surface);
+        background: var(--color-accent-soft);
     }
 
 }
