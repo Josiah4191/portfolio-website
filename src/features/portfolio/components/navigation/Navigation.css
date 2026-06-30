@@ -89,7 +89,6 @@
     .nav-brand:hover > .nav-logo-mark {
         background-color: var(--color-subsurface);
     }
-
 }
 
 @media (max-width: 600px) {
