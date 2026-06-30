@@ -4,7 +4,7 @@
     height: fit-content;
 
     border-radius: var(--radius-md);
-    box-shadow: var(--surface-card);
+    box-shadow: var(--surface-icon-wrapper);
     background-color: var(--portfolio-color-surface);
 
     display: flex;
