@@ -75,6 +75,10 @@
     display: none;
 }
 
+.nav-menu-button-desktop-container {
+    display: flex;
+}
+
 /* Hover Effects */
 @media (hover: hover) and (pointer: fine) {
     .nav-brand:hover > .nav-name-full,
