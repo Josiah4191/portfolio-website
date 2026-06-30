@@ -27,6 +27,6 @@
 
 @media (hover: hover) and (pointer: fine) {
     .hero-link:hover {
-        background-color: var(--color-hover-surface);
+        background-color: var(--color-accent-soft);
     }
 }

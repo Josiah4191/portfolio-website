@@ -16,8 +16,7 @@
 
     background: var(--color-surface);
     border-radius: 50%;
-    box-shadow: var(--surface-card);
-    color: #5b94c8;
+    box-shadow: var(--surface-icon-wrapper);
 
     display: grid;
     place-items: center;
