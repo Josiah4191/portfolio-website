@@ -2,23 +2,29 @@ import './Stack.css';
 import StackCard from "./StackCard.jsx";
 import {BADGES} from "../../data/badgeData.js"
 import SlidingCarousel from "../../../../shared/components/SlidingCarousel.jsx";
+import SectionHeader from "../project-page/SectionHeader.jsx";
 
 export default function Stack() {
     return (
-        <section id="stack" className="section">
+        <section className="section" aria-labelledby="stack-title">
             <div className="grid page-margin">
-                <h2 className="section-title section-content">Stack</h2>
-                {/*<p className="section-content">These are some of the technologies and tools I use when building web
-                    applications and software projects.</p>*/}
-                <SlidingCarousel
-                    variant="carousel-card"
-                    ariaLabel="Tools"
-                    className="section-content">
-                    {BADGES.map((badge) =>
-                        <li key={badge.id}>
-                            <StackCard {...badge}/>
-                        </li>)}
-                </SlidingCarousel>
+
+                <div className="stack-section-header">
+                    <SectionHeader
+                        eyebrow="TECHNOLOGIES"
+                        title="My Stack"
+                        titleId="stack-title"
+                        description="Here are the technologies and tools I use to build modern, responsive, and scalable web applications."/>
+                </div>
+
+                <div className="stack-section-carousel">
+                    <SlidingCarousel
+                        ariaLabel="Tools"
+                        trackClass="stack-section-track">
+                        {BADGES.map((badge) => <StackCard key={badge.id} badge={badge}/>)}
+                    </SlidingCarousel>
+
+                </div>
             </div>
         </section>
     )

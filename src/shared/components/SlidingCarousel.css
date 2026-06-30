@@ -3,19 +3,16 @@
 }
 
 .sliding-carousel-viewport {
-    border-right: 1px solid var(--color-border);
-    border-left: 1px solid var(--color-border);
+    border-right: 2px solid var(--color-border);
+    border-left: 2px solid var(--color-border);
 }
 
 .sliding-carousel-track {
-    display: flex;
-    gap: var(--gap-sm);
-
     overflow-x: auto;
     scrollbar-width: none;
     scroll-behavior: smooth;
     --webkit-overflow-scrolling: touch;
-    padding: var(--padding-md);
+    padding: var(--space-md);
 }
 
 .sliding-carousel-track::-webkit-scrollbar {
@@ -27,13 +24,15 @@
     width: 42px;
     border-radius: 50%;
     cursor: pointer;
-    color: var(--slate-300);
-    font-size: var(--font-size-xxl);
+    color: var(--color-accent);
+    font-size: var(--font-size-2xl);
+    background: var(--color-surface);
+    box-shadow: var(--surface-button);
 
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    transition: background 0.2s ease-in-out;
+    transition: background 0.2s ease-in-out, opacity 0.2s ease-in-out;
 
     display: flex;
     align-items: center;
@@ -42,11 +41,7 @@
 
 .sliding-carousel-button:disabled {
     cursor: default;
-    opacity: 0.3;
-}
-
-.sliding-carousel-button:hover {
-    background: rgba(0, 0, 0, 0.05);
+    opacity: 0;
 }
 
 .sliding-carousel-button-left {
@@ -64,6 +59,18 @@
 
 .sliding-carousel-icon-left {
     transform: rotate(180deg);
+}
+
+/* Hover Effects */
+@media (hover: hover) and (pointer: fine) {
+    .sliding-carousel-button:not(:disabled) {
+        opacity: 1;
+    }
+
+    .sliding-carousel-button:hover {
+        background: var(--color-hover-surface);
+    }
+
 }
 
 

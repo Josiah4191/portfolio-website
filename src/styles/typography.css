@@ -1,0 +1,373 @@
+@import url("../../public/fonts/Inter/inter.css");
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+    --font-portfolio: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-squirrel: "Amatic SC", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+    /*================================*/
+    /* Font Weights                   */
+    /*================================*/
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+    --font-weight-black: 900;
+
+    /*================================*/
+    /* Font Sizes                     */
+    /*================================*/
+    --font-size-xs: 0.75rem; /* 12px */
+    --font-size-sm: 0.875rem; /* 14px */
+    --font-size-base: 1rem; /* 16px */
+    --font-size-base-lg: 1.125rem;
+    --font-size-md: 1.25rem; /* 20px */
+    --font-size-lg: 1.5rem; /* 24px */
+    --font-size-xl: 2rem; /* 32px */
+    --font-size-xl-lg: 2.5rem; /* 40px */
+    --font-size-2xl: 3rem; /* 48px */
+    --font-size-2xl-lg: 3.5rem; /* 56px */
+    --font-size-3xl: 4.5rem; /* 72px */
+
+    /*================================*/
+    /* Page                           */
+    /*================================*/
+    --type-page-title-size: var(--font-size-3xl);
+    --type-page-title-weight: var(--font-weight-bold);
+    --type-page-title-line-height: 1.1;
+    --type-page-title-letter-spacing: 0;
+
+    --type-page-text-size: var(--font-size-md);
+    --type-page-text-weight: var(--font-weight-semibold);
+    --type-page-text-line-height: 1.6;
+    --type-page-text-letter-spacing: 0;
+
+    --type-page-eyebrow-size: var(--font-size-base);
+    --type-page-eyebrow-weight: var(--font-weight-semibold);
+    --type-page-eyebrow-line-height: 1.3;
+    --type-page-eyebrow-letter-spacing: 0.04em;
+
+    /*================================*/
+    /* Section                        */
+    /*================================*/
+
+    --type-section-page-title-size: var(--font-size-2xl-lg);
+    --type-section-page-title-weight: var(--font-weight-bold);
+    --type-section-page-title-line-height: 1.1;
+    --type-section-page-title-letter-spacing: 0;
+
+    --type-section-title-size: var(--font-size-2xl);
+    --type-section-title-weight: var(--font-weight-semibold);
+    --type-section-title-line-height: 1.1;
+    --type-section-title-letter-spacing: 0;
+
+    --type-section-subtitle-size: var(--font-size-md);
+    --type-section-subtitle-weight: var(--font-weight-semibold);
+    --type-section-subtitle-line-height: 1.6;
+    --type-section-subtitle-letter-spacing: 0;
+
+    --type-section-text-size: var(--font-size-base);
+    --type-section-text-weight: var(--font-weight-medium);
+    --type-section-text-line-height: 1.6;
+    --type-section-text-letter-spacing: 0;
+
+    /*================================*/
+    /* Cards                          */
+    /*================================*/
+    --type-card-title-size: var(--font-size-md);
+    --type-card-title-weight: var(--font-weight-semibold);
+    --type-card-title-line-height: 1.3;
+    --type-card-title-letter-spacing: 0;
+
+    --type-card-subtitle-size: var(--font-size-base);
+    --type-card-subtitle-weight: var(--font-weight-semibold);
+    --type-card-subtitle-line-height: 1.3;
+    --type-card-subtitle-letter-spacing: 0;
+
+    --type-card-body-size: var(--font-size-sm);
+    --type-card-body-weight: var(--font-weight-medium);
+    --type-card-body-line-height: 1.6;
+    --type-card-body-letter-spacing: 0;
+
+    /*================================*/
+    /* Labels                         */
+    /*================================*/
+    --type-label-size: var(--font-size-sm);
+    --type-label-weight: var(--font-weight-semibold);
+    --type-label-line-height: 1.3;
+    --type-label-letter-spacing: 0.04em;
+
+    --type-badge-size: var(--font-size-sm);
+    --type-badge-weight: var(--font-weight-semibold);
+    --type-badge-line-height: 1.3;
+    --type-badge-letter-spacing: 0;
+
+    --type-eyebrow-size: var(--font-size-sm);
+    --type-eyebrow-weight: var(--font-weight-semibold);
+    --type-eyebrow-line-height: 1.3;
+    --type-eyebrow-letter-spacing: 0.04em;
+
+    /*================================*/
+    /* Buttons / Links                */
+    /*================================*/
+    --type-button-size: var(--font-size-base);
+    --type-button-weight: var(--font-weight-semibold);
+    --type-button-line-height: 1;
+    --type-button-letter-spacing: 0;
+
+    --type-link-size: var(--font-size-base);
+    --type-link-weight: var(--font-weight-semibold);
+    --type-link-line-height: 1.3;
+    --type-link-letter-spacing: 0;
+
+    /*================================*/
+    /* Navigation                     */
+    /*================================*/
+
+    --type-nav-logo-size: var(--font-size-base);
+    --type-nav-logo-weight: var(--font-weight-bold);
+    --type-nav-logo-line-height: 1.3;
+    --type-nav-logo-letter-spacing: 0;
+
+    --type-nav-subtitle-size: var(--font-size-base);
+    --type-nav-subtitle-weight: var(--font-weight-medium);
+    --type-nav-subtitle-line-height: 1.3;
+    --type-nav-subtitle-letter-spacing: 0;
+
+    --type-nav-link-size: var(--font-size-sm);
+    --type-nav-link-weight: var(--font-weight-semibold);
+    --type-nav-link-line-height: 1.3;
+    --type-nav-link-letter-spacing: 0;
+
+    --type-nav-link-subtitle-size: var(--font-size-sm);
+    --type-nav-link-subtitle-weight: var(--font-weight-regular);
+    --type-nav-link-subtitle-line-height: 1.3;
+    --type-nav-link-subtitle-letter-spacing: 0;
+}
+
+/*================================*/
+/* Page                           */
+/*================================*/
+
+.type-page-title {
+    font-size: var(--type-page-title-size);
+    font-weight: var(--type-page-title-weight);
+    line-height: var(--type-page-title-line-height);
+    letter-spacing: var(--type-page-title-letter-spacing);
+    color: var(--color-text);
+}
+
+.type-page-text {
+    font-size: var(--type-page-text-size);
+    font-weight: var(--type-page-text-weight);
+    line-height: var(--type-page-text-line-height);
+    letter-spacing: var(--type-page-text-letter-spacing);
+    color: var(--color-text);
+}
+
+.type-page-eyebrow {
+    font-size: var(--type-page-eyebrow-size);
+    font-weight: var(--type-page-eyebrow-weight);
+    line-height: var(--type-page-eyebrow-line-height);
+    letter-spacing: var(--type-page-eyebrow-letter-spacing);
+    text-transform: uppercase;
+    color: var(--color-accent);
+}
+
+/*================================*/
+/* Section                        */
+/*================================*/
+
+.type-section-page-title {
+    font-size: var(--type-section-page-title-size);
+    font-weight: var(--type-section-page-title-weight);
+    line-height: var(--type-section-page-title-line-height);
+    letter-spacing: var(--type-section-page-title-letter-spacing);
+    color: var(--color-text);
+}
+
+
+.type-section-title {
+    font-size: var(--type-section-title-size);
+    font-weight: var(--type-section-title-weight);
+    line-height: var(--type-section-title-line-height);
+    letter-spacing: var(--type-section-title-letter-spacing);
+    color: var(--color-text);
+}
+
+.type-section-subtitle {
+    font-size: var(--type-section-subtitle-size);
+    font-weight: var(--type-section-subtitle-weight);
+    line-height: var(--type-section-subtitle-line-height);
+    letter-spacing: var(--type-section-subtitle-letter-spacing);
+    color: var(--color-text);
+}
+
+.type-section-text {
+    font-size: var(--type-section-text-size);
+    font-weight: var(--type-section-text-weight);
+    line-height: var(--type-section-text-line-height);
+    letter-spacing: var(--type-section-text-letter-spacing);
+    color: var(--color-text-muted);
+}
+
+/*================================*/
+/* Cards                          */
+/*================================*/
+.type-card-title {
+    font-size: var(--type-card-title-size);
+    font-weight: var(--type-card-title-weight);
+    line-height: var(--type-card-title-line-height);
+    letter-spacing: var(--type-card-title-letter-spacing);
+    color: var(--color-text);
+}
+
+.type-card-subtitle {
+    font-size: var(--type-card-subtitle-size);
+    font-weight: var(--type-card-subtitle-weight);
+    line-height: var(--type-card-subtitle-line-height);
+    letter-spacing: var(--type-card-subtitle-letter-spacing);
+    color: var(--color-text);
+}
+
+.type-card-body {
+    font-size: var(--type-card-body-size);
+    font-weight: var(--type-card-body-weight);
+    line-height: var(--type-card-body-line-height);
+    letter-spacing: var(--type-card-body-letter-spacing);
+    color: var(--color-text-muted);
+}
+
+/*================================*/
+/* Labels / Badges                */
+/*================================*/
+.type-label {
+    font-size: var(--type-label-size);
+    font-weight: var(--type-label-weight);
+    line-height: var(--type-label-line-height);
+    letter-spacing: var(--type-label-letter-spacing);
+    color: var(--color-accent);
+}
+
+.type-badge {
+    font-size: var(--type-badge-size);
+    font-weight: var(--type-badge-weight);
+    line-height: var(--type-badge-line-height);
+    letter-spacing: var(--type-badge-letter-spacing);
+    color: var(--color-text);
+}
+
+.type-eyebrow {
+    font-size: var(--type-eyebrow-size);
+    font-weight: var(--type-eyebrow-weight);
+    line-height: var(--type-eyebrow-line-height);
+    letter-spacing: var(--type-eyebrow-letter-spacing);
+    text-transform: uppercase;
+    color: var(--color-accent);
+}
+
+/*================================*/
+/* Buttons / Links                */
+/*================================*/
+.type-button {
+    font-size: var(--type-button-size);
+    font-weight: var(--type-button-weight);
+    line-height: var(--type-button-line-height);
+    letter-spacing: var(--type-button-letter-spacing);
+    color: var(--color-text);
+}
+
+.type-back-link {
+    font-size: var(--type-link-size);
+    font-weight: var(--type-link-weight);
+    line-height: var(--type-link-line-height);
+    letter-spacing: var(--type-link-letter-spacing);
+    color: var(--color-accent);
+}
+
+/*================================*/
+/* Navigation                     */
+/*================================*/
+.type-nav-logo {
+    font-size: var(--type-nav-logo-size);
+    font-weight: var(--type-nav-logo-weight);
+    line-height: var(--type-nav-logo-line-height);
+    letter-spacing: var(--type-nav-logo-letter-spacing);
+    color: var(--color-text);
+}
+
+.type-nav-subtitle {
+    font-size: var(--type-nav-subtitle-size);
+    font-weight: var(--type-nav-subtitle-weight);
+    line-height: var(--type-nav-subtitle-line-height);
+    letter-spacing: var(--type-nav-subtitle-letter-spacing);
+    color: var(--color-text-muted);
+}
+
+.type-nav-link {
+    font-size: var(--type-nav-link-size);
+    font-weight: var(--type-nav-link-weight);
+    line-height: var(--type-nav-link-line-height);
+    letter-spacing: var(--type-nav-link-letter-spacing);
+    color: var(--color-text);
+}
+
+.type-nav-link-subtitle {
+    font-size: var(--type-nav-link-subtitle-size);
+    font-weight: var(--type-nav-link-subtitle-weight);
+    line-height: var(--type-nav-link-subtitle-line-height);
+    letter-spacing: var(--type-nav-link-subtitle-letter-spacing);
+    color: var(--color-text-muted);
+}
+
+@supports (font-variation-settings: "cv11" 1) {
+    /* single story a */
+    .h0, .heading-xxl, .heading-xl, .heading-lg, header, footer {
+        font-family: 'InterVariable', sans-serif;
+        font-feature-settings: "cv11" 1;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        /* Page Hero */
+        --type-page-title-size: var(--font-size-2xl-lg);
+        --type-page-text-size: var(--font-size-base-lg);
+        --type-page-eyebrow-size: var(--font-size-sm);
+
+        /* Section */
+        --type-section-title-size: var(--font-size-xl-lg);
+        --type-section-page-title-size: var(--font-size-2xl);
+        --type-section-subtitle-size: var(--font-size-base-lg);
+
+        /* Button */
+        --type-button-size: var(--font-size-sm);
+        --type-button-weight: var(--font-weight-bold);
+
+        /* Card */
+        --type-card-title-size: var(--font-size-base-lg);
+
+        /* Label */
+        --type-label-size: var(--font-size-xs);
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        /* Page Hero */
+        --type-page-title-size: var(--font-size-2xl);
+
+        /* Section */
+        --type-section-subtitle-size: var(--font-size-base);
+        --type-section-page-title-size: var(--font-size-xl-lg);
+        --type-section-text-size: var(--font-size-sm);
+
+        /* Badge */
+        --type-badge-size: var(--font-size-xs);
+
+    }
+}
+

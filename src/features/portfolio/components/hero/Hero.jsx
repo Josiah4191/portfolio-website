@@ -1,21 +1,23 @@
 import './Hero.css';
-import IconLink from "../../../../shared/components/IconLink.jsx";
+import HeroIntro from "./HeroIntro.jsx";
+import HeroCodeEditor from "./HeroCodeEditor.jsx";
+import HeroLinks from "./HeroLinks.jsx";
 
 export default function Hero() {
     return (
-        <section className="section hero-section">
+        <section className="hero-section" aria-labelledby="hero-title">
             <div className="grid page-margin">
-                <h1 className="section-title section-content">Hello.</h1>
-                <p className="hero-name section-content">My name is Josiah.</p>
-                <p className="section-content">
-                    I’m a full-stack web developer who enjoys building clean,
-                    interactive web applications and learning new technologies. This site is a place
-                    to share some of my projects, experience, and ways to connect.
-                </p>
-                <div className="project-links section-content hero-section-links">
-                    <IconLink label="GitHub" icon="github" url="https://github.com/josiah4191"/>
-                    <IconLink label="LinkedIn" icon="linkedin" url="https://linkedin.com/in/josiahstoltzfus"/>
-                    <IconLink label="Resume" icon="resume" url="/Resume.pdf" />
+
+                <div className="hero-intro-wrapper">
+                    <HeroIntro titleId="hero-title"/>
+                </div>
+
+                <div className="hero-links-wrapper">
+                    <HeroLinks/>
+                </div>
+
+                <div className="hero-code-editor-wrapper">
+                    <HeroCodeEditor/>
                 </div>
             </div>
         </section>

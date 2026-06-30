@@ -3,7 +3,7 @@
     height: var(--uno-card-height);
     border-radius: 3px;
     border: var(--color-border) 1px solid;
-    box-shadow: var(--game-shadow-lg);
+    box-shadow: var(--shadow-card);
     transition: transform 0.2s ease-in-out;
     position: relative;
     font-weight: bold;

@@ -1,8 +1,8 @@
 import './RootLayout.css';
-import Navigation from "./Navigation.jsx";
+import Navigation from "../features/portfolio/components/navigation/Navigation.jsx";
 import {Outlet, useLocation} from "react-router-dom";
 import Footer from "../features/portfolio/components/footer/Footer.jsx";
-import ScrollToHash from "./ScrollToHash.jsx";
+import ScrollToHash from "../shared/components/ScrollToHash.jsx";
 import {useEffect} from "react";
 import {THEMES} from "../data/themeData.js";
 import PageTransition from "../shared/components/PageTransition.jsx";

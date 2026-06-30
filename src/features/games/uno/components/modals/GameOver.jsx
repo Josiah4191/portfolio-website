@@ -11,7 +11,7 @@ export default function GameOver({winnerName, onExitToMenu}) {
                 <div className="game-over-actions" aria-label="Game over actions">
                     <button
                         type="button"
-                        className="start-game-button"
+                        className="game-menu-button"
                         onClick={onExitToMenu}>
                         New Game
                     </button>

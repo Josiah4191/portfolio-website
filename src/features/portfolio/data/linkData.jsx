@@ -1,11 +1,11 @@
 import GitHubIcon from "../../../shared/icons/GitHubIcon.jsx";
 import LinkedInIcon from "../../../shared/icons/LinkedInIcon.jsx";
-import CaretRightIcon from "../../../shared/icons/CaretRightIcon.jsx";
-import FileIcon from "../../../shared/icons/FileIcon.jsx";
+
+import {Play, FileText} from "lucide-react";
 
 export const LINK_ICONS = {
-    github: <GitHubIcon/>,
-    linkedin: <LinkedInIcon/>,
-    demo: <CaretRightIcon/>,
-    resume: <FileIcon/>,
+    github: GitHubIcon,
+    linkedin: LinkedInIcon,
+    demo: Play,
+    resume: FileText
 }

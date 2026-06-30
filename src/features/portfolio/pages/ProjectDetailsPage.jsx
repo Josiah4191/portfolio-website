@@ -18,6 +18,6 @@ export default function ProjectDetailsPage() {
     }
 
     return (
-        <ProjectPage {...project}/>
+        <ProjectPage project={project}/>
     )
 }

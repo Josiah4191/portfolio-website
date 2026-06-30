@@ -1,0 +1,110 @@
+.nav-container {
+    grid-column: 1/-1;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+
+    transition: color 0.2s ease;
+}
+
+.nav-name-full {
+    white-space: nowrap;
+
+    transition: color 0.2s ease;
+}
+
+.nav-name-full {
+    white-space: nowrap;
+}
+
+.nav-logo-mark {
+    width: 36px;
+    height: 36px;
+
+    background-color: var(--color-surface);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--surface-card);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-md);
+    color: var(--color-accent);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background-color 0.2s ease;
+}
+
+.nav-divider {
+    width: 2px;
+    height: 100%;
+
+    background-color: var(--color-border);
+}
+
+.nav-overlay {
+    z-index: 90;
+    position: fixed;
+    inset: 0;
+    opacity: 0;
+
+    transition: opacity 0.2s ease-in-out;
+    pointer-events: none;
+}
+
+.nav-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.projects-nav {
+    position: relative;
+}
+
+.nav-menu-button {
+    transition: color 0.2s ease;
+}
+
+.nav-menu-button-mobile {
+    display: none;
+}
+
+/* Hover Effects */
+@media (hover: hover) and (pointer: fine) {
+    .nav-brand:hover > .nav-name-full,
+    .nav-menu-button:hover {
+        color: var(--color-hover-text);
+    }
+
+    .nav-brand:hover > .nav-logo-mark {
+        background-color: var(--color-subsurface);
+    }
+
+}
+
+@media (max-width: 600px) {
+    .nav-menu-button-mobile {
+        display: block;
+    }
+
+    .nav-menu-button-desktop-container {
+        display: none;
+    }
+
+    .nav-logo-mark {
+        width: 32px;
+        height: 32px;
+    }
+
+    .nav-subtitle,
+    .nav-divider {
+        display: none;
+    }
+
+}

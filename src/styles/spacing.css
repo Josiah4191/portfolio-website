@@ -1,0 +1,94 @@
+:root {
+    /*========== Spacing ==========*/
+    /*
+    Desktop: 12 column grid
+    Tablet: 8 column grid
+    Mobile: 4 column grid
+    */
+    /* Breakpoints */
+    --bp-mobile: 480px;
+    --bp-tablet: 768px;
+    --bp-desktop: 1200px;
+
+    /* Navigation */
+    --nav-height: 88px;
+
+    /* Page Layout */
+    --section-spacing: 7.5rem;
+    --nav-section-spacing: 1.5rem;
+    --page-margin: 10rem;
+    --nav-margin: 3rem;
+    --grid-gutter: 2rem;
+
+    /* Spacing Scale */
+    --space-xs: 0.25rem; /* 4px */
+    --space-sm: 0.5rem; /* 8px */
+    --space-md: 1rem; /* 16px */
+    --space-lg: 1.5rem; /* 24px */
+    --space-xl: 2rem; /* 32px */
+    --space-xxl: 3rem; /* 48px */
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-gutter);
+}
+
+.section {
+    padding-block: var(--section-spacing);
+}
+
+.nav-section {
+    padding-block: var(--nav-section-spacing);
+}
+
+.page-margin {
+    margin-inline: var(--page-margin);
+}
+
+.page-margin-media {
+    margin-inline: var(--page-margin-media);
+}
+
+.nav-page-margin {
+    margin-inline: var(--nav-margin);
+}
+
+@media (min-width: 1700px) {
+    :root {
+        --page-margin: 20rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    :root {
+        --page-margin: 5rem;
+        --nav-margin: 2rem;
+        --grid-gutter: 2rem;
+    }
+
+    .grid {
+        grid-template-columns: repeat(8, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --section-spacing: 5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --nav-height: 72px;
+        --section-spacing: 4rem;
+        --page-margin: 1.5rem;
+        --nav-margin: 1.5rem;
+        --grid-gutter: 1rem;
+    }
+
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

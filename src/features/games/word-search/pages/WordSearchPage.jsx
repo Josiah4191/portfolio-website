@@ -15,16 +15,6 @@ import WordList from "../components/WordList.jsx";
 import WordSearchCategorySelect from "../components/WordSearchCategorySelect.jsx";
 import GameToolbar from "../../GameToolbar.jsx";
 
-/*
-    WordSearchPage is responsible for managing the word search game screen.
-
-    Features:
-    - Stores puzzle, selection, and found-word state
-    - Handles pointer input for selecting words
-    - Builds new puzzles from the selected category and difficulty
-    - Triggers canvas redraws when game state changes
-*/
-
 export default function WordSearchPage() {
 
     const [isDragging, setIsDragging] = useState(false);
@@ -142,20 +132,28 @@ export default function WordSearchPage() {
     }, [category]);
 
     useEffect(() => {
-        const context = canvas.current.getContext("2d");
-        const canvasElement = canvas.current;
 
-        canvasElement.width = canvasWidth * dpr;
-        canvasElement.height = canvasHeight * dpr;
+        async function drawPuzzle() {
+            await document.fonts.load("16px Inter");
 
-        canvasElement.style.width = `${canvasWidth}px`;
-        canvasElement.style.height = `${canvasHeight}px`;
+            const context = canvas.current.getContext("2d");
+            const canvasElement = canvas.current;
 
-        context.scale(dpr, dpr);
+            canvasElement.width = canvasWidth * dpr;
+            canvasElement.height = canvasHeight * dpr;
 
-        drawFoundWords(context, cellSize, foundWords, "rgba(78, 159, 110, 0.7)");
-        drawSelectedCells(context, selectedCells, cellSize, "rgba(74, 111, 165, 0.7)");
-        drawLetters(context, puzzle, cellSize);
+            canvasElement.style.width = `${canvasWidth}px`;
+            canvasElement.style.height = `${canvasHeight}px`;
+
+            context.scale(dpr, dpr);
+
+            drawFoundWords(context, cellSize, foundWords, "rgba(78, 159, 110, 0.7)");
+            drawSelectedCells(context, selectedCells, cellSize, "rgba(74, 111, 165, 0.7)");
+            drawLetters(context, puzzle, cellSize);
+        }
+
+        void drawPuzzle();
+
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [isDragging, startCell, currentCell, selectedCells, puzzle, foundWords, availableWidth]);
 

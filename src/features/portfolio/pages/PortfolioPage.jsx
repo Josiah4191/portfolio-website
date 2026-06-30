@@ -2,16 +2,17 @@ import Hero from "../components/hero/Hero.jsx";
 import Projects from "../components/projects/Projects.jsx";
 import About from "../components/about/About.jsx";
 import Stack from "../components/stack/Stack.jsx";
+import SectionDivider from "../../../shared/components/SectionDivider.jsx";
 
 export default function PortfolioPage() {
     return (
         <>
             <Hero/>
-            <hr className="section-divider" aria-hidden="true"/>
+            <SectionDivider />
             <Projects/>
-            <hr className="section-divider" aria-hidden="true"/>
+            <SectionDivider />
             <About/>
-            <hr className="section-divider" aria-hidden="true"/>
+            <SectionDivider />
             <Stack/>
         </>
     );

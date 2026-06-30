@@ -1,9 +1,14 @@
-.stack-cards-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.stack-section-header {
+    grid-column: 1/-1;
+}
 
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--gap-md);
+.stack-section-carousel {
+    grid-column: 1/-1;
+}
+
+.stack-section-track {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto;
+    gap: var(--space-sm);
 }

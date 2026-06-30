@@ -1,0 +1,100 @@
+:root {
+    /* Portfolio */
+    --portfolio-color-page: #EAF2FA;
+    --portfolio-color-page-soft: #F3F8FC;
+    --portfolio-color-surface: #FFFFFF;
+    --portfolio-color-subsurface: #F6FAFD;
+    --portfolio-color-border: #D7E5F3;
+    --portfolio-color-border-strong: #BED4EA;
+    --portfolio-color-text: #3C4754;
+    --portfolio-color-text-muted: #627286;
+    --portfolio-color-text-subtle: #8A99AB;
+    --portfolio-color-accent: #78A8D8;
+    --portfolio-color-accent-strong: #5F96CB;
+    --portfolio-color-accent-soft: #DDECF8;
+    --portfolio-color-hover-surface: #F4F9FD;
+    --portfolio-color-hover-border: #BED4EA;
+    --portfolio-color-hover-text: #5F96CB;
+
+    /* Games */
+    --game-text: #F2F2F2;
+    --game-text-muted: #C7C7C7;
+    --game-text-subtle: #9A9A9A;
+    --game-background: #212121;
+    --game-surface: #2C2C2C;
+    --game-surface-alt: #2F3136;
+    --game-border: #3A3A3A;
+    --game-accent-red: #C94F4F;
+    --game-accent-blue: #4F7AC9;
+    --game-accent-green: #4FA06D;
+    --game-accent-yellow: #D8B24C;
+    --game-accent-rainbow: linear-gradient(
+            135deg,
+            var(--game-accent-red),
+            var(--game-accent-yellow),
+            var(--game-accent-green),
+            var(--game-accent-blue)
+    );
+
+    /*========== Technology Type ==========*/
+    --color-type-frontend-background: #DCEEFF;
+    --color-type-frontend-text: #1D4ED8;
+    --color-type-backend-background: #DCF5E4;
+    --color-type-backend-text: #166534;
+    --color-type-full-stack-background: #E8E0FF;
+    --color-type-full-stack-text: #6D28D9;
+    --color-type-framework-background: #DCF5F0;
+    --color-type-framework-text: #0F766E;
+    --color-type-database-background: #FFE8D1;
+    --color-type-database-text: #B45309;
+    --color-type-markup-background: #FFE0E0;
+    --color-type-markup-text: #B91C1C;
+    --color-type-styling-background: #DCF2FF;
+    --color-type-styling-text: #0369A1;
+    --color-type-design-background: #FFE1ED;
+    --color-type-design-text: #BE185D;
+
+    /*========== Code Editor ==========*/
+    --code-keyword: #B45F06;
+    --code-function: #8A6D00;
+    --code-component: #3574F0;
+    --code-key: #871094;
+    --code-value: #067D17;
+    --code-punctuation: #606366;
+    --code-identifier: #000000;
+    --code-comment: #6A737D;
+
+    --mac-red: #FF5F57;
+    --mac-yellow: #FEBC2E;
+    --mac-green: #28C840;
+
+}
+
+body.page-portfolio {
+    --color-background: var(--portfolio-color-page);
+    --color-border: var(--portfolio-color-border);
+    --color-surface: var(--portfolio-color-surface);
+    --color-subsurface: var(--portfolio-color-subsurface);
+
+    --color-text: var(--portfolio-color-text);
+    --color-text-muted: var(--portfolio-color-text-muted);
+    --color-text-subtle: var(--portfolio-color-text-subtle);
+    --color-accent: var(--portfolio-color-accent);
+    --color-accent-hover: var(--portfolio-color-accent-strong);
+    --color-accent-soft: var(--portfolio-color-accent-soft);
+
+    --color-hover-surface: var(--portfolio-color-hover-surface);
+    --color-hover-border: var(--portfolio-color-hover-border);
+    --color-hover-text: var(--portfolio-color-hover-text);
+}
+
+body.page-game {
+    --color-background: var(--game-background);
+    --color-surface: var(--game-surface);
+    --color-border: var(--game-border);
+
+    --color-text: var(--game-text);
+    --color-text-subtle: var(--game-text-subtle);
+    --color-text-muted: var(--game-text-muted);
+}
+

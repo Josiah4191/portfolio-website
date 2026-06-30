@@ -31,7 +31,7 @@
 .uno-rules-title {
     color: var(--color-text);
     font-size: var(--font-size-lg);
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-semibold);
 }
 
 .uno-gameplay-list {
@@ -46,7 +46,7 @@
 
 .uno-rules-title-secondary {
     font-size: var(--font-size-md);
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-semibold);
     color: var(--color-text-muted);
 }
 

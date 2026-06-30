@@ -1,0 +1,6 @@
+.hero-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    z-index: 10;
+}

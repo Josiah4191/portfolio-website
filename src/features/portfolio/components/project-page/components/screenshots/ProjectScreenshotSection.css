@@ -1,0 +1,19 @@
+.project-screenshot-section-header {
+    grid-column: 1 / -1;
+}
+
+.project-screenshot-section-carousel-wrapper {
+    grid-column: 1 / -1;
+}
+
+@media (max-width: 768px) {
+    .project-screenshot-section-carousel-wrapper {
+        margin-inline: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-screenshot-section-carousel-wrapper {
+        margin-inline: 12px;
+    }
+}

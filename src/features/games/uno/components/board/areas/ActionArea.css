@@ -8,7 +8,7 @@
 
 .action-area-message {
     animation: float-up 1.8s ease-in-out 1 forwards;
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-semibold);
 }
 
 .action-color.red {

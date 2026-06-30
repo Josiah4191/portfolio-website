@@ -1,0 +1,134 @@
+.mobile-nav-menu {
+    z-index: 100;
+    position: fixed;
+    max-height: calc(100dvh - (var(--page-margin) * 2));
+    padding: var(--space-md);
+    overflow: hidden;
+
+    background-color: var(--color-surface);
+    box-shadow: var(--surface-card);
+    bottom: var(--page-margin);
+    left: var(--page-margin);
+    right: var(--page-margin);
+    border-radius: var(--radius-md);
+
+    transform: translateY(calc(100% + var(--page-margin)));
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-border) transparent;
+    transition: transform 0.3s ease-in-out;
+}
+
+.mobile-nav-menu.is-open {
+    transform: translateY(0);
+}
+
+.mobile-nav-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-nav-submenu {
+    position: relative;
+    min-height: 0;
+    max-height: 0;
+    padding: 0 var(--space-md);
+    overflow: hidden;
+
+    background: var(--color-subsurface);
+    border-radius: var(--radius-md);
+
+    display: flex;
+    flex-direction: column;
+
+    transition: max-height 0.3s ease-in-out;
+}
+
+.mobile-nav-submenu.is-open {
+    max-height: 1000px;
+}
+
+.mobile-nav-submenu::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    opacity: 0;
+
+    transition: opacity 0.6s ease-in-out;
+}
+
+.mobile-nav-submenu.is-open::before {
+    opacity: 1;
+}
+
+.mobile-nav-submenu > li {
+    position: relative;
+}
+
+.mobile-nav-submenu > li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+
+    background-color: var(--color-border);
+}
+
+.mobile-nav-divider {
+    flex-shrink: 0;
+    width: 100%;
+    height: 1px;
+
+    background-color: var(--color-border);
+}
+
+.mobile-nav-section-button {
+    all: unset;
+    width: 100%;
+
+    display: block;
+
+    cursor: pointer;
+}
+
+.mobile-nav-grab-handle-button {
+    all: unset;
+    padding-block: var(--space-sm);
+
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.mobile-nav-grab-handle {
+    width: 30px;
+    height: 4px;
+
+    background: var(--color-accent);
+    border-radius: 999px;
+}
+
+.mobile-nav-link {
+    transition: color 0.2s ease;
+}
+
+/* Hover Effects */
+@media (hover: hover) and (pointer: fine) {
+    .mobile-nav-link:hover .nav-menu-item-title {
+        color: var(--color-hover-text);
+    }
+
+    .mobile-nav-link:hover .nav-menu-item-trailing-icon {
+        transform: translateX(4px);
+    }
+}

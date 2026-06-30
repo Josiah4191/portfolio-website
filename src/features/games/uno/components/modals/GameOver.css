@@ -42,7 +42,7 @@
 .game-over-title {
     color: var(--color-text);
     font-size: var(--font-size-lg);
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-semibold);
 }
 
 .game-over-winner {
@@ -52,6 +52,7 @@
 
 .game-over-actions {
     display: flex;
+    flex-direction: column;
     gap: var(--gap-sm);
     padding: var(--padding-lg);
 }

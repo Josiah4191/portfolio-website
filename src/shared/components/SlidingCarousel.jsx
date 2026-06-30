@@ -1,8 +1,8 @@
 import './SlidingCarousel.css'
 import {Children, useEffect, useRef, useState} from "react";
-import CaretRightIcon from "../icons/CaretRightIcon.jsx";
+import {ChevronRight} from "lucide-react";
 
-export default function SlidingCarousel({children, ariaLabel, className}) {
+export default function SlidingCarousel({children, ariaLabel, trackClass = ""}) {
     const slides = Children.toArray(children);
     const trackRef = useRef(null);
 
@@ -57,21 +57,21 @@ export default function SlidingCarousel({children, ariaLabel, className}) {
     }, []);
 
     return (
-        <section className={`${className}`} aria-label={ariaLabel}>
+        <section aria-label={ariaLabel}>
             <div className="sliding-carousel">
                 <button
                     type="button"
                     disabled={isAtStart}
                     onClick={() => scrollByAmount(-1)}
                     className="sliding-carousel-button sliding-carousel-button-left">
-                    <CaretRightIcon className="sliding-carousel-icon sliding-carousel-icon-left"/>
+                    <ChevronRight className="sliding-carousel-icon sliding-carousel-icon-left"/>
                 </button>
 
                 <div className="sliding-carousel-viewport">
                     <ul
                         ref={trackRef}
                         onScroll={updateButtonState}
-                        className="sliding-carousel-track">
+                        className={`sliding-carousel-track ${trackClass}`}>
                         {slides.map((slide, index) => (
                             <li key={index} className="sliding-carousel-slide">
                                 {slide}
@@ -85,7 +85,7 @@ export default function SlidingCarousel({children, ariaLabel, className}) {
                     disabled={isAtEnd}
                     onClick={() => scrollByAmount(1)}
                     className="sliding-carousel-button sliding-carousel-button-right">
-                    <CaretRightIcon className="sliding-carousel-icon"/>
+                    <ChevronRight className="sliding-carousel-icon"/>
                 </button>
             </div>
         </section>

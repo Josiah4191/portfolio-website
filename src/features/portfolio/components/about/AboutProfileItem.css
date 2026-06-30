@@ -1,0 +1,25 @@
+.about-profile-item {
+    display: flex;
+    gap: var(--space-md);
+}
+
+.about-profile-item-icon-wrapper {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+
+    border: 1px solid var(--color-border);
+    background-color: var(--color-subsurface);
+    border-radius: var(--radius-md);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-profile-item-icon {
+    width: 28px;
+    height: 28px;
+
+    color: var(--color-accent);
+}

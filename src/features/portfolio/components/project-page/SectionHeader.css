@@ -1,0 +1,25 @@
+.section-header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.section-header-heading {
+    line-height: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.section-header-divider {
+    width: 48px;
+    height: 5px;
+
+    background: var(--color-accent);
+    border-radius: 10px;
+}
+
+.section-header-description {
+    max-width: 50ch;
+}

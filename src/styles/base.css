@@ -1,0 +1,43 @@
+@import "./colors.css";
+@import "./typography.css";
+@import "./spacing.css";
+@import "./surfaces.css";
+
+body {
+    background: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-portfolio), serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .interactive-lift:hover {
+        transform: translateY(-2px);
+        cursor: pointer;
+    }
+
+    .interactive-text:hover {
+        color: var(--color-interactive-hover);
+        cursor: pointer;
+    }
+
+    .interactive-surface:hover {
+        background-color: var(--color-interactive-hover);
+        cursor: pointer;
+    }
+}
+
+

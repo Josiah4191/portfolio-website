@@ -1,0 +1,54 @@
+.project-hero-intro {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.project-hero-back-link {
+    display: flex;
+    gap: var(--space-xs);
+    align-items: center;
+}
+
+.project-hero-back-link-text {
+    transition: color 0.2s ease-in-out;
+}
+
+.project-hero-back-icon {
+    color: var(--color-accent);
+
+    transition: transform 0.2s ease-in-out;
+}
+
+.project-hero-heading {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.project-hero-type {
+    align-self: flex-start;
+    padding: var(--space-sm) var(--space-md);
+
+    background-color: var(--color-subsurface);
+    border-radius: var(--radius-pill);
+    box-shadow: var(--surface-icon-wrapper);
+    color: var(--color-text-muted);
+}
+
+.project-hero-description {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+/* Hover Effects */
+@media (hover: hover) and (pointer: fine) {
+    .project-hero-back-link:hover .project-hero-back-link-text {
+        color: var(--color-hover-text);
+    }
+
+    .project-hero-back-link:hover .project-hero-back-icon {
+        transform: translateX(-4px);
+    }
+}
