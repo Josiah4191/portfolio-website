@@ -16,6 +16,21 @@
     --portfolio-color-hover-border: #BED4EA;
     --portfolio-color-hover-text: #5F96CB;
 
+    /* Games Colors Updated */
+    --game-color-background-dark: #050F20;
+    --game-color-background: #071224;
+    --game-color-surface: #101B31;
+    --game-color-subsurface: #18233C;
+    --game-color-border: #3A4663;
+    --game-color-text: #F5F7FB;
+    --game-color-text-muted: #A5B3CA;
+    --game-color-accent: #2F66F5;
+    --game-color-accent-hover: #4276FF;
+    --game-color-glow: rgba(47, 102, 245, 0.18);
+    --game-color-shadow: rgba(0, 0, 0, 0.45);
+    --game-card-border: #E6EBf4;
+    --game-color-gradient: radial-gradient(circle at center, rgba(47, 102, 245, .12), transparent 55%), #050F20;
+
     /* Games */
     --game-text: #F2F2F2;
     --game-text-muted: #C7C7C7;
@@ -89,12 +104,12 @@ body.page-portfolio {
 }
 
 body.page-game {
-    --color-background: var(--game-background);
-    --color-surface: var(--game-surface);
-    --color-border: var(--game-border);
+    --color-background: var(--game-color-background-dark);
+    --color-surface: var(--game-color-surface);
+    --color-border: var(--game-color-border);
 
-    --color-text: var(--game-text);
-    --color-text-subtle: var(--game-text-subtle);
-    --color-text-muted: var(--game-text-muted);
+    --color-text: var(--game-color-text);
+    --color-text-subtle: var(--game-color-text-muted);
+    --color-text-muted: var(--game-color-text-muted);
 }
 

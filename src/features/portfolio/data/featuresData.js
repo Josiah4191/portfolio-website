@@ -75,11 +75,6 @@ export const FEATURES_MAP = {
             icon: Grid3X3
         },
         {
-            title: "Difficulty Levels",
-            description: "Multiple difficulty settings with increasing complexity.",
-            icon: Gauge
-        },
-        {
             title: "Responsive Design",
             description: "Optimized for both desktop and mobile devices.",
             icon: Smartphone
