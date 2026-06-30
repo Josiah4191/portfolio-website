@@ -1,19 +1,19 @@
 .game-toolbar {
-    padding-top: var(--padding-md);
-    padding-bottom: var(--padding-md);
+    padding-top: var(--space-md);
+    padding-bottom: var(--space-md);
     border-bottom: 1px solid var(--color-border);
 }
 
 .game-toolbar-content {
-    margin-left: var(--desktop-nav-margins);
-    margin-right: var(--desktop-nav-margins);
+    margin-left: var(--nav-margin);
+    margin-right: var(--nav-margin);
     display: flex;
     justify-content: space-between;
 }
 
 .game-toolbar-actions {
     display: flex;
-    gap: var(--gap-md);
+    gap: var(--space-md);
 }
 
 .game-toolbar-link,
@@ -25,18 +25,4 @@
 .game-toolbar-button:hover {
     text-decoration: none;
     color: var(--color-text-subtle);
-}
-
-@media (max-width: 768px) {
-    .game-toolbar-content {
-        margin-left: var(--tablet-nav-margins);
-        margin-right: var(--tablet-nav-margins);
-    }
-}
-
-@media (max-width: 480px) {
-    .game-toolbar-content {
-        margin-left: var(--mobile-nav-margins);
-        margin-right: var(--mobile-nav-margins);
-    }
 }

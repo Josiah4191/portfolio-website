@@ -6,8 +6,8 @@
 
     --uno-card-width: 80px;
     --uno-card-height: 100px;
-    --uno-card-gap: var(--gap-sm);
-    --uno-card-gap-center: var(--gap-md);
+    --uno-card-gap: var(--space-sm);
+    --uno-card-gap-center: var(--space-md);
     --uno-card-font-size: var(--font-size-lg);
     --uno-player-font-size: var(--font-size-base);
     --uno-opponents-grid-columns: repeat(4, auto);
@@ -19,8 +19,8 @@
     .uno-game-page {
         --uno-card-width: 60px;
         --uno-card-height: 80px;
-        --uno-card-gap: var(--gap-xs);
-        --uno-card-gap-center: var(--gap-sm);
+        --uno-card-gap: var(--space-xs);
+        --uno-card-gap-center: var(--space-sm);
         --uno-card-font-size: var(--font-size-md);
         --uno-card-font-size-corner: var(--font-size-sm);
         --uno-player-font-size: var(--font-size-sm);

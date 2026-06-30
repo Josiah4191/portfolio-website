@@ -18,8 +18,8 @@
 
 .word-search-game-header {
     width: 100%;
-    margin-bottom: var(--gap-md);
-    padding: var(--padding-sm);
+    margin-bottom: var(--space-md);
+    padding: var(--space-sm);
 }
 
 .word-search-board-wrapper {
@@ -27,8 +27,7 @@
     width: 100%;
     border: 1px solid var(--color-border);
     background-color: var(--color-surface);
-    box-shadow: var(--shadow-md);
-    margin-bottom: var(--gap-md);
+    margin-bottom: var(--space-md);
     border-radius: var(--radius-sm);
     cursor: pointer;
 }

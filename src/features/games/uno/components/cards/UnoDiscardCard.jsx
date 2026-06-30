@@ -1,4 +1,3 @@
-import './UnoDiscardCard.css'
 import UnoCardFace from "./UnoCardFace.jsx";
 
 export default function UnoDiscardCard({card, displayColor, cardRef}) {

@@ -15,13 +15,13 @@
 
 .uno-rules-header,
 .uno-rules-section {
-    padding: var(--padding-md) var(--padding-lg);
+    padding: var(--space-md) var(--space-md);
     border-bottom: 1px solid var(--color-border);
     color: var(--color-text-muted);
 
     display: flex;
     flex-direction: column;
-    gap: var(--gap-md);
+    gap: var(--space-md);
 }
 
 .uno-rules-section:last-child {
@@ -39,7 +39,7 @@
 }
 
 .uno-gameplay-list li {
-    padding-bottom: var(--gap-sm);
+    padding-bottom: var(--space-sm);
     list-style-type: disc;
     list-style-position: inside;
 }
@@ -53,15 +53,15 @@
 .uno-action-rule-header {
     display: flex;
     align-items: flex-end;
-    gap: var(--gap-sm);
+    gap: var(--space-sm);
 }
 
 .uno-action-rule {
-    padding-bottom: var(--padding-sm);
+    padding-bottom: var(--space-sm);
     border-bottom: 1px solid var(--color-border);
     display: flex;
     flex-direction: column;
-    gap: var(--gap-sm);
+    gap: var(--space-sm);
 }
 
 .uno-action-rule:last-child {

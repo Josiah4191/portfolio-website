@@ -2,6 +2,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--gap-xxl);
-    padding-bottom: var(--padding-xxl);
+    gap: var(--space-xxl);
+    padding-bottom: var(--space-xxl);
 }

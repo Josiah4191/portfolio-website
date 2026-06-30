@@ -7,10 +7,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: var(--gap-xl);
-    margin-top: var(--gap-xxl);
+    gap: var(--space-xl);
+    margin-top: var(--space-xxl);
     width: calc(
             (var(--uno-opponent-badge-width) * var(--uno-opponent-columns)) +
-            (var(--gap-xl) * (var(--uno-opponent-columns) - 1))
+            (var(--space-xl) * (var(--uno-opponent-columns) - 1))
     );
 }
