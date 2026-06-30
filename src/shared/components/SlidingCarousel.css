@@ -8,11 +8,13 @@
 }
 
 .sliding-carousel-track {
+    padding: var(--space-md);
     overflow-x: auto;
+
     scrollbar-width: none;
     scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
     --webkit-overflow-scrolling: touch;
-    padding: var(--space-md);
 }
 
 .sliding-carousel-track::-webkit-scrollbar {
