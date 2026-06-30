@@ -15,7 +15,7 @@ export default function SlidingCarousel({children, ariaLabel, trackClass = ""}) 
         if (!track) return;
 
         const maxScrollLeft = track.scrollWidth - track.clientWidth;
-        const scrollAmount = track.clientWidth * 0.8;
+        const scrollAmount = track.clientWidth * 0.75;
 
         const nextScrollLeft = Math.max(0, Math.min(track.scrollLeft + direction * scrollAmount, maxScrollLeft));
 

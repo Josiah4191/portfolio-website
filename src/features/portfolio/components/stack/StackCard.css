@@ -14,6 +14,9 @@
     align-items: center;
     gap: var(--space-md);
     text-align: center;
+
+    scroll-snap-align: start;
+    scroll-margin-left: var(--space-sm);
 }
 
 .stack-card-image-container {
