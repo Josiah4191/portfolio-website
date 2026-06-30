@@ -8,7 +8,7 @@
 }
 
 .sliding-carousel-track {
-    padding: var(--space-md);
+    padding: var(--space-sm);
     overflow-x: auto;
 
     scrollbar-width: none;
