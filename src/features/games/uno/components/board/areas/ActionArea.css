@@ -12,19 +12,19 @@
 }
 
 .action-color.red {
-    color: var(--game-accent-red);
+    color: var(--uno-card-red);
 }
 
 .action-color.blue {
-    color: var(--game-accent-blue);
+    color: var(--uno-card-blue);
 }
 
 .action-color.green {
-    color: var(--game-accent-green);
+    color: var(--uno-card-green);
 }
 
 .action-color.yellow {
-    color: var(--game-accent-yellow);
+    color: var(--uno-card-yellow);
 }
 
 @keyframes float-up {

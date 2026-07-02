@@ -1,0 +1,28 @@
+.panel {
+    --panel-surface: var(--game-panel-surface);
+    --panel-surface-light: var(--game-surface-light);
+    --panel-sheen-opacity: .08;
+    --panel-inset-highlight-size: 2px;
+    --panel-inset-highlight-opacity: 0.12;
+    --panel-inset-shadow-opacity: 0.12;
+    --panel-shadow-opacity: 0.5;
+    --panel-shadow-blur: 24px;
+    --panel-radius: var(--radius-xl);
+    --panel-border-color: color-mix(in srgb, var(--panel-surface-light) 95%, white);
+    --panel-border-opacity: 0.35;
+
+    background:
+        linear-gradient(180deg, rgb(255 255 255 / var(--panel-sheen-opacity)), transparent 45%),
+        linear-gradient(180deg, var(--panel-surface-light), var(--panel-surface));
+    border-radius: var(--panel-radius);
+    box-shadow:
+            inset 0 var(--panel-inset-highlight-size) 0 rgb(255 255 255 / var(--panel-inset-highlight-opacity)),
+            0 12px var(--panel-shadow-blur) rgb(0 0 0 / var(--panel-shadow-opacity)),
+            inset 0 -1px 0 rgb(0 0 0 / var(--panel-inset-shadow-opacity));
+    border: 1px solid rgb(from var(--panel-border-color) r g b / var(--panel-border-opacity));
+}
+
+.panel.no-border {
+    border: none;
+}
+

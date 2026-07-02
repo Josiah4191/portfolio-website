@@ -1,0 +1,100 @@
+.uno-card {
+    position: relative;
+    width: var(--uno-card-width);
+    height: var(--uno-card-height);
+    padding: var(--uno-card-padding);
+
+    background: var(--uno-card-background-frame);
+    border-radius: var(--uno-card-border-radius);
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 1),
+                inset 0 -1px 0 rgb(0 0 0 / 0.25),
+                0 10px 24px rgb(0 0 0 / 0.4);
+    color: var(--color-text);
+
+    font-weight: bold;
+    font-family: "Rubik", "Arial Rounded MT Bold", "Trebuchet MS", Arial, sans-serif;
+
+    transition: transform 0.2s ease-in-out;
+
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.uno-card-face {
+    height: 100%;
+    width: 100%;
+
+    border-radius: var(--uno-card-border-radius);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    overflow: hidden;
+    position: relative;
+}
+
+.uno-card-center-value {
+    font-size: var(--uno-card-font-size);
+    user-select: none;
+    position: relative;
+}
+
+.uno-card-top-value {
+    padding-inline: var(--space-sm);
+
+    margin-right: auto;
+    font-size: var(--uno-card-font-size-corner);
+    position: relative;
+}
+
+.uno-card-bottom-value {
+    padding-inline: var(--space-sm);
+    margin-left: auto;
+    font-size: var(--uno-card-font-size-corner);
+    position: relative;
+}
+
+.uno-card-center-value .card-value-icon {
+    width: var(--uno-card-icon-size-lg);
+    height: var(--uno-card-icon-size-lg);
+}
+
+.uno-card-bottom-value .card-value-icon {
+    width: var(--uno-card-icon-size);
+    height: var(--uno-card-icon-size);
+    margin-bottom: var(--space-sm);
+}
+
+.uno-card-top-value .card-value-icon {
+    width: var(--uno-card-icon-size);
+    height: var(--uno-card-icon-size);
+    margin-top: var(--space-sm);
+}
+
+.uno-card-face.red {
+    background: var(--uno-card-background-red);
+}
+
+.uno-card-face.blue {
+    background: var(--uno-card-background-blue);
+}
+
+.uno-card-face.green {
+    background: var(--uno-card-background-green);
+}
+
+.uno-card-face.yellow {
+    background: var(--uno-card-background-yellow);
+}
+
+.uno-card-face.wild {
+    background: var(--uno-card-background-rainbow);
+}
+
+@media (max-width: 480px) {
+    .uno-card-bottom-value, .uno-card-top-value {
+        display: none;
+    }
+}

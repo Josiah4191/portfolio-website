@@ -8,18 +8,17 @@
     opacity: 0;
 }
 
-.uno-hand-card.uno-hand-card-is-pending .uno-card-face {
+.uno-hand-card.uno-hand-card-is-pending .uno-card {
     animation: pulse-white-card 1s infinite;
 }
 
 @media (hover: hover) and (pointer: fine) {
-    .uno-hand-card .uno-card-face:hover {
+    .uno-hand-card .uno-card:hover {
         transform: translateY(-4px);
-        transition: transform 0.2s ease-in-out;
     }
 }
 
-.uno-hand-card.uno-hand-card-is-pending .uno-card-face:hover {
+.uno-hand-card.uno-hand-card-is-pending .uno-card {
     border: var(--color-text) 1px solid;
     animation: none;
     transition: transform 0.2s ease-in-out;

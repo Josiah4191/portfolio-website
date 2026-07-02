@@ -1,9 +1,9 @@
-import './UnoPlayerHand.css'
+import './PagingComponent.css'
 import UnoHandCard from "../cards/UnoHandCard.jsx";
 import {sortCards} from "../../utils/refUtils.js";
 import {useEffect, useState} from "react";
 
-export default function UnoPlayerHand({
+export default function PagingComponent({
                                           localPlayer,
                                           playableCardIds,
                                           pendingCardId,
@@ -118,36 +118,3 @@ export default function UnoPlayerHand({
         </div>
     )
 }
-
-/*
-{totalPages > 1 && (
-                <div className="uno-hand-page-dots">
-                    <button
-                        type="button"
-                        className="hand-page-arrow"
-                        aria-label="Previous hand page"
-                        onClick={prevPage}
-                        disabled={activePage === 0}>
-                        ⌃
-                    </button>
-                    {Array.from({length: totalPages}).map((_, index) => (
-                        <button
-                            type="button"
-                            key={index}
-                            aria-label={`Go to hand page ${index + 1}`}
-                            aria-current={index === activePage ? "page" : undefined}
-                            className={`uno-hand-page-dot ${index === activePage ? "active" : ""}`}
-                            onClick={() => setActivePage(index)}
-                        />
-                    ))}
-                    <button
-                        type="button"
-                        className="uno-hand-page-arrow"
-                        aria-label="Next hand page"
-                        onClick={nextPage}
-                        disabled={activePage === totalPages - 1}>
-                        ⌄
-                    </button>
-                </div>
-            )}
- */

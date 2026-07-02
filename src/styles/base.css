@@ -2,6 +2,7 @@
 @import "./typography.css";
 @import "./spacing.css";
 @import "./surfaces.css";
+@import "../features/games/uno/styles/UnoTokens.css";
 
 body {
     background: var(--color-background);

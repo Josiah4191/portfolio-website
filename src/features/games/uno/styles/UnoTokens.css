@@ -1,0 +1,66 @@
+:root {
+    /*========== Card ==========*/
+    --uno-card-width: 110px;
+    --uno-card-height: 160px;
+    --uno-card-padding: 5px;
+    --uno-card-border-radius: 8px;
+    --uno-card-gap: var(--space-sm);
+    --uno-card-gap-center: var(--space-md);
+    --uno-card-font-size: var(--font-size-2xl);
+    --uno-card-font-size-corner: var(--font-size-lg);
+    --uno-card-icon-size: 20px;
+    --uno-card-icon-size-lg: 32px;
+
+    /*========== Player ==========*/
+    --uno-player-font-size: var(--font-size-base-lg);
+
+    /*========== Colors ==========*/
+    --uno-card-red: #C94F4F;
+    --uno-card-red-light: #D16B6B;
+    --uno-card-blue: #4F7AC9;
+    --uno-card-blue-light: #678CD0;
+    --uno-card-green: #4FA06D;
+    --uno-card-green-light: #65B382;
+    --uno-card-yellow: #D8B24C;
+    --uno-card-yellow-light: #DFC06C;
+
+    --uno-card-background-red: linear-gradient(180deg, var(--uno-card-red-light), var(--uno-card-red));
+    --uno-card-background-blue: linear-gradient(180deg, var(--uno-card-blue-light), var(--uno-card-blue));
+    --uno-card-background-green: linear-gradient(180deg, var(--uno-card-green-light), var(--uno-card-green));
+    --uno-card-background-yellow: linear-gradient(180deg, var(--uno-card-yellow-light), var(--uno-card-yellow));
+    --uno-card-background-rainbow:
+            linear-gradient(180deg, rgb(255 255 255 / 0.08), rgb(255 255 255 / 0)),
+            linear-gradient(180deg, var(--uno-card-red), var(--uno-card-yellow), var(--uno-card-green), var(--uno-card-blue));
+    --uno-card-background-frame: linear-gradient(180deg, var(--white-light-silver), var(--white-medium-gray));
+
+    --uno-draw-pile-background-frame:
+            linear-gradient(180deg, rgba(255,255,255,.01), rgba(255,255,255,0)),
+            linear-gradient(180deg, #414751, #2F353E);
+    --uno-draw-pile-background-card:
+            linear-gradient(180deg, rgba(255,255,255,.01), rgba(255,255,255,0)),
+            linear-gradient(180deg, #232931, #181D24);
+    --uno-card-mini-background: linear-gradient(180deg, #414751, #2F353E);
+}
+
+@media (max-width: 768px) {
+    .uno-game-page {
+        --uno-card-width: 60px;
+        --uno-card-height: 80px;
+        --uno-card-gap: var(--space-xs);
+        --uno-card-gap-center: var(--space-sm);
+        --uno-card-font-size: var(--font-size-md);
+        --uno-card-font-size-corner: var(--font-size-sm);
+        --uno-player-font-size: var(--font-size-sm);
+        --uno-opponents-grid-columns: repeat(2, auto);
+        --uno-opponent-columns: 2;
+    }
+}
+
+@media (max-width: 480px) {
+    .uno-game-page {
+        --uno-card-width: 46px;
+        --uno-card-height: 58px;
+        --uno-card-font-size: var(--font-size-sm);
+        --uno-card-font-size-corner: var(--font-size-xs);
+    }
+}

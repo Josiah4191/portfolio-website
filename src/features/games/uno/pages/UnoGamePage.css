@@ -3,37 +3,11 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-
-    --uno-card-width: 80px;
-    --uno-card-height: 100px;
-    --uno-card-gap: var(--space-sm);
-    --uno-card-gap-center: var(--space-md);
-    --uno-card-font-size: var(--font-size-lg);
-    --uno-player-font-size: var(--font-size-base);
-    --uno-opponents-grid-columns: repeat(4, auto);
-    --uno-opponent-badge-width: 100px;
-    --uno-opponent-columns: 4;
 }
 
-@media (max-width: 768px) {
-    .uno-game-page {
-        --uno-card-width: 60px;
-        --uno-card-height: 80px;
-        --uno-card-gap: var(--space-xs);
-        --uno-card-gap-center: var(--space-sm);
-        --uno-card-font-size: var(--font-size-md);
-        --uno-card-font-size-corner: var(--font-size-sm);
-        --uno-player-font-size: var(--font-size-sm);
-        --uno-opponents-grid-columns: repeat(2, auto);
-        --uno-opponent-columns: 2;
-    }
-}
-
-@media (max-width: 480px) {
-    .uno-game-page {
-        --uno-card-width: 46px;
-        --uno-card-height: 58px;
-        --uno-card-font-size: var(--font-size-sm);
-        --uno-card-font-size-corner: var(--font-size-xs);
-    }
+.modal-panel {
+    overflow: hidden;
+    background: transparent;
+    padding: 0;
+    border-radius: var(--radius-xl);
 }

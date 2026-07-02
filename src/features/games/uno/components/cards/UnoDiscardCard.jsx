@@ -1,9 +1,9 @@
-import UnoCardFace from "./UnoCardFace.jsx";
+import UnoCard from "./UnoCard.jsx";
 
 export default function UnoDiscardCard({card, displayColor, cardRef}) {
     return (
         <div ref={cardRef}>
-            <UnoCardFace card={card} displayColor={displayColor}/>
+            <UnoCard card={card} displayColor={displayColor}/>
         </div>
     )
 }

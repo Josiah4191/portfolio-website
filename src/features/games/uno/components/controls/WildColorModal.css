@@ -21,19 +21,19 @@
 }
 
 .wild-card.red {
-    background-color: var(--game-accent-red);
+    background-color: var(--uno-card-red);
 }
 
 .wild-card.blue {
-    background-color: var(--game-accent-blue);
+    background-color: var(--uno-card-blue);
 }
 
 .wild-card.green {
-    background-color: var(--game-accent-green);
+    background-color: var(--uno-card-green);
 }
 
 .wild-card.yellow {
-    background-color: var(--game-accent-yellow);
+    background-color: var(--uno-card-yellow);
 }
 
 @keyframes fadeIn {

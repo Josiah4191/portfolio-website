@@ -9,7 +9,6 @@ import {registerRef} from "../../utils/refUtils.js";
 import CurrentPlayerDot from "./indicators/CurrentPlayerDot.jsx";
 import FullToMiniFlyingCard from "../animations/FullToMiniFlyingCard.jsx";
 import MiniToFullFlyingCard from "../animations/MiniToFullFlyingCard.jsx";
-import ActionArea from "./areas/ActionArea.jsx";
 
 export default function UnoGameBoard({
                                          gameState,

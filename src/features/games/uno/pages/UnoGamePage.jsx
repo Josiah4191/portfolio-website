@@ -199,7 +199,7 @@ export default function UnoGamePage() {
                     </>)}
             </GameToolbar>
 
-            <Modal isOpen={openRules} onClose={() => setOpenRules(false)}>
+            <Modal className="modal-panel" isOpen={openRules} onClose={() => setOpenRules(false)}>
                 <UnoRules onClose={() => setOpenRules(false)}/>
             </Modal>
 

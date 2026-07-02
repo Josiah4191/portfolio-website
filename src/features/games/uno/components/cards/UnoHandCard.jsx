@@ -1,5 +1,5 @@
 import './UnoHandCard.css'
-import UnoCardFace from "./UnoCardFace.jsx";
+import UnoCard from "./UnoCard.jsx";
 
 export default function UnoHandCard({
                                         card,
@@ -20,7 +20,7 @@ export default function UnoHandCard({
             onClick={onPlayCard}
             disabled={!isPlayable}
             className={`uno-hand-card ${isBeingCloned ? "uno-hand-card-is-hidden" : ""} ${isPending ? "uno-hand-card-is-pending" : ""}`}>
-            <UnoCardFace card={card}/>
+            <UnoCard card={card}/>
         </button>
     )
 }

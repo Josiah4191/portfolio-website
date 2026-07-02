@@ -16,7 +16,6 @@ export default function RootLayout({theme, children}) {
 
         document.body.classList.remove(
             THEMES.portfolio,
-            THEMES.squirrel,
             THEMES.game);
 
         document.body.classList.add(theme);

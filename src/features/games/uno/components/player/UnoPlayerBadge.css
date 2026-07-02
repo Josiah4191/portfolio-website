@@ -1,32 +1,55 @@
+.panel.uno-player-badge {
+    --panel-surface: color-mix(in srgb, var(--game-panel-surface) 96%, white);
+    --panel-surface-light: color-mix(in srgb, var(--game-panel-surface-light) 92%, white);
+    --panel-sheen-opacity: 0;
+    --panel-inset-highlight-size: 1px;
+    --panel-inset-highlight-opacity: 0.35;
+    --panel-inset-shadow-opacity: 0.12;
+    --panel-shadow-opacity: 0;
+    --panel-shadow-blur: 30px;
+    --panel-radius: var(--radius-sm);
+    --panel-border-color: color-mix(in srgb, var(--panel-surface-light) 35%, white);
+    --panel-border-opacity: 0.35;
+}
+
 .uno-player-badge {
-    display: flex;
-    background: transparent;
-    flex-direction: column;
-    width: var(--uno-opponent-badge-width);
-    font-size: var(--uno-player-font-size);
-    color: var(--color-text-muted);
-    transition: transform 0.2s ease-in-out;
-    align-items: flex-start;
-    gap: 5px;
     position: relative;
+    width: 200px;
+    padding: var(--space-md);
+
+    font-size: var(--uno-player-font-size);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-md);
+
+    transition: transform 0.2s ease-in-out;
+}
+
+.uno-player-label-icon {
+    color: var(--game-accent-light);
+    fill: var(--game-accent-light);
 }
 
 .uno-player-label {
-    white-space: nowrap;
-    font-weight: 700;
+    position: relative;
     width: 100%;
-    padding: 10px;
+
     border-radius: 3px;
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
-    letter-spacing: 0.02em;
-    min-width: 80px;
+    opacity: 0.8;
+
+    font-weight: 700;
     text-align: center;
+    white-space: nowrap;
+    letter-spacing: 0.02em;
+
+    display: flex;
+    gap: var(--space-sm);
+
+    overflow: hidden;
     transition: transform 0.2s ease-in-out, border 0.2s ease-in-out;
     cursor: default;
-    position: relative;
-    overflow: hidden;
-    opacity: 0.8;
 }
 
 .uno-player-label-text {
@@ -35,36 +58,47 @@
 }
 
 .uno-player-card-count {
+    width: 100%;
+
     display: flex;
-    gap: 2px;
     align-items: center;
-    position: relative;
+    gap: var(--space-xs);
 }
 
 .uno-player-action-text {
-    animation: float-up-player 1.4s ease-in-out 1 forwards;
     position: absolute;
     bottom: 0;
-    font-size: 16px;
-    pointer-events: none;
     width: 100%;
-    text-align: center;
+
+    font-size: 16px;
     font-weight: var(--font-weight-semibold);
+    text-align: center;
+
+    animation: float-up-player 1.4s ease-in-out 1 forwards;
+    pointer-events: none;
 }
 
 .uno-player-card-count-label {
-    font-size: var(--uno-player-font-size);
-    opacity: 0.6;
-    position: absolute;
-    left: 100%;
-    margin-left: 6px;
+    margin-left: auto;
+    height: 100%;
+
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-muted);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .uno-player-card-count-card {
-    width: 10px;
-    height: 18px;
-    background-color: var(--color-border);
+    width: 14px;
+    height: 24px;
+
+    background: var(--uno-draw-pile-background-card);
     border-radius: 1px;
+    box-shadow: 0 4px 10px rgb(0 0 0 / 0.25);
+    border: 1px solid color-mix(in srgb, black 62%, lightblue);
 }
 
 .uno-player-label.uno-player-badge-has-action {
@@ -73,10 +107,11 @@
 
 .uno-player-label.uno-player-badge-has-countdown:hover,
 .uno-player-label.uno-player-badge-has-action:hover {
-    cursor: pointer;
-    animation: none;
-    transition: border 0.2s ease-in-out;
     border: var(--color-text-muted) 1px solid;
+
+    transition: border 0.2s ease-in-out;
+    animation: none;
+    cursor: pointer;
 }
 
 .uno-player-label.uno-player-badge-has-countdown::before {

@@ -21,14 +21,6 @@ export default function UnoPlayerArea({
 
     return (
         <div className="uno-player-area">
-            <UnoPlayerHand
-                flyingCard={flyingCard}
-                cardRefs={cardRefs}
-                registerRef={registerRef}
-                localPlayer={localPlayer}
-                playableCardIds={availableActions.playableCardIds}
-                pendingCardId={pendingCardId}
-                onPlayCard={onPlayCard}/>
             <UnoPlayerActionBar
                 lastAction={lastAction}
                 availableActions={availableActions}
@@ -39,6 +31,14 @@ export default function UnoPlayerArea({
                 registerRef={registerRef}
                 onCallUno={onCallUno}
                 onPassTurn={onPassTurn}/>
+            <UnoPlayerHand
+                flyingCard={flyingCard}
+                cardRefs={cardRefs}
+                registerRef={registerRef}
+                localPlayer={localPlayer}
+                playableCardIds={availableActions.playableCardIds}
+                pendingCardId={pendingCardId}
+                onPlayCard={onPlayCard}/>
         </div>
     )
 

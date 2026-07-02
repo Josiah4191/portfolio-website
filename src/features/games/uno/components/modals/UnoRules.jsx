@@ -1,4 +1,5 @@
 import './UnoRules.css'
+import Panel from "../shared/Panel.jsx";
 
 export default function UnoRules() {
     const gamePlayRules = [
@@ -37,7 +38,7 @@ export default function UnoRules() {
     ];
 
     return (
-        <section className="uno-rules" aria-labelledby="uno-rules-title">
+        <Panel className="uno-rules-panel" aria-labelledby="uno-rules-title">
 
             <div className="uno-rules-header">
                 <h1 id="uno-rules-title" className="uno-rules-title">Rules</h1>
@@ -66,6 +67,6 @@ export default function UnoRules() {
                     </article>
                 ))}
             </section>
-        </section>
+        </Panel>
     )
 }

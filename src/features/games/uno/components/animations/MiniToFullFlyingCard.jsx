@@ -1,5 +1,5 @@
 import './UnoFlyingCard.css'
-import UnoCardFace from "../cards/UnoCardFace.jsx";
+import UnoCard from "../cards/UnoCard.jsx";
 import {motion} from "framer-motion";
 import UnoCardBack from "../cards/UnoCardBack.jsx";
 
@@ -68,7 +68,7 @@ export default function MiniToFullFlyingCard({
             onAnimationComplete={onAnimationComplete}>
 
             <div className="uno-flying-card-side">
-                {card && <UnoCardFace card={card}/>}
+                {card && <UnoCard card={card}/>}
             </div>
 
             <div className="uno-flying-card-side uno-flying-card-back">

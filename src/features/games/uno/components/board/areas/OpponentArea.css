@@ -4,13 +4,10 @@
 }
 
 .opponent-area {
+    margin-top: var(--space-xxl);
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: var(--space-xl);
-    margin-top: var(--space-xxl);
-    width: calc(
-            (var(--uno-opponent-badge-width) * var(--uno-opponent-columns)) +
-            (var(--space-xl) * (var(--uno-opponent-columns) - 1))
-    );
 }

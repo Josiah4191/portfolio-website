@@ -11,7 +11,6 @@ export default function GameLayout({theme}) {
 
         document.body.classList.remove(
             THEMES.portfolio,
-            THEMES.squirrel,
             THEMES.game);
 
         document.body.classList.add(theme);

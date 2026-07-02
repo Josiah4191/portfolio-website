@@ -1,5 +1,5 @@
 :root {
-    /* Portfolio */
+    /*========== Portfolio Colors ==========*/
     --portfolio-color-page: #EAF2FA;
     --portfolio-color-page-soft: #F3F8FC;
     --portfolio-color-surface: #FFFFFF;
@@ -16,40 +16,23 @@
     --portfolio-color-hover-border: #BED4EA;
     --portfolio-color-hover-text: #5F96CB;
 
-    /* Games Colors Updated */
-    --game-color-background-dark: #050F20;
-    --game-color-background: #071224;
-    --game-color-surface: #101B31;
-    --game-color-subsurface: #18233C;
-    --game-color-border: #3A4663;
-    --game-color-text: #F5F7FB;
-    --game-color-text-muted: #A5B3CA;
-    --game-color-accent: #2F66F5;
-    --game-color-accent-hover: #4276FF;
-    --game-color-glow: rgba(47, 102, 245, 0.18);
-    --game-color-shadow: rgba(0, 0, 0, 0.45);
-    --game-card-border: #E6EBf4;
-    --game-color-gradient: radial-gradient(circle at center, rgba(47, 102, 245, .12), transparent 55%), #050F20;
+    /*========== Game Colors ==========*/
+    --game-color-text: #F2F2F2;
+    --game-color-text-muted: #C7C7C7;
+    --game-color-text-subtle: #9A9A9A;
 
-    /* Games */
-    --game-text: #F2F2F2;
-    --game-text-muted: #C7C7C7;
-    --game-text-subtle: #9A9A9A;
-    --game-background: #212121;
-    --game-surface: #2C2C2C;
-    --game-surface-alt: #2F3136;
-    --game-border: #3A3A3A;
-    --game-accent-red: #C94F4F;
-    --game-accent-blue: #4F7AC9;
-    --game-accent-green: #4FA06D;
-    --game-accent-yellow: #D8B24C;
-    --game-accent-rainbow: linear-gradient(
-            135deg,
-            var(--game-accent-red),
-            var(--game-accent-yellow),
-            var(--game-accent-green),
-            var(--game-accent-blue)
-    );
+    --game-background-surface: #001434;
+    --game-background-surface-light: #002561;
+    --game-background:
+            linear-gradient(180deg, rgb(255 255 255 / 0.05), transparent 100%),
+            linear-gradient(180deg, var(--game-background-surface), var(--game-background-surface-light));
+
+    --game-panel-surface: #002560;
+    --game-panel-surface-light: #00348A;
+    --game-accent: #0055E0;
+    --game-accent-light: #3B82F6;
+    --game-accent-extra-light: #5499FF;
+    --game-accent-dark: #0045B7;
 
     /*========== Technology Type ==========*/
     --color-type-frontend-background: #DCEEFF;
@@ -83,6 +66,57 @@
     --mac-yellow: #FEBC2E;
     --mac-green: #28C840;
 
+    /*========== Neutral Off-Blacks ==========*/
+    --black-almost: #0A0A0A;
+    --black-rich: #111111;
+    --black-soft: #161616;
+    --black-charcoal: #1C1C1C;
+    --black-graphite: #222222;
+    --black-dark-slate: #2A2A2A;
+    --black-slate-charcoal: #323232;
+    --black-gunmetal: #3A3A3A;
+    --black-steel: #444444;
+    --black-medium-graphite: #555555;
+
+    /*========== Neutral Off-Whites ==========*/
+    --white-pure: #FFFFFF;
+    --white-almost: #FCFCFC;
+    --white-soft: #FAFAFA;
+    --white-snow: #F8F8F8;
+    --white-porcelain: #F7F7F7;
+    --white-cloud: #F5F5F5;
+    --white-light-gray: #F2F2F2;
+    --white-silver: #EEEEEE;
+    --white-light-silver: #E8E8E8;
+    --white-medium-gray: #E2E2E2;
+
+    /*========== Cool Off-Whites ==========*/
+    --white-blue: #F8F9FB;
+    --white-mist: #F5F7FA;
+    --white-slate: #F1F4F8;
+    --white-cool-gray: #EDF1F5;
+    --white-blue-gray: #E8EDF2;
+
+    /*========== Premium Light Materials ==========*/
+    --white-ivory: #FAF9F6;
+    --white-linen: #F7F5F2;
+    --white-frost: #F4F6F8;
+    --white-pearl: #F1F2F4;
+    --white-platinum: #ECEDEF;
+
+    /*========== Cool Off-Blacks ==========*/
+    --black-blue: #0F1115;
+    --black-midnight: #14181D;
+    --black-slate: #1A2027;
+    --black-carbon-blue: #20262D;
+    --black-deep-graphite: #272E36;
+
+    /*========== Premium Dark Materials ==========*/
+    --black-obsidian: #181A1B;
+    --black-onyx: #1B1D20;
+    --black-carbon: #212428;
+    --black-dark-graphite: #26292E;
+    --black-slate-steel: #30343A;
 }
 
 body.page-portfolio {
@@ -104,10 +138,7 @@ body.page-portfolio {
 }
 
 body.page-game {
-    --color-background: var(--game-color-background-dark);
-    --color-surface: var(--game-color-surface);
-    --color-border: var(--game-color-border);
-
+    --color-background: var(--game-background);
     --color-text: var(--game-color-text);
     --color-text-subtle: var(--game-color-text-muted);
     --color-text-muted: var(--game-color-text-muted);

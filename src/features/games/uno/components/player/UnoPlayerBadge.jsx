@@ -1,6 +1,8 @@
 import './UnoPlayerBadge.css'
 import {buildPlayerActionMessage} from "../../utils/refUtils.js";
 import {useEffect, useState} from "react";
+import {User} from "lucide-react";
+import Panel from "../shared/Panel.jsx";
 
 export default function UnoPlayerBadge({
                                            playerId,
@@ -15,7 +17,7 @@ export default function UnoPlayerBadge({
                                            registerRef
                                        }) {
 
-    const MAX_VISIBLE_CARDS = 5;
+    const MAX_VISIBLE_CARDS = 7;
     const showCardNumbers = handSize > MAX_VISIBLE_CARDS;
     const visibleCardCount = Math.min(handSize, MAX_VISIBLE_CARDS);
     const [playerActionText, setPlayerActionText] = useState(null);
@@ -40,7 +42,7 @@ export default function UnoPlayerBadge({
     }, [lastAction]);
 
     return (
-        <div
+        <Panel
             className={"uno-player-badge"}
             ref={(element) => registerRef?.(playerRefs, playerId, element)}>
             <button
@@ -48,6 +50,7 @@ export default function UnoPlayerBadge({
                 onClick={onClick}
                 disabled={!isClickable}
                 className={`uno-player-label ${hasAction} ${countdown}`}>
+                <User className="uno-player-label-icon"/>
                 <span className="uno-player-label-text">{label}</span>
             </button>
             <div className="uno-player-card-count">
@@ -64,16 +67,13 @@ export default function UnoPlayerBadge({
                             }/>
                     );
                 })}
-                {showCardNumbers && <p className="uno-player-card-count-label">
-                    {handSize}
-
-                </p>}
+                <p className="uno-player-card-count-label">{handSize}</p>
             </div>
             {playerActionText?.playerId === playerId && (
                 <p className="uno-player-action-text">
                     {playerActionText.message}
                 </p>
             )}
-        </div>
+        </Panel>
     )
 }

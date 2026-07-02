@@ -1,10 +1,18 @@
-.uno-rules {
-    border: 1px solid var(--color-border);
-    background: var(--color-background);
-    font-weight: var(--font-weight-regular);
-    border-radius: var(--radius-sm);
+.panel.uno-rules-panel {
+    --panel-surface: var(--game-panel-surface);
+    --panel-surface-light: var(--game-surface-light);
+    --panel-border-opacity: .28;
+    --panel-sheen-opacity: .08;
+    --panel-highlight-opacity: 0.15;
+    --panel-shadow-opacity: 0.5;
+    --panel-shadow-blur: 24px;
+    --panel-radius: var(--radius-xl);
+}
+
+.uno-rules-panel {
     width: 100%;
 
+    overflow: hidden;
     display: flex;
     flex-direction: column;
 }
