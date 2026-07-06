@@ -22,8 +22,8 @@
     justify-content: center;
 }
 
-.portfolio-carousel-button.disabled {
-    opacity: 0.5;
+.portfolio-carousel-button:disabled {
+    opacity: 0;
     cursor: default;
 }
 
@@ -33,4 +33,22 @@
 
 .portfolio-carousel-button-right {
     right: -50px;
+}
+
+/* Hover Effects */
+@media (hover: hover) and (pointer: fine) {
+    .portfolio-carousel-button:not(:disabled) {
+        opacity: 1;
+    }
+
+    .portfolio-carousel-button:hover:not(:disabled) {
+        background: var(--color-accent-soft);
+    }
+
+}
+
+@media (max-width: 480px) {
+    .portfolio-carousel-button {
+        display: none;
+    }
 }

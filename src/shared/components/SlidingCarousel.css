@@ -29,21 +29,3 @@
 .sliding-carousel-icon-left {
     transform: rotate(180deg);
 }
-
-/* Hover Effects */
-@media (hover: hover) and (pointer: fine) {
-    .sliding-carousel-button:not(:disabled) {
-        opacity: 1;
-    }
-
-    .sliding-carousel-button:hover {
-        background: var(--color-accent-soft);
-    }
-
-}
-
-@media (max-width: 480px) {
-    .sliding-carousel-button {
-        display: none;
-    }
-}

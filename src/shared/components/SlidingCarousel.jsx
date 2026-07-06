@@ -74,7 +74,6 @@ export default function SlidingCarousel({
                         direction="left"
                         disabled={isAtStart}
                         onClick={() => scrollByAmount(-1)}/>}
-
                 <div
                     ref={trackRef}
                     onScroll={updateButtonState}
