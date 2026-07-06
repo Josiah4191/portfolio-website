@@ -1,8 +1,7 @@
 .action-area {
     position: fixed;
-    top: 50%;
-    left: var(--space-xxl);
-    transform: translate(-50%, -50%);
+    top: 40%;
+    left: 30%;
     z-index: 1000;
 
     pointer-events: none;
@@ -53,3 +52,16 @@
         opacity: 0;
     }
 }
+
+@media (max-width: 1024px) {
+    .action-area {
+        left: 20%;
+    }
+}
+
+@media (max-width: 768px) {
+    .action-area {
+        left: 10%;
+    }
+}
+
