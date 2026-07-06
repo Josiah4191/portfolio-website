@@ -3,7 +3,7 @@ import {SCREENSHOT_MAP} from "./screenshotData.js";
 import {FEATURES_MAP} from "./featuresData.js"
 import word_search_board from '../assets/screenshots/word-search/word-search-board.png'
 import manage_squirrels from '../assets/screenshots/squirrel-java/manage-squirrels-java.png'
-import game_board from '../assets/screenshots/uno/game-board.png'
+import uno_preview from '../assets/screenshots/uno/uno-preview.png'
 import add_items from '../assets/screenshots/squirrel-csharp/add-items-csharp.png'
 import hero_section from '../assets/screenshots/portfolio/hero-section.png'
 
@@ -76,7 +76,7 @@ export const PROJECTS = [
                 },
             ],
             preview: {
-                image: game_board,
+                image: uno_preview,
                 alt: "UNO gameboard showing players, cards, draw pile, and discard pile.",
             },
             highlights: [
