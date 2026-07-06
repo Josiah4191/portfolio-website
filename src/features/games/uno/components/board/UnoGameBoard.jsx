@@ -2,13 +2,13 @@ import CenterArea from "./areas/CenterArea.jsx";
 import OpponentArea from "./areas/OpponentArea.jsx";
 import './UnoGameBoard.css'
 import UnoPlayerArea from "./areas/UnoPlayerArea.jsx";
-import {useEffect, useRef, useState} from "react";
+import {useEffect, useRef} from "react";
 import UnoFlyingCard from "../animations/UnoFlyingCard.jsx";
-import WildColorModal from "../controls/WildColorModal.jsx";
-import {registerRef} from "../../utils/refUtils.js";
+import {registerRef} from "../../utils/utils.js";
 import CurrentPlayerDot from "./indicators/CurrentPlayerDot.jsx";
 import FullToMiniFlyingCard from "../animations/FullToMiniFlyingCard.jsx";
 import MiniToFullFlyingCard from "../animations/MiniToFullFlyingCard.jsx";
+import WildColorModal from "../modals/WildColorModal.jsx";
 
 export default function UnoGameBoard({
                                          gameState,
@@ -29,19 +29,8 @@ export default function UnoGameBoard({
     const cardRefs = useRef({});
     const playerRefs = useRef({});
     const playerCardRefs = useRef({});
-    const [pendingCardRect, setPendingCardRect] = useState({})
     const isWildColorAnimating = flyingCard?.card?.cardId === gameState.pendingCardId;
     const shouldShowWildColorModal = gameState.pendingAction === "CHOOSE_WILD_COLOR" && !isWildColorAnimating;
-
-    useEffect(() => {
-        const pendingCardElement = cardRefs.current[gameState.pendingCardId];
-        const cardRect = pendingCardElement?.getBoundingClientRect();
-
-        if (shouldShowWildColorModal) {
-            setPendingCardRect(cardRect);
-        }
-
-    }, [gameState.pendingAction, gameState.pendingCardId, shouldShowWildColorModal])
 
     useEffect(() => {
         if (!lastAction) {
@@ -175,11 +164,8 @@ export default function UnoGameBoard({
                 playerRefs={playerRefs}
                 playerCardRefs={playerCardRefs}
                 registerRef={registerRef}
-                lastAction={lastAction}
                 opponents={gameState.opponents}
-                availableActions={gameState.availableActions}
-                currentPlayerId={gameState.currentPlayerId}
-                onCallOutUno={onCallOutUno}/>
+                availableActions={gameState.availableActions}/>
             <CenterArea
                 drawPileRef={drawPileRef}
                 discardPileRef={discardPileRef}
@@ -197,23 +183,17 @@ export default function UnoGameBoard({
                 cardRefs={cardRefs}
                 registerRef={registerRef}
                 localPlayer={gameState.localPlayer}
-                currentPlayerId={gameState.currentPlayerId}
                 availableActions={gameState.availableActions}
-                lastAction={lastAction}
                 pendingCardId={gameState.pendingCardId}
                 onPassTurn={onPassTurn}
                 onCallUno={onCallUno}
-                onPlayCard={handlePlayCard}/>
+                onCallOutUno={onCallOutUno}
+                onPlayCard={handlePlayCard}
+                onDrawCard={handleDrawCard}/>
 
-            {shouldShowWildColorModal && <WildColorModal
-                style={{
-                    position: "fixed",
-                    left: `${pendingCardRect.left + pendingCardRect.width / 2}px`,
-                    top: `${pendingCardRect.top - 35}px`,
-                    transform: "translate(-50%, -50%)",
-                    zIndex: 9999
-                }}
-                onChooseWildColor={handleChooseWildColor}/>}
+            <WildColorModal
+                isOpen={shouldShowWildColorModal}
+                onChooseWildColor={handleChooseWildColor}/>
 
             {gameState.gameStatus === "IN_PROGRESS" &&
                 <CurrentPlayerDot

@@ -1,0 +1,112 @@
+.panel.wild-color-panel {
+    --panel-surface: var(--game-modal-surface-inner);
+    --panel-surface-light: var(--game-modal-surface-inner-light);
+    --panel-sheen-opacity: 0.03;
+
+    --panel-bottom-edge-color: transparent;
+    border-bottom: 1px solid rgb(255 255 255 / 0.1);
+}
+
+.panel.wild-color-panel::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    height: 1px;
+    background: var(--uno-game-rainbow-border);
+}
+
+.wild-color-panel {
+    width: 100%;
+    height: 100%;
+    padding: var(--space-xl);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-lg);
+}
+
+.wild-color-title {
+    width: 100%;
+    text-align: center;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.04em;
+    position: relative;
+}
+
+.wild-color-title::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 5px;
+    right: 5px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--game-accent-extra-light), transparent);
+}
+
+.wild-color-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+    gap: var(--space-md);
+}
+
+.game-button.wild-card {
+    flex-shrink: 0;
+
+    --game-button-width: 50px;
+    --game-button-height: 50px;
+    --game-button-radius: 50%;
+
+    --game-button-shadow-opacity: 0.5;
+    --game-button-shadow-blur: 12px;
+    --game-button-shadow-offset: 4px;
+
+    --game-button-inset-highlight-color: rgb(255 255 255 / .2);
+    --game-button-bottom-edge-color: rgb(255 255 255 / .1);
+    --game-button-border-left: 1px solid rgb(255 255 255 / .1);
+    --game-button-border-right: 1px solid rgb(255 255 255 / .1);
+
+    filter: saturate(1.1);
+}
+
+.game-button.wild-card:hover {
+    transform: scale(1.05);
+}
+
+.wild-card.red {
+    --game-button-surface: var(--uno-card-red);
+    --game-button-surface-light: var(--uno-card-red-light);
+}
+
+.wild-card.blue {
+    --game-button-surface: var(--uno-card-blue);
+    --game-button-surface-light: var(--uno-card-blue-light);
+}
+
+.wild-card.green {
+    --game-button-surface: var(--uno-card-green);
+    --game-button-surface-light: var(--uno-card-green-light);
+}
+
+.wild-card.yellow {
+    --game-button-surface: var(--uno-card-yellow);
+    --game-button-surface-light: var(--uno-card-yellow-light);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

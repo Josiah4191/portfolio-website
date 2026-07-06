@@ -1,58 +1,31 @@
 import './UnoPlayerBadge.css'
-import {buildPlayerActionMessage} from "../../utils/refUtils.js";
-import {useEffect, useState} from "react";
 import {User} from "lucide-react";
 import Panel from "../shared/Panel.jsx";
 
 export default function UnoPlayerBadge({
                                            playerId,
+                                           playerName,
                                            handSize,
-                                           label,
                                            hasAction,
-                                           countdown,
-                                           lastAction,
-                                           onClick,
                                            playerRefs,
                                            playerCardRefs,
-                                           registerRef
+                                           registerRef,
                                        }) {
-
     const MAX_VISIBLE_CARDS = 7;
-    const showCardNumbers = handSize > MAX_VISIBLE_CARDS;
     const visibleCardCount = Math.min(handSize, MAX_VISIBLE_CARDS);
-    const [playerActionText, setPlayerActionText] = useState(null);
-    const isClickable = Boolean(onClick);
-
-    useEffect(() => {
-        const playerAction = buildPlayerActionMessage(lastAction);
-
-        if (!playerAction?.message) {
-            // eslint-disable-next-line react-hooks/set-state-in-effect
-            setPlayerActionText(null);
-            return;
-        }
-
-        setPlayerActionText(playerAction);
-
-        const timeout = setTimeout(() => {
-            setPlayerActionText(null);
-        }, 2200);
-
-        return () => clearTimeout(timeout);
-    }, [lastAction]);
 
     return (
         <Panel
-            className={"uno-player-badge"}
-            ref={(element) => registerRef?.(playerRefs, playerId, element)}>
-            <button
-                type="button"
-                onClick={onClick}
-                disabled={!isClickable}
-                className={`uno-player-label ${hasAction} ${countdown}`}>
+            className={"uno-player-badge"}>
+            <div
+                aria-label={`${playerName}. ${handSize} cards in hand.`}
+                className={`uno-player-label ${hasAction}`}>
                 <User className="uno-player-label-icon"/>
-                <span className="uno-player-label-text">{label}</span>
-            </button>
+                <span className="uno-player-label-text">{playerName}</span>
+                <span
+                    ref={(element) => registerRef?.(playerRefs, playerId, element)}
+                    className="uno-player-turn-indicator"/>
+            </div>
             <div className="uno-player-card-count">
                 {Array.from({length: visibleCardCount}).map((_, index) => {
                     const isLastVisibleCard = index === visibleCardCount - 1;
@@ -69,11 +42,6 @@ export default function UnoPlayerBadge({
                 })}
                 <p className="uno-player-card-count-label">{handSize}</p>
             </div>
-            {playerActionText?.playerId === playerId && (
-                <p className="uno-player-action-text">
-                    {playerActionText.message}
-                </p>
-            )}
         </Panel>
     )
 }

@@ -21,18 +21,32 @@
     --game-color-text-muted: #C7C7C7;
     --game-color-text-subtle: #9A9A9A;
 
-    --game-background-surface: #001434;
-    --game-background-surface-light: #002561;
-    --game-background:
-            linear-gradient(180deg, rgb(255 255 255 / 0.05), transparent 100%),
-            linear-gradient(180deg, var(--game-background-surface), var(--game-background-surface-light));
+    --game-background-surface: #0D0F16;
+    --game-background-surface-light: #181B2A;
+    --game-background: linear-gradient(
+            180deg,
+            #1B222B,
+            #0F141A
+    );
 
-    --game-panel-surface: #002560;
-    --game-panel-surface-light: #00348A;
+    --game-panel-surface: #1D232D;
+    --game-panel-surface-light: #313846;
     --game-accent: #0055E0;
     --game-accent-light: #3B82F6;
     --game-accent-extra-light: #5499FF;
     --game-accent-dark: #0045B7;
+
+    --game-modal-surface-inner-light: #242A33;
+    --game-modal-surface-inner: #171C23;
+    --game-modal-background-inner: linear-gradient(
+             180deg,
+            var(--game-modal-surface-inner-light),
+            var(--game-modal-surface-inner)
+    );
+
+    --game-header-surface: #151B24;
+    --game-header-surface-light: #232B36;
+    --game-header-background: linear-gradient(180deg, #2A313A 0%, #171C24 100%);
 
     /*========== Technology Type ==========*/
     --color-type-frontend-background: #DCEEFF;

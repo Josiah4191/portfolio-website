@@ -1,57 +1,120 @@
-import UnoPlayerBadge from "./UnoPlayerBadge.jsx";
+import './UnoPlayerActionBar.css'
+import {Users, CircleAlert, FastForward, Hand} from "lucide-react";
+import {useCallback, useEffect, useMemo} from "react";
+import UnoActionButton from "../shared/UnoActionButton.jsx";
 
 export default function UnoPlayerActionBar({
                                                localPlayer,
-                                               currentPlayerId,
-                                               availableActions,
-                                               lastAction,
+                                               canCallUno,
+                                               canPass,
+                                               canDraw,
+                                               onDrawCard,
                                                onCallUno,
+                                               onCallOutUno,
                                                onPassTurn,
-                                               playerRefs,
-                                               playerCardRefs,
-                                               registerRef
+                                               availableActions
                                            }) {
+    const callOutUnoPlayerIds = useMemo(() => availableActions?.callOutUnoPlayerIds ?? [],
+        [availableActions?.callOutUnoPlayerIds]
+    );
 
-    function handleCallUno() {
+    const canCallOutUno = callOutUnoPlayerIds.length > 0;
+
+    const isDraw = canDraw ? "is-draw" : "";
+    const isCallUno = canCallUno ? "is-call-uno" : "";
+    const isCallOutUno = canCallOutUno ? "is-call-out-uno" : "";
+    const isPass = canPass ? "is-pass" : "";
+    const isCountdown = canCallUno || canCallOutUno ? "is-countdown" : "";
+
+    const handleCallUno = useCallback(() => {
         onCallUno(localPlayer.id);
-    }
+    }, [localPlayer.id, onCallUno]);
 
-    const canCallUno = availableActions.canCallUno;
-    const canPass = availableActions.canPass;
+    const handleCallOutUno = useCallback(() => {
+        callOutUnoPlayerIds.forEach(id => onCallOutUno(id));
+    }, [callOutUnoPlayerIds, onCallOutUno])
 
-    const label =
-        canCallUno
-            ? "UNO"
-            : canPass
-                ? "PASS"
-                : localPlayer.name;
+    const handleKeyDown = useCallback((event) => {
+        console.log("key pressed", event.key);
+        console.log({canCallOutUno, canCallUno, canPass});
+        switch (event.key) {
+            case "1":
+                if (canDraw) {
+                    onDrawCard();
+                }
+                break;
+            case "2":
+                if (canCallOutUno) {
+                    handleCallOutUno();
+                }
+                break;
+            case "3":
+                if (canCallUno) {
+                    handleCallUno();
+                }
+                break;
+            case "4":
+                if (canPass) {
+                    onPassTurn();
+                }
+                break;
+        }
+    }, [canCallOutUno, canCallUno, canDraw, canPass, handleCallOutUno, handleCallUno, onDrawCard, onPassTurn])
 
-    const onClick =
-        canCallUno
-            ? handleCallUno
-            : canPass
-                ? onPassTurn
-                : undefined;
-
-    const hasAction = canPass ? "uno-player-badge-has-action" : "";
-
-    const countdown = canCallUno ? "uno-player-badge-has-countdown" : "";
+    useEffect(() => {
+        window.addEventListener("keydown", handleKeyDown);
+        return () => window.removeEventListener("keydown", handleKeyDown);
+    }, [handleKeyDown])
 
     return (
-        <div>
-            <UnoPlayerBadge
-                key={localPlayer.id}
-                playerId={localPlayer.id}
-                playerRefs={playerRefs}
-                playerCardRefs={playerCardRefs}
-                registerRef={registerRef}
-                label={label}
-                hasAction={hasAction}
-                countdown={countdown}
-                lastAction={lastAction}
-                isCurrentPlayer={localPlayer.id === currentPlayerId}
-                handSize={localPlayer.handSize}
-                onClick={onClick}/>
-        </div>
+        <section
+            className="uno-player-action-bar">
+
+            <div className="uno-player-controls">
+                <UnoActionButton
+                    className={`uno-draw-button ${isDraw}`}
+                    icon={Hand}
+                    tooltipTitle="Draw Card"
+                    tooltipDescription="Draw a card from the deck"
+                    keybind={1}
+                    isDisabled={canDraw ? "" : "is-disabled"}
+                    onClick={onDrawCard}>
+                </UnoActionButton>
+
+                <UnoActionButton
+                    className={`uno-call-out-button ${isCallOutUno}`}
+                    icon={Users}
+                    tooltipTitle="Call Out Uno"
+                    tooltipDescription="Call out a player who forgot to declare UNO after reaching one card"
+                    keybind={2}
+                    isDisabled={canCallOutUno ? "" : "is-disabled"}
+                    onClick={handleCallOutUno}>
+                </UnoActionButton>
+
+                <UnoActionButton
+                    className={`uno-call-button ${isCallUno}`}
+                    icon={CircleAlert}
+                    tooltipTitle="Say UNO"
+                    tooltipDescription="Declare UNO when you have one card remaining. If you don't, another player may call you out"
+                    keybind={3}
+                    isDisabled={canCallUno ? "" : "is-disabled"}
+                    onClick={handleCallUno}>
+                </UnoActionButton>
+
+                <UnoActionButton
+                    className={`uno-pass-button ${isPass}`}
+                    icon={FastForward}
+                    keybind={4}
+                    tooltipTitle="Pass Turn"
+                    tooltipDescription="End your turn without playing the card you just drew"
+                    onClick={onPassTurn}
+                    isDisabled={canPass ? "" : "is-disabled"}>
+                </UnoActionButton>
+            </div>
+
+            <div className={`uno-countdown-drain ${isCountdown}`}>
+                <span className={`uno-countdown-drain-inner ${isCountdown}`}/>
+            </div>
+        </section>
     )
 }

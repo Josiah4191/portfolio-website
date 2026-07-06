@@ -2,6 +2,7 @@ import './UnoGameMenu.css'
 import {useState} from "react";
 import {Play, Users} from "lucide-react";
 import Panel from "../shared/Panel.jsx";
+import GameButton from "../shared/GameButton.jsx";
 
 export default function UnoGameMenu({startGame}) {
 
@@ -16,7 +17,7 @@ export default function UnoGameMenu({startGame}) {
             <div className="uno-menu-content">
                 <h1 className="uno-game-title" data-text={"UNO"}>UNO</h1>
 
-                <Panel className="uno-player-selection-panel no-border">
+                <Panel className="uno-player-selection-panel">
                     <div className="uno-player-selection" aria-labelledby="uno-player-count-title">
 
                         <div className="uno-player-count-options-wrapper">
@@ -53,13 +54,10 @@ export default function UnoGameMenu({startGame}) {
 
                 </Panel>
 
-                <button
-                    type="button"
+                <GameButton
+                    icon={Play}
                     className="uno-start-game-button"
-                    onClick={handleStartGame}>
-                    <Play className="uno-start-game-icon" size={28} aria-hidden="true"/>
-                    Start Game
-                </button>
+                    onClick={handleStartGame}>Start Game</GameButton>
 
             </div>
         </div>

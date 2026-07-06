@@ -1,21 +1,30 @@
 .uno-card {
+    --uno-card-inset-highlight-color: rgb(255 255 255 / .2);
+    --uno-card-inset-shadow-color: rgb(255 255 255 / .08);
+    --uno-card-shadow-color: rgb(0 0 0 / 0.25);
+    --uno-card-shadow-blur: 16px;
+    --uno-card-shadow-offset: 4px;
+
     position: relative;
     width: var(--uno-card-width);
     height: var(--uno-card-height);
     padding: var(--uno-card-padding);
 
     background: var(--uno-card-background-frame);
+    border-left: 1px solid rgb(255 255 255 / .05);
+    border-right: 1px solid rgb(255 255 255 / 0.05);
     border-radius: var(--uno-card-border-radius);
-    box-shadow: inset 0 1px 0 rgb(255 255 255 / 1),
-                inset 0 -1px 0 rgb(0 0 0 / 0.25),
-                0 10px 24px rgb(0 0 0 / 0.4);
-    color: var(--color-text);
+    box-shadow:
+            inset 0 1px 0 rgb(255 255 255 / .05), /* inset highlight */
+            inset 0 -1px 3px rgb(0 0 0 / 0.1), /* inset shadow */
+            0 4px 16px rgb(0 0 0 / 0.1), /* shadow */
+            0 1px 0 rgb(255 255 255 / .05), /* bottom edge */
+            0 0 0 2px var(--uno-card-hover-ring-color) /* focus ring shadow */;
 
-    font-weight: bold;
-    font-family: "Rubik", "Arial Rounded MT Bold", "Trebuchet MS", Arial, sans-serif;
+    color: var(--uno-card-text-color);
+    font-weight: var(--font-weight-extrabold);
 
-    transition: transform 0.2s ease-in-out;
-
+    transition: box-shadow 0.2s ease-in-out;
     user-select: none;
     -webkit-user-select: none;
 }
@@ -33,6 +42,8 @@
 
     overflow: hidden;
     position: relative;
+
+    filter: saturate(1.1);
 }
 
 .uno-card-center-value {
@@ -93,8 +104,3 @@
     background: var(--uno-card-background-rainbow);
 }
 
-@media (max-width: 480px) {
-    .uno-card-bottom-value, .uno-card-top-value {
-        display: none;
-    }
-}

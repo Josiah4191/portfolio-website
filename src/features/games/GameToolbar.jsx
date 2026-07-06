@@ -7,7 +7,7 @@ export default function GameToolbar({children}) {
             <div className="game-toolbar-content">
                 <Link className="game-toolbar-link" to="/">
                     <div className="game-nav-logo-mark"><span>J</span></div>
-                    <span className="type-nav-logo">Portfolio</span>
+                    <span className="type-nav-logo game-nav-logo-label">Portfolio</span>
                 </Link>
                 {children && (
                     <div className="game-toolbar-actions">

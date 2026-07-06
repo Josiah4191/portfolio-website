@@ -1,0 +1,36 @@
+.icon-left {
+    transform: rotate(180deg);
+}
+
+.portfolio-carousel-button {
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: var(--color-accent);
+    font-size: var(--font-size-2xl);
+    background: var(--color-surface);
+    box-shadow: var(--surface-icon-wrapper);
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background 0.2s ease-in-out, opacity 0.2s ease-in-out;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portfolio-carousel-button.disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.portfolio-carousel-button-left {
+    left: -50px;
+}
+
+.portfolio-carousel-button-right {
+    right: -50px;
+}

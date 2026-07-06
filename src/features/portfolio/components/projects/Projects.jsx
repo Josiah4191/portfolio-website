@@ -3,6 +3,7 @@ import {PROJECTS} from "../../data/projectData.js";
 import ProjectCard from "./ProjectCard.jsx";
 import SlidingCarousel from "../../../../shared/components/SlidingCarousel.jsx";
 import SectionHeader from "../project-page/SectionHeader.jsx";
+import PortfolioCarouselButton from "../../../../shared/components/PortfolioCarouselButton.jsx";
 
 export default function Projects() {
     return (
@@ -20,6 +21,7 @@ export default function Projects() {
                 <div className="projects-section-carousel">
                     <SlidingCarousel
                         ariaLabel="Projects"
+                        ButtonComponent={PortfolioCarouselButton}
                         trackClass="projects-section-track">
                         {PROJECTS.map((project) => <ProjectCard key={project.slug} project={project}/>)}
                     </SlidingCarousel>

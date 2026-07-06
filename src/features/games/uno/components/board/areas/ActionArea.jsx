@@ -1,10 +1,9 @@
 import './ActionArea.css'
 import {useEffect, useState} from "react";
-import {buildActionMessage} from "../../../utils/refUtils.js";
+import {buildActionMessage} from "../../../utils/utils.js";
 
 export default function ActionArea({lastAction}) {
-
-    const [actionText, setActionText] = useState(null);
+    const [actionMessages, setActionMessages] = useState([]);
 
     useEffect(() => {
         const messageData = buildActionMessage(lastAction);
@@ -13,21 +12,25 @@ export default function ActionArea({lastAction}) {
             return;
         }
 
-        // eslint-disable-next-line react-hooks/set-state-in-effect
-        setActionText(messageData);
+        const message = {
+            id: Date.now() + Math.random(),
+            ...messageData
+        };
+
+        setActionMessages((previous) => [...previous, message]);
 
         const timeout = setTimeout(() => {
-            setActionText(null);
+            setActionMessages(previous => previous.filter(item => item.id !== message.id));
         }, 2200);
 
         return () => clearTimeout(timeout);
     }, [lastAction])
 
-    if (!actionText) return null;
+    if (actionMessages.length === 0) return null;
 
     return (
         <div className="action-area">
-            {actionText && (
+            {actionMessages.map(actionText => (
                 <div
                     aria-live="polite"
                     className="action-area-message">
@@ -39,7 +42,7 @@ export default function ActionArea({lastAction}) {
                 </span>
                     )}
                 </div>
-            )}
+            ))}
         </div>
     )
 }

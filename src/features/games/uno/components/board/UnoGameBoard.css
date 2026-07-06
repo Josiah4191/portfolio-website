@@ -1,7 +1,14 @@
 .uno-game-board {
+    position: relative;
+    width: 100%;
+
     display: flex;
     flex-direction: column;
-    width: 100%;
-    position: relative;
     gap: var(--space-xxl);
+}
+
+@media (max-width: 500px) {
+    .uno-game-board {
+        gap: var(--space-lg);
+    }
 }

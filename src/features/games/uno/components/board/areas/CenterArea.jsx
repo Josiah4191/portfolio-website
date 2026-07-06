@@ -8,8 +8,8 @@ export default function CenterArea({
                                        drawPileRef,
                                        drawPileSize,
                                        discardPileSize,
-                                       topCard,
                                        lastAction,
+                                       topCard,
                                        availableActions,
                                        currentColor,
                                        onDrawCard

@@ -3,6 +3,7 @@ import StackCard from "./StackCard.jsx";
 import {BADGES} from "../../data/badgeData.js"
 import SlidingCarousel from "../../../../shared/components/SlidingCarousel.jsx";
 import SectionHeader from "../project-page/SectionHeader.jsx";
+import PortfolioCarouselButton from "../../../../shared/components/PortfolioCarouselButton.jsx";
 
 export default function Stack() {
     return (
@@ -20,6 +21,7 @@ export default function Stack() {
                 <div className="stack-section-carousel">
                     <SlidingCarousel
                         ariaLabel="Tools"
+                        ButtonComponent={PortfolioCarouselButton}
                         trackClass="stack-section-track">
                         {BADGES.map((badge) => <StackCard key={badge.id} badge={badge}/>)}
                     </SlidingCarousel>

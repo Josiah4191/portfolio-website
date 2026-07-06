@@ -7,8 +7,9 @@
 }
 
 .stack-section-track {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: auto;
+    width: max-content;
+
+    display: flex;
+    padding: var(--space-sm);
     gap: var(--space-sm);
 }

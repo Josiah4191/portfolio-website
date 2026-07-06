@@ -1,70 +1,14 @@
-.uno-player-container {
-    display: flex;
-    gap: 10px;
+.uno-player-hand-carousel {
     width: 100%;
-    justify-content: center;
 }
 
-.uno-player-hand {
-    display: flex;
-    width: calc(var(--uno-card-width) * 7 + var(--uno-card-gap) * 6);
-    flex-wrap: wrap;
-    gap: var(--uno-card-gap);
-    align-content: start;
-}
+.uno-player-hand-track {
+    width: max-content;
+    margin-inline: auto;
+    padding: var(--space-sm);
 
-.uno-hand-page-dots {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
+    gap: var(--uno-card-gap);
 }
-
-.uno-hand-page-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    border: none;
-    background: rgba(255, 255, 255, 0.3);
-    cursor: pointer;
-}
-
-.uno-hand-page-dot.active {
-    background: var(--color-text);
-    box-shadow: 0 0 8px rgba(255, 255, 255, .8),
-    0 0 16px rgba(255, 255, 255, .4);
-}
-
-
-.uno-hand-page-arrow {
-    background: none;
-    border: none;
-    color: rgba(255, 255, 255, 0.5);
-
-    font-size: 1rem;
-    line-height: 1;
-
-    padding: 0;
-    margin: 0;
-
-    cursor: pointer;
-
-    transition: color 0.2s ease, transform 0.2s ease;
-}
-
-.hand-page-arrow:hover:not(:disabled) {
-    color: rgba(255, 255, 255, 1);
-    transform: scale(1.1);
-}
-
-.hand-page-arrow:disabled {
-    opacity: 0.15;
-    cursor: default;
-}
-
-@media (max-width: 390px) {
-    .uno-player-hand {
-        max-width: calc(100vw - 24px);
-    }
-}
-

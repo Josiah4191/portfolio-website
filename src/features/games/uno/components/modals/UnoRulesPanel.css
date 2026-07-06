@@ -1,0 +1,215 @@
+.panel.uno-rules-panel {
+    --panel-surface: var(--game-panel-surface);
+    --panel-surface-light: var(--game-panel-surface-light);
+
+    --panel-sheen-opacity: 0;
+    --panel-radius: var(--radius-lg);
+
+    --panel-bottom-edge-color: transparent;
+    border-bottom: 1px solid rgb(255 255 255 / 0.1);
+
+    padding: var(--space-md);
+
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.panel.uno-rules-panel::before {
+    content: "";
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    bottom: 0;
+    height: 1px;
+    background: var(--uno-game-rainbow-border);
+}
+
+.uno-rules-header {
+    position: relative;
+    padding: var(--space-md);
+
+    display: flex;
+    gap: var(--space-md);
+    align-items: center;
+}
+
+.uno-rules-content {
+    background: linear-gradient(to bottom, var(--game-modal-surface-inner-light), var(--game-modal-surface-inner));
+    border-radius: var(--radius-lg);
+    border: 1px solid rgb(255 255 255 / 0.06);
+
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    scrollbar-color: rgb(255 255 255 / .1) transparent;
+}
+
+.uno-rules-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.uno-rules-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.uno-rules-content::-webkit-scrollbar-thumb {
+    background: rgb(255 255 255 / .14);
+    border-radius: 999px;
+}
+
+.uno-rules-content::-webkit-scrollbar-thumb:hover {
+    background: rgb(255 255 255 / .22);
+}
+
+.uno-rules-icon {
+    height: 32px;
+    width: 32px;
+}
+
+.uno-rules-section {
+    padding: var(--space-md);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.uno-rules-section:last-child {
+    border-bottom: none;
+}
+
+.uno-rules-title {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+}
+
+.uno-gameplay-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.uno-rule-item {
+    position: relative;
+    color: var(--game-color-text-muted);
+    font-weight: var(--font-weight-medium);
+
+    display: flex;
+    gap: var(--space-sm);
+}
+
+.uno-rule-bullet {
+    flex: 0 0 auto;
+    margin-top: 0.35em;
+
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: linear-gradient(
+            180deg,
+            var(--game-accent-light),
+            var(--game-accent)
+    );
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / .15),
+    0 2px 4px rgb(0 0 0 / .25);
+}
+
+.uno-rules-title-secondary {
+    font-size: var(--font-size-base-lg);
+    letter-spacing: 0.05em;
+    font-weight: var(--font-weight-bold);
+}
+
+.uno-action-rule-header {
+    display: flex;
+    align-items: flex-end;
+    gap: var(--space-sm);
+}
+
+.uno-action-rule,
+.uno-control-rule {
+    padding-bottom: var(--space-sm);
+    border-bottom: 1px solid rgb(255 255 255 / 0.08);
+
+    display: flex;
+    gap: var(--space-md);
+}
+
+.uno-action-description,
+.uno-control-description {
+    color: var(--game-color-text-muted);
+    font-weight: var(--font-weight-medium);
+}
+
+.uno-action-title,
+.uno-control-title {
+    font-size: var(--font-size-base-lg);
+    font-weight: var(--font-weight-semibold);
+}
+
+.uno-action-rule:last-child,
+.uno-control-rule:last-child {
+    border-bottom: none;
+}
+
+.uno-action-rule-icon-wrapper,
+.uno-control-rule-icon-wrapper {
+    flex: 0 0 50px;
+    width: 50px;
+    height: 50px;
+    padding: 3px;
+
+    --rule-icon-tile-light: #242A34;
+    --rule-icon-tile: #191E26;
+    background: linear-gradient(
+            180deg,
+            var(--rule-icon-tile-light),
+            var(--rule-icon-tile)
+    );
+
+    border: 1px solid rgb(255 255 255 / 0.07);
+    border-top: 1px solid rgb(255 255 255 / 0.1);
+    border-radius: var(--radius-xs);
+    text-align: center;
+    color: var(--game-accent-light);
+    box-shadow: 0 4px 10px rgb(0 0 0 / 0.18);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.uno-rules-action-text {
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-semibold);
+}
+
+.uno-rules-action-icon {
+    stroke-width: 2.1;
+}
+
+@media (max-width: 600px) {
+    .uno-rules-title {
+        font-size: var(--font-size-lg);
+    }
+
+    .uno-rules-title-secondary {
+        font-size: var(--font-size-base);
+    }
+
+    .uno-action-title,
+    .uno-control-title {
+        font-size: var(--font-size-base);
+    }
+
+    .uno-action-description,
+    .uno-control-description {
+        font-size: var(--font-size-sm);
+    }
+
+    .uno-rule-item {
+        font-size: var(--font-size-sm);
+    }
+
+}

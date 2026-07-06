@@ -1,0 +1,88 @@
+.uno-player-action-bar {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.uno-player-controls {
+    padding: var(--space-md);
+
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.uno-countdown-drain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.uno-countdown-drain-inner {
+    position: relative;
+    width: 80%;
+    height: 12px;
+
+    border-top: 1px solid rgb(255 255 255 / 0.15);
+    border-bottom: 1px solid rgb(255 255 255 / 0.1);
+    border-left: 1px solid rgb(255 255 255 / 0.1);
+    border-right: 1px solid rgb(255 255 255 / 0.1);
+    border-radius: var(--radius-pill);
+    --panel-surface: var(--game-modal-surface-inner);
+    --panel-surface-light: var(--game-modal-surface-inner-light);
+    background: linear-gradient(to bottom, var(--panel-surface-light), var(--panel-surface));
+}
+
+.uno-countdown-drain-text {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    line-height: 1;
+}
+
+.uno-countdown-drain.is-countdown {
+    opacity: 1;
+}
+
+.uno-countdown-drain-inner.is-countdown::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgb(255 255 255 / .9);
+    border-radius: var(--radius-pill);
+    animation: countdown-drain-animation 2s forwards ease-in;
+}
+
+@keyframes countdown-drain-animation {
+    0% {
+        width: 100%;
+        background: var(--game-accent-light);
+    }
+
+    60% {
+        background: rgb(255 255 255);
+    }
+
+    80% {
+        background: var(--uno-card-red-light);
+    }
+
+    100% {
+        width: 0;
+        background: var(--uno-card-red);
+    }
+}
+
+@media (max-width: 500px) {
+    .uno-player-controls {
+        padding: var(--space-sm);
+        gap: var(--space-md);
+    }
+}

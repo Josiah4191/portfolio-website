@@ -1,6 +1,5 @@
 .stack-card {
-    min-width: 180px;
-    min-height: 200px;
+    width: 180px;
     height: 100%;
     padding: var(--space-md);
 

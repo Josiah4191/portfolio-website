@@ -1,21 +1,24 @@
 .close-button {
     position: absolute;
-    top: var(--padding-sm);
-    right: var(--padding-sm);
-
-    font-size: var(--font-size-lg);
-    color: inherit;
-    cursor: pointer;
-
+    top: var(--space-sm);
+    right: var(--space-sm);
     width: 40px;
     height: 40px;
-    border-radius: var(--radius-sm);
 
-    z-index: 1;
+    border-radius: 50%;
+
+    font-size: var(--font-size-lg);
+    color: var(--color-text-muted);
 
     transition: background-color 0.2s ease, transform 0.2s ease;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .close-button:hover {
-    background: rgba(0, 0, 0, 0.05);
+    background: rgb(255 255 255 / 0.06);
+    color: var(--color-text);
 }

@@ -9,31 +9,11 @@
 }
 
 .uno-hand-card.uno-hand-card-is-pending .uno-card {
-    animation: pulse-white-card 1s infinite;
+    --uno-card-hover-ring-color: rgb(255 255 255 / 0.75);
 }
 
 @media (hover: hover) and (pointer: fine) {
-    .uno-hand-card .uno-card:hover {
-        transform: translateY(-4px);
-    }
-}
-
-.uno-hand-card.uno-hand-card-is-pending .uno-card {
-    border: var(--color-text) 1px solid;
-    animation: none;
-    transition: transform 0.2s ease-in-out;
-}
-
-@keyframes pulse-white-card {
-    0% {
-        border: var(--color-border) 1px solid;
-    }
-
-    50% {
-        border: var(--color-text) 1px solid;
-    }
-
-    100% {
-        border: var(--color-border) 1px solid;
+    .uno-hand-card.uno-hand-card-is-playable .uno-card:hover {
+        --uno-card-hover-ring-color: var(--game-accent-light);
     }
 }

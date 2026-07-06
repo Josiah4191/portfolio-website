@@ -1,14 +1,14 @@
 .sliding-carousel {
     position: relative;
+    width: 100%;
+    min-width: 0;
 }
 
 .sliding-carousel-viewport {
+    width: 100%;
+    min-width: 0;
     border-right: 2px solid var(--color-border);
     border-left: 2px solid var(--color-border);
-}
-
-.sliding-carousel-track {
-    padding: var(--space-sm);
 
     overflow-x: auto;
     scrollbar-width: none;
@@ -19,39 +19,6 @@
 
 .sliding-carousel-track::-webkit-scrollbar {
     display: none;
-}
-
-.sliding-carousel-button {
-    height: 42px;
-    width: 42px;
-    border-radius: 50%;
-    cursor: pointer;
-    color: var(--color-accent);
-    font-size: var(--font-size-2xl);
-    background: var(--color-surface);
-    box-shadow: var(--surface-icon-wrapper);
-
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: background 0.2s ease-in-out, opacity 0.2s ease-in-out;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.sliding-carousel-button:disabled {
-    cursor: default;
-    opacity: 0;
-}
-
-.sliding-carousel-button-left {
-    left: -50px;
-}
-
-.sliding-carousel-button-right {
-    right: -50px;
 }
 
 .sliding-carousel-icon {

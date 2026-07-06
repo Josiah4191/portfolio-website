@@ -13,8 +13,8 @@ export default function CurrentPlayerDot({currentPlayerId, playerRefs}) {
             const rect = element.getBoundingClientRect();
 
             setDotPosition({
-                left: rect.left + rect.width / 2,
-                top: rect.bottom + 16,
+                left: rect.left,
+                top: rect.top
             });
         }
 

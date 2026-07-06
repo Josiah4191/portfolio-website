@@ -29,27 +29,6 @@ export function buildActionMessage(lastAction) {
     }
 }
 
-export function buildPlayerActionMessage(lastAction) {
-    if (!lastAction) return null;
-
-    switch (lastAction.type) {
-        case "CARD_PLAYED":
-        case "UNO_CALLED_OUT":
-            return {
-                message: lastAction.cardsDrawn > 0 ? `+${lastAction.cardsDrawn}` : null,
-                playerId: lastAction.targetPlayerId ?? null,
-            };
-        case "UNO_CALLED":
-            return {
-                message: "UNO!",
-                playerId: lastAction.playerId,
-            };
-        default:
-            return null;
-    }
-}
-
-
 const colorOrder = {
     WILD: 0,
     RED: 1,

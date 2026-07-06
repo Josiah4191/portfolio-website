@@ -24,21 +24,4 @@ body {
     border-width: 0;
 }
 
-@media (hover: hover) and (pointer: fine) {
-    .interactive-lift:hover {
-        transform: translateY(-2px);
-        cursor: pointer;
-    }
-
-    .interactive-text:hover {
-        color: var(--color-interactive-hover);
-        cursor: pointer;
-    }
-
-    .interactive-surface:hover {
-        background-color: var(--color-interactive-hover);
-        cursor: pointer;
-    }
-}
-
 

@@ -1,8 +1,14 @@
 import './SlidingCarousel.css'
 import {Children, useEffect, useRef, useState} from "react";
-import {ChevronRight} from "lucide-react";
 
-export default function SlidingCarousel({children, ariaLabel, trackClass = ""}) {
+export default function SlidingCarousel({
+                                            children,
+                                            ariaLabel,
+                                            className,
+                                            showButtons = true,
+                                            ButtonComponent,
+                                            trackClass = ""}) {
+    const Button = ButtonComponent;
     const slides = Children.toArray(children);
     const trackRef = useRef(null);
 
@@ -21,7 +27,8 @@ export default function SlidingCarousel({children, ariaLabel, trackClass = ""}) 
 
         track.scrollTo({
             left: nextScrollLeft,
-            behavior: "smooth"});
+            behavior: "smooth"
+        });
     }
 
     function updateButtonState() {
@@ -60,20 +67,19 @@ export default function SlidingCarousel({children, ariaLabel, trackClass = ""}) 
     }, []);
 
     return (
-        <section aria-label={ariaLabel}>
+        <section aria-label={ariaLabel} className={`${className}`}>
             <div className="sliding-carousel">
-                <button
-                    type="button"
-                    disabled={isAtStart}
-                    onClick={() => scrollByAmount(-1)}
-                    className="sliding-carousel-button sliding-carousel-button-left">
-                    <ChevronRight className="sliding-carousel-icon sliding-carousel-icon-left"/>
-                </button>
+                {showButtons && ButtonComponent &&
+                    <Button
+                        direction="left"
+                        disabled={isAtStart}
+                        onClick={() => scrollByAmount(-1)}/>}
 
-                <div className="sliding-carousel-viewport">
+                <div
+                    ref={trackRef}
+                    onScroll={updateButtonState}
+                    className="sliding-carousel-viewport">
                     <ul
-                        ref={trackRef}
-                        onScroll={updateButtonState}
                         className={`sliding-carousel-track ${trackClass}`}>
                         {slides.map((slide, index) => (
                             <li key={index} className="sliding-carousel-slide">
@@ -83,13 +89,11 @@ export default function SlidingCarousel({children, ariaLabel, trackClass = ""}) 
                     </ul>
                 </div>
 
-                <button
-                    type="button"
-                    disabled={isAtEnd}
-                    onClick={() => scrollByAmount(1)}
-                    className="sliding-carousel-button sliding-carousel-button-right">
-                    <ChevronRight className="sliding-carousel-icon"/>
-                </button>
+                {showButtons && ButtonComponent &&
+                    <Button
+                        direction="right"
+                        disabled={isAtEnd}
+                        onClick={() => scrollByAmount(1)}/>}
             </div>
         </section>
     )

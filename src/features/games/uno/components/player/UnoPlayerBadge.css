@@ -2,19 +2,19 @@
     --panel-surface: color-mix(in srgb, var(--game-panel-surface) 96%, white);
     --panel-surface-light: color-mix(in srgb, var(--game-panel-surface-light) 92%, white);
     --panel-sheen-opacity: 0;
-    --panel-inset-highlight-size: 1px;
-    --panel-inset-highlight-opacity: 0.35;
-    --panel-inset-shadow-opacity: 0.12;
-    --panel-shadow-opacity: 0;
-    --panel-shadow-blur: 30px;
+
+    --panel-inset-highlight-color: rgb(255 255 255 / .2);
+    --panel-inset-shadow-color: rgb(0 0 0 / .08);
+
+    --panel-shadow-offset: 4px;
+    --panel-shadow-opacity: .5;
+
     --panel-radius: var(--radius-sm);
-    --panel-border-color: color-mix(in srgb, var(--panel-surface-light) 35%, white);
-    --panel-border-opacity: 0.35;
 }
 
 .uno-player-badge {
-    position: relative;
     width: 200px;
+    position: relative;
     padding: var(--space-md);
 
     font-size: var(--uno-player-font-size);
@@ -45,6 +45,7 @@
     letter-spacing: 0.02em;
 
     display: flex;
+    align-items: center;
     gap: var(--space-sm);
 
     overflow: hidden;
@@ -65,24 +66,20 @@
     gap: var(--space-xs);
 }
 
-.uno-player-action-text {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+.uno-player-turn-indicator {
+    margin-left: auto;
 
-    font-size: 16px;
-    font-weight: var(--font-weight-semibold);
-    text-align: center;
-
-    animation: float-up-player 1.4s ease-in-out 1 forwards;
-    pointer-events: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--black-medium-graphite);
 }
 
 .uno-player-card-count-label {
-    margin-left: auto;
     height: 100%;
+    margin-left: auto;
 
-    font-size: var(--font-size-md);
+    font-size: var(--uno-player-card-count-label-font-size);
     font-weight: var(--font-weight-semibold);
     color: var(--color-text-muted);
 
@@ -95,33 +92,10 @@
     width: 14px;
     height: 24px;
 
-    background: var(--uno-draw-pile-background-card);
+    background: var(--uno-card-background-mini);
     border-radius: 1px;
     box-shadow: 0 4px 10px rgb(0 0 0 / 0.25);
     border: 1px solid color-mix(in srgb, black 62%, lightblue);
-}
-
-.uno-player-label.uno-player-badge-has-action {
-    animation: pulse-white 1s ease-in-out infinite;
-}
-
-.uno-player-label.uno-player-badge-has-countdown:hover,
-.uno-player-label.uno-player-badge-has-action:hover {
-    border: var(--color-text-muted) 1px solid;
-
-    transition: border 0.2s ease-in-out;
-    animation: none;
-    cursor: pointer;
-}
-
-.uno-player-label.uno-player-badge-has-countdown::before {
-    content: "";
-    position: absolute;
-    background: var(--color-border);
-    inset: 0;
-    z-index: 0;
-    transform-origin: left;
-    animation: uno-countdown-drain 2s linear forwards;
 }
 
 @keyframes pulse-white {
@@ -138,32 +112,15 @@
     }
 }
 
-@keyframes float-up-player {
-    0% {
-        transform: translateY(8px);
-        opacity: 0;
+@media (max-width: 500px) {
+    .uno-player-badge {
+        width: 140px;
+
+        padding: var(--space-sm);
     }
 
-    15% {
-        opacity: 1;
-    }
-
-    80% {
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateY(-10px);
-        opacity: 0;
-    }
-}
-
-@keyframes uno-countdown-drain {
-    from {
-        transform: scaleX(1);
-    }
-
-    to {
-        transform: scaleX(0);
+    .uno-player-card-count-card {
+        width: 10px;
+        height: 20px;
     }
 }

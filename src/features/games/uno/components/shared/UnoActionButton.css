@@ -1,0 +1,95 @@
+.uno-action-button-wrapper {
+    position: relative;
+}
+
+.game-button.uno-action-button {
+    --game-button-width: 60px;
+    --game-button-height: 60px;
+    --game-button-radius: var(--radius-sm);
+    --game-button-label-size: var(--font-size-sm);
+    --game-button-icon-height: 28px;
+    --game-button-icon-width: 28px;
+
+    --game-button-sheen-opacity: 0.05;
+    --game-button-surface: #20252D;
+    --game-button-surface-light: #353B46;
+
+    --game-button-inset-highlight-color: rgb(255 255 255 / .2);
+    --game-button-border-left: 1px solid rgb(172 191 222 / 0.1);
+    --game-button-border-right: 1px solid rgb(172 191 222 / 0.1);
+    --game-button-bottom-edge-color: rgb(172 191 222 / 0.1);
+    --game-button-shadow-color: rgb(0 0 0 / .3);
+
+    --game-button-inset-shadow-color: transparent;
+}
+
+.uno-action-keybind {
+    --keybind-size: 24px;
+
+    position: absolute;
+    width: var(--keybind-size);
+    height: var(--keybind-size);
+    bottom: calc(var(--keybind-size) /2 * -1);
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+
+    background: var(--icon-tile-background);
+
+    border: 1px solid rgb(255 255 255 / 0.07);
+    border-top: 1px solid rgb(255 255 255 / 0.1);
+    border-radius: var(--radius-xxs);
+    text-align: center;
+    box-shadow: 0 4px 10px rgb(0 0 0 / 0.18);
+
+    display: none;
+}
+
+.uno-action-button-wrapper.is-disabled .uno-action-keybind {
+    color: #8A919D;
+}
+
+.uno-action-button.uno-call-button.is-call-uno {
+    --game-button-hover-ring-color: var(--uno-card-red-light);
+}
+
+.uno-action-button-wrapper.is-disabled .game-button {
+    --game-button-surface: #161A20;
+    --game-button-surface-light: #262C35;
+
+    --game-button-sheen-opacity: 0.02;
+
+    --game-button-icon-color: #8A919D;
+
+    --game-button-inset-highlight-color: rgb(255 255 255 / 0.12);
+    --game-button-border-left: 1px solid rgb(70 79 92 / 0.5);
+    --game-button-border-right: 1px solid rgb(70 79 92 / 0.5);
+    --game-button-bottom-edge-color: rgb(95 105 120 / 0.5);
+
+    --game-button-shadow-color: rgb(0 0 0 / 0.12);
+    --game-button-hover-ring-color: transparent;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .uno-action-button.uno-pass-button.is-pass:hover,
+    .uno-action-button.uno-draw-button.is-draw:hover,
+    .uno-action-button.uno-call-out-button.is-call-out-uno:hover,
+    .uno-action-button.uno-call-button.is-call-uno:hover {
+        --game-button-hover-ring-color: var(--game-accent-light);
+    }
+
+    .uno-action-button-wrapper:hover .game-tooltip {
+        opacity: 1;
+    }
+
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .uno-action-keybind {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

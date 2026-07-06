@@ -1,10 +1,10 @@
 import './UnoGamePage.css'
 import UnoGameBoard from "../components/board/UnoGameBoard.jsx";
 import UnoGameMenu from "../components/controls/UnoGameMenu.jsx";
-import UnoRules from "../components/modals/UnoRules.jsx";
-import Modal from "../../../../shared/components/Modal.jsx";
-import GameOver from "../components/modals/GameOver.jsx";
 import GameToolbar from "../../GameToolbar.jsx";
+import GameButton from "../components/shared/GameButton.jsx";
+import UnoRulesModal from "../components/modals/UnoRulesModal.jsx";
+import GameOverModal from "../components/modals/GameOverModal.jsx";
 import {useEffect, useState} from "react";
 import {
     createGame,
@@ -16,6 +16,7 @@ import {
     callUno,
     callOutUno
 } from "../services/unoApi.js";
+import {BookOpen, Play} from "lucide-react";
 
 export default function UnoGamePage() {
     const [gameState, setGameState] = useState(null);
@@ -184,28 +185,30 @@ export default function UnoGamePage() {
             <GameToolbar>
                 {gameState && (
                     <>
-                        <button
-                            type="button"
-                            className="game-toolbar-button"
+                        <GameButton
+                            className="uno-primary-action-button uno-new-game-button"
+                            icon={Play}
                             onClick={exitToMenu}>
                             New Game
-                        </button>
-                        <button
-                            type="button"
-                            className="game-toolbar-button"
-                            onClick={() => setOpenRules(!openRules)}>
-                            Rules
-                        </button>
-                    </>)}
+                        </GameButton>
+
+                        <GameButton
+                            icon={BookOpen}
+                            className="uno-secondary-action-button uno-rules-button"
+                            onClick={() => setOpenRules(!openRules)}>Rules</GameButton>
+                    </>
+                )}
             </GameToolbar>
 
-            <Modal className="modal-panel" isOpen={openRules} onClose={() => setOpenRules(false)}>
-                <UnoRules onClose={() => setOpenRules(false)}/>
-            </Modal>
+            <UnoRulesModal
+                isOpen={openRules}
+                onClose={() => setOpenRules(false)}/>
 
-            <Modal isOpen={gameState?.gameStatus === "FINISHED"}>
-                <GameOver winnerName={winnerName} onPlayAgain={startGame} onExitToMenu={exitToMenu}/>
-            </Modal>
+            <GameOverModal
+                isOpen={gameState?.gameStatus === "FINISHED"}
+                winnerName={winnerName}
+                onPlayAgain={startGame}
+                onExitToMenu={exitToMenu}/>
 
             {!gameState && <UnoGameMenu startGame={startGame}/>}
             {gameState && <UnoGameBoard

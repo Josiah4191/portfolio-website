@@ -4,30 +4,43 @@
     height: var(--uno-card-height);
     padding: var(--uno-card-padding);
 
-    justify-content: center;
-
-    background: var(--uno-draw-pile-background-frame);
+    background: var(--uno-card-background-frame);
     border-radius: var(--uno-card-border-radius);
 
-    box-shadow:
-            inset 0 1px 0 rgb(255 255 255 / 0.1),
-            inset 0 -1px 0 rgb(0 0 0 / 0.2),
-            0 10px 24px rgb(0 0 0 / 0.4);
+    border-left: 1px solid rgb(255 255 255 / .05);
+    border-right: 1px solid rgb(255 255 255 / 0.05);
 
-    display: flex;
+    box-shadow:
+            inset 0 1px 0 rgb(255 255 255 / .05), /* inset highlight */
+            inset 0 -1px 3px rgb(0 0 0 / 0.1), /* inset shadow */
+            0 4px 16px rgb(0 0 0 / 0.1), /* shadow */
+            0 1px 0 rgb(255 255 255 / .05), /* bottom edge */
+            0 0 0 2px var(--uno-card-hover-ring-color) /* focus ring shadow */;
+
+    transition: box-shadow 0.2s ease-in-out;
 }
 
-.uno-draw-pile-button {
+.uno-draw-pile-face {
     height: 100%;
     width: 100%;
     border-radius: var(--uno-card-border-radius);
-    background: var(--uno-draw-pile-background-card);
+    background: var(--uno-card-background-dark);
 
-    transition: transform 0.2s ease-in-out;
-    transform-style: preserve-3d;
-    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.uno-draw-pile-card:hover {
-    transform: translateY(-4px);
+.uno-draw-pile-card:disabled:hover {
+    --uno-card-hover-ring-color: rgb(255 255 255 / 0.4);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .uno-draw-pile-card.uno-draw-pile-card-is-drawable:hover {
+        --uno-card-hover-ring-color: var(--game-accent-light);
+    }
+
+    .uno-draw-pile-card:hover .game-tooltip {
+        opacity: 1;
+    }
 }

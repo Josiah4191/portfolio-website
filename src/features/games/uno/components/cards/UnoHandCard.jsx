@@ -10,7 +10,6 @@ export default function UnoHandCard({
                                         isPlayable,
                                         onPlayCard,
                                     }) {
-
     const isPending = pendingCardId === card.cardId;
 
     return (
@@ -19,7 +18,10 @@ export default function UnoHandCard({
             ref={(element) => registerRef?.(cardRefs, card.cardId, element)}
             onClick={onPlayCard}
             disabled={!isPlayable}
-            className={`uno-hand-card ${isBeingCloned ? "uno-hand-card-is-hidden" : ""} ${isPending ? "uno-hand-card-is-pending" : ""}`}>
+            className={`uno-hand-card 
+            ${isPlayable ? "uno-hand-card-is-playable" : ""}
+            ${isBeingCloned ? "uno-hand-card-is-hidden" : ""} 
+            ${isPending ? "uno-hand-card-is-pending" : ""}`}>
             <UnoCard card={card}/>
         </button>
     )
