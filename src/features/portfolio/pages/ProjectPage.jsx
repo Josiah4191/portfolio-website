@@ -15,7 +15,7 @@ export default function ProjectPage({project}) {
     } = project;
 
     return (
-        <div>
+        <>
             <ProjectHero title={title}
                          description={description}
                          badges={badges}
@@ -27,6 +27,6 @@ export default function ProjectPage({project}) {
             <ProjectScreenshotSection screenshots={screenshots}/>
 
             <ProjectFeaturesSection features={features}/>
-        </div>
+        </>
     )
 }

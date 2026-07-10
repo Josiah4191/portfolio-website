@@ -1,5 +1,5 @@
 import './UnoDrawPile.css'
-import UnoLogo from "../../../UnoLogo.jsx";
+import UnoLogo from "../../../assets/UnoLogo.jsx";
 import GameTooltip from "../../shared/GameTooltip.jsx";
 
 export default function UnoDrawPile({onDrawCard, canDraw, drawPileRef}) {

@@ -1,7 +1,6 @@
 import './ProjectHero.css'
 import ProjectHeroIntro from "./ProjectHeroIntro.jsx";
-import ProjectQuickLinks from "./bottom-area/ProjectQuickLinks.jsx";
-import ProjectTechnologies from "./bottom-area/ProjectTechnologies.jsx";
+import PortfolioLinks from "../../../../../../shared/components/PortfolioLinks.jsx";
 
 export default function ProjectHero({title, description, badges, links, projectType}) {
     return (
@@ -9,12 +8,11 @@ export default function ProjectHero({title, description, badges, links, projectT
             <div className="grid page-margin">
 
                 <div className="project-hero-left-side">
-                    <ProjectHeroIntro titleId="project-hero-title" title={title} description={description} projectType={projectType}/>
+                    <ProjectHeroIntro titleId="project-hero-title" title={title} description={description} badges={badges} projectType={projectType}/>
                 </div>
 
                 <div className="project-hero-right-side">
-                    <ProjectQuickLinks links={links}/>
-                    <ProjectTechnologies badges={badges}/>
+                    <PortfolioLinks links={links}/>
                 </div>
 
             </div>

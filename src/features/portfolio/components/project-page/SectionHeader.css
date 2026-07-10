@@ -20,6 +20,22 @@
     border-radius: 10px;
 }
 
+.section-light {
+    color: var(--color-text);
+}
+
+.section-dark {
+    color: var(--color-text-light);
+}
+
 .section-header-description {
     max-width: 50ch;
+}
+
+.section-eyebrow-light {
+    color: var(--color-accent);
+}
+
+.section-eyebrow-dark {
+    color: var(--color-accent-light);
 }

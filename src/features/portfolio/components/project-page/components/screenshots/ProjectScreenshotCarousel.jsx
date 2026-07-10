@@ -3,7 +3,7 @@ import {useState} from "react";
 import {ChevronLeft, ChevronRight} from "lucide-react";
 import ProjectScreenshotSlide from "./ProjectScreenshotSlide.jsx";
 
-export default function ProjectScreenshotCarousel({screenshots, ariaLabel, className = ""}) {
+export default function ProjectScreenshotCarousel({screenshots}) {
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const lastIndex = screenshots.length - 1;

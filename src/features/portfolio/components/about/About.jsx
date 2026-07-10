@@ -1,8 +1,7 @@
 import './About.css';
 import SectionHeader from "../project-page/SectionHeader.jsx";
-import AboutHighlightCard from "./AboutHighlightCard.jsx";
-import {AppWindowMac, LucideMonitorSmartphone, Lightbulb} from "lucide-react";
-import AboutProfileCard from "./AboutProfileCard.jsx";
+import {ABOUT_CARDS} from "../../data/aboutData.js";
+import AboutCard from "./AboutCard.jsx";
 
 export default function About() {
     return (
@@ -18,7 +17,7 @@ export default function About() {
 
                     <div className="about-divider" aria-hidden="true"/>
 
-                    <div className="type-section-text about-description">
+                    <div className="text-section-body about-description">
                         <p>
                             I recently graduated from <span
                             className="about-text-emphasis">Greenville Technical College</span> with an associate degree
@@ -44,33 +43,15 @@ export default function About() {
                     </div>
                 </div>
 
-                <div className="about-profile">
-                    <AboutProfileCard/>
-                </div>
-
-                <ul className="about-highlights">
-                    <li>
-                        <AboutHighlightCard
-                            title={"Full-stack Development"}
-                            description={"Building complete web applications from front to back."}
-                            icon={AppWindowMac}/>
-                    </li>
-
-                    <li>
-                        <AboutHighlightCard
-                            title={"Responsive Design"}
-                            description={"Creating user-friendly experiences across all devices."}
-                            icon={LucideMonitorSmartphone}/>
-                    </li>
-
-                    <li>
-                        <AboutHighlightCard
-                            title={"Always Learning"}
-                            description={"Continuously exploring new technologies."}
-                            icon={Lightbulb}/>
-                    </li>
-
+                <ul className="about-card-list">
+                    {ABOUT_CARDS.map((card) => (
+                        <li key={card.title}>
+                            <AboutCard {...card} />
+                        </li>
+                    ))}
                 </ul>
+
+
             </div>
         </section>
     );

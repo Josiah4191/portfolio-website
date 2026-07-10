@@ -1,13 +1,12 @@
 import './GameToolbar.css'
 import {Link} from "react-router-dom";
 
-export default function GameToolbar({children}) {
+export default function GameToolbar({className = "", labelClassName="", children}) {
     return (
-        <header className="nav-section game-nav-section">
+        <header className={`game-toolbar ${className}`}>
             <div className="game-toolbar-content">
                 <Link className="game-toolbar-link" to="/">
-                    <div className="game-nav-logo-mark"><span>J</span></div>
-                    <span className="type-nav-logo game-nav-logo-label">Portfolio</span>
+                    <span className={`game-nav-label ${labelClassName}`}>Portfolio</span>
                 </Link>
                 {children && (
                     <div className="game-toolbar-actions">

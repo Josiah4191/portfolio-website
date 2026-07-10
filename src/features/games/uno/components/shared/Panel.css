@@ -1,6 +1,6 @@
 .panel {
-    --panel-surface: var(--game-panel-surface);
-    --panel-surface-light: var(--game-panel-surface-light);
+    --panel-surface: var(--uno-panel-surface);
+    --panel-surface-light: var(--uno-panel-surface-light);
     --panel-sheen-opacity: .08;
 
     --panel-inset-highlight-color: rgb(255 255 255 / 0.25);

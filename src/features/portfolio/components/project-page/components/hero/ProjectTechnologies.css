@@ -1,0 +1,16 @@
+.project-technologies {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-technologies-header {
+    display: flex;
+    gap: var(--space-sm);
+    align-items: center;
+}
+
+.project-technologies-badge-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+}

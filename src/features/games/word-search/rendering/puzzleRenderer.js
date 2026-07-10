@@ -54,8 +54,8 @@ export function drawLetters(context, puzzle, cellSize) {
             for (let col = 0; col < puzzle.grid[row].length; col++) {
                 const x = col * cellSize + 1;
                 const y = row * cellSize + 1;
-                context.fillStyle = '#C7C7C7';
-                context.font = '16px Inter';
+                context.fillStyle = '#4E3523';
+                context.font = '500 16px Inter';
                 context.textAlign = 'center';
                 context.textBaseline = 'middle';
                 context.fillText(puzzle.grid[row][col], x + cellSize / 2, y + cellSize / 2);

@@ -1,24 +1,20 @@
 .footer-section {
-    padding-block: 1rem;
-    background: var(--color-background);
-    box-shadow: var(--surface-card);
-    color: var(--color-text);
+
+    padding-block: var(--space-xl);
+    background: var(--color-text);)
 }
 
 .footer-content {
     grid-column: 1/-1;
 
+    color: var(--color-text-light);
+    font-size: var(--font-size-base-lg);
+    font-weight: var(--font-weight-semibold);
+
     display: flex;
     align-items: center;
     justify-content: center;
     gap: var(--space-sm);
-}
-
-.footer-icon {
-    width: 28px;
-    height: 28px;
-
-    color: var(--color-accent);
 }
 
 .footer-email {
@@ -27,6 +23,5 @@
 
 @media (hover: hover) and (pointer: fine) {
     .footer-email:hover {
-        color: var(--color-accent-hover);
     }
 }

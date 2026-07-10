@@ -9,11 +9,12 @@ import {
     validateDirection, cellsMatch
 } from "../utils/puzzleUtils.js";
 import WordPuzzle from "../domain/WordPuzzle.js";
-import {CATEGORIES} from "../data/puzzles.js"
+import {PUZZLES} from "../data/puzzles.js"
 import {GRID_COLS, GRID_ROWS} from "../data/puzzleConfig.js";
 import WordList from "../components/WordList.jsx";
 import WordSearchCategorySelect from "../components/WordSearchCategorySelect.jsx";
-import GameToolbar from "../../GameToolbar.jsx";
+import WordSearchToolbar from "../WordSearchToolbar.jsx";
+import {Plus} from "lucide-react";
 
 export default function WordSearchPage() {
 
@@ -22,11 +23,10 @@ export default function WordSearchPage() {
     const [currentCell, setCurrentCell] = useState(null);
     const [selectedCells, setSelectedCells] = useState([]);
     const [availableWidth, setAvailableWidth] = useState(0);
-    const [puzzle, setPuzzle] = useState(null);
+    const [board, setBoard] = useState(null);
     const [foundWords, setFoundWords] = useState([]);
-    const [category, setCategory] = useState("Fruits");
+    const [selectedPuzzle, setSelectedPuzzle] = useState(PUZZLES[0]);
 
-    const categoryOptions = CATEGORIES.map((cat) => cat.category);
     const canvas = useRef(null);
     const canvasContainer = useRef(null);
 
@@ -36,7 +36,7 @@ export default function WordSearchPage() {
     const canvasHeight = GRID_ROWS * cellSize;
     const dpr = window.devicePixelRatio || 1;
 
-    const wordsToDisplay = puzzle?.placedWords.map((placedWord) => {
+    const wordsToDisplay = board?.placedWords.map((placedWord) => {
         const isFound = foundWords.some((foundWord) =>
             cellsMatch(foundWord.cells, placedWord.cells));
 
@@ -83,7 +83,7 @@ export default function WordSearchPage() {
     }
 
     function validateWord() {
-        const matchedWord = findMatchedWord(puzzle, selectedCells);
+        const matchedWord = findMatchedWord(board, selectedCells);
 
         if (matchedWord && !isAlreadyFound(foundWords, matchedWord)) {
             setFoundWords((prevWords) => [...prevWords, matchedWord]);
@@ -101,13 +101,13 @@ export default function WordSearchPage() {
         setSelectedCells(cells);
     }
 
-    function createPuzzle() {
-        const words = CATEGORIES.find(c => c.category === category).words.map(word => word.toUpperCase());
-        const puzzle = wordPuzzle.buildPuzzle(words, "hard", GRID_ROWS, GRID_COLS);
+    function createBoard() {
+        const words = selectedPuzzle.words.map(word => word.toUpperCase());
+        const board = wordPuzzle.buildPuzzle(words, "hard", GRID_ROWS, GRID_COLS);
 
         setFoundWords([]);
         setSelectedCells([]);
-        setPuzzle(puzzle);
+        setBoard(board);
     }
 
     useEffect(() => {
@@ -127,14 +127,14 @@ export default function WordSearchPage() {
     }, []);
 
     useEffect(() => {
-        createPuzzle();
+        createBoard();
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [category]);
+    }, [selectedPuzzle]);
 
     useEffect(() => {
 
         async function drawPuzzle() {
-            await document.fonts.load("16px Inter");
+            await document.fonts.load("500 16px Inter");
 
             const context = canvas.current.getContext("2d");
             const canvasElement = canvas.current;
@@ -147,58 +147,72 @@ export default function WordSearchPage() {
 
             context.scale(dpr, dpr);
 
-            drawFoundWords(context, cellSize, foundWords, "rgba(78, 159, 110, 0.7)");
-            drawSelectedCells(context, selectedCells, cellSize, "rgba(74, 111, 165, 0.7)");
-            drawLetters(context, puzzle, cellSize);
+            drawFoundWords(context, cellSize, foundWords, "rgb(186 207 170 / 0.7)");
+            drawSelectedCells(context, selectedCells, cellSize, "rgb(219 234 210 / 0.7)");
+            drawLetters(context, board, cellSize);
         }
 
         void drawPuzzle();
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [isDragging, startCell, currentCell, selectedCells, puzzle, foundWords, availableWidth]);
+    }, [isDragging, startCell, currentCell, selectedCells, board, foundWords, availableWidth]);
 
     return (
-        <main className="word-search-page" aria-labelledby="word-search-title">
-            <GameToolbar>
+        <main className={`word-search-page ${selectedPuzzle.theme}`} aria-labelledby="word-search-title">
+            <WordSearchToolbar>
                 <button
                     type="button"
-                    className="game-toolbar-button"
-                    onClick={createPuzzle}>
+                    className="word-search-button"
+                    onClick={createBoard}>
+                    <Plus size={20} strokeWidth={2.3}/>
                     New Puzzle
                 </button>
-            </GameToolbar>
+            </WordSearchToolbar>
 
-            <section className="word-search-game">
-                <div className="word-search-game-card">
+            <section className={`word-search-game`}>
+
+                <div className={`word-search-game-card`}>
                     <header className="word-search-game-header">
                         <h1
                             id="word-search-title"
                             className="word-search-title">
-                            Word Search
+                            WORD SEARCH
                         </h1>
 
                         <WordSearchCategorySelect
-                            value={category}
-                            setValue={setCategory}
-                            options={categoryOptions}/>
+                            puzzles={PUZZLES}
+                            currentPuzzle={selectedPuzzle}
+                            setSelectedPuzzle={setSelectedPuzzle}/>
 
                         <p className="word-search-progress">
-                            {`${foundWords.length} / ${puzzle?.placedWords?.length ?? 0} Words Found`}
+                            {`${foundWords.length} / ${board?.placedWords?.length ?? 0} Words Found`}
                         </p>
                     </header>
-                    <div className="word-search-board-wrapper" ref={canvasContainer}>
-                        <canvas
-                            className="word-search-board"
-                            ref={canvas}
-                            aria-label={`Word search puzzle. ${foundWords.length} of ${puzzle?.placedWords?.length ?? 0} words found.`}
-                            onPointerMove={onPointerMove}
-                            onPointerUp={onPointerUp}
-                            onPointerDown={onPointerDown}/>
+
+                    <div className="word-search-play-area">
+                        <div className="word-search-board-wrapper" ref={canvasContainer}>
+                            <canvas
+                                className="word-search-board"
+                                ref={canvas}
+                                aria-label={`Word search puzzle. ${foundWords.length} of ${board?.placedWords?.length ?? 0} words found.`}
+                                onPointerMove={onPointerMove}
+                                onPointerUp={onPointerUp}
+                                onPointerDown={onPointerDown}/>
+                        </div>
+                        <WordList
+                            words={wordsToDisplay}/>
                     </div>
-                    <WordList
-                        words={wordsToDisplay}/>
+
                 </div>
             </section>
         </main>
     )
 }
+
+/*
+--word-search-success: #6D8A5E;
+--word-search-success-light: #DCEAD5;
+
+--word-search-highlight: #D3B06A;
+--word-search-highlight-light: #F5E8C8;
+*/

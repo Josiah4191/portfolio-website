@@ -5,6 +5,8 @@ import CloseButton from "./CloseButton.jsx";
 
 export default function Modal({isOpen, onClose, children, width = "700px", height= "auto", closeOnEscape = true}) {
 
+    const modalRoot = document.getElementById("uno-modal-root");
+
     useEffect(() => {
         if (!isOpen || !closeOnEscape) return;
 
@@ -40,6 +42,6 @@ export default function Modal({isOpen, onClose, children, width = "700px", heigh
                 {children}
             </div>
         </div>,
-        document.body
+        modalRoot
     );
 }

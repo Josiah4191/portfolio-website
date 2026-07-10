@@ -1,6 +1,6 @@
 .panel.uno-rules-panel {
-    --panel-surface: var(--game-panel-surface);
-    --panel-surface-light: var(--game-panel-surface-light);
+    --panel-surface: var(--uno-panel-surface);
+    --panel-surface-light: var(--uno-panel-surface-light);
 
     --panel-sheen-opacity: 0;
     --panel-radius: var(--radius-lg);
@@ -35,7 +35,7 @@
 }
 
 .uno-rules-content {
-    background: linear-gradient(to bottom, var(--game-modal-surface-inner-light), var(--game-modal-surface-inner));
+    background: linear-gradient(to bottom, var(--uno-modal-surface-inner-light), var(--uno-modal-surface-inner));
     border-radius: var(--radius-lg);
     border: 1px solid rgb(255 255 255 / 0.06);
 
@@ -92,7 +92,7 @@
 
 .uno-rule-item {
     position: relative;
-    color: var(--game-color-text-muted);
+    color: var(--uno-color-text-muted);
     font-weight: var(--font-weight-medium);
 
     display: flex;
@@ -108,8 +108,8 @@
     border-radius: 50%;
     background: linear-gradient(
             180deg,
-            var(--game-accent-light),
-            var(--game-accent)
+            var(--uno-accent-light),
+            var(--uno-accent)
     );
     box-shadow: inset 0 1px 0 rgb(255 255 255 / .15),
     0 2px 4px rgb(0 0 0 / .25);
@@ -138,7 +138,7 @@
 
 .uno-action-description,
 .uno-control-description {
-    color: var(--game-color-text-muted);
+    color: var(--uno-color-text-muted);
     font-weight: var(--font-weight-medium);
 }
 
@@ -172,7 +172,7 @@
     border-top: 1px solid rgb(255 255 255 / 0.1);
     border-radius: var(--radius-xs);
     text-align: center;
-    color: var(--game-accent-light);
+    color: var(--uno-accent-light);
     box-shadow: 0 4px 10px rgb(0 0 0 / 0.18);
 
     display: flex;

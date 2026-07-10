@@ -1,4 +1,4 @@
-import UnoLogo from "../../UnoLogo.jsx";
+import UnoLogo from "../../assets/UnoLogo.jsx";
 
 export default function UnoCardBack() {
     return (

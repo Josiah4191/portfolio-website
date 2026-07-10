@@ -1,3 +1,7 @@
+.stack-section {
+    background: var(--color-text);
+}
+
 .stack-section-header {
     grid-column: 1/-1;
 }
@@ -8,8 +12,9 @@
 
 .stack-section-track {
     width: max-content;
+    padding-inline: var(--space-sm);
+    padding-block: var(--space-md);
 
     display: flex;
-    padding: var(--space-sm);
-    gap: var(--space-sm);
+    gap: var(--space-lg);
 }

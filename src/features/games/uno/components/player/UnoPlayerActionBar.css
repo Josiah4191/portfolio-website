@@ -36,8 +36,8 @@
     border-left: 1px solid rgb(255 255 255 / 0.1);
     border-right: 1px solid rgb(255 255 255 / 0.1);
     border-radius: var(--radius-pill);
-    --panel-surface: var(--game-modal-surface-inner);
-    --panel-surface-light: var(--game-modal-surface-inner-light);
+    --panel-surface: var(--uno-modal-surface-inner);
+    --panel-surface-light: var(--uno-modal-surface-inner-light);
     background: linear-gradient(to bottom, var(--panel-surface-light), var(--panel-surface));
 }
 
@@ -63,7 +63,7 @@
 @keyframes countdown-drain-animation {
     0% {
         width: 100%;
-        background: var(--game-accent-light);
+        background: var(--uno-accent-light);
     }
 
     60% {

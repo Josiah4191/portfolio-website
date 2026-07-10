@@ -8,7 +8,7 @@ export default function ProjectScreenshotSection({screenshots}) {
         <>
             <SectionDivider/>
 
-            <section className="section" id="project-screenshots">
+            <section className="section project-screenshot-section" id="project-screenshots">
                 <div className="grid">
 
                     <div className="page-margin project-screenshot-section-header">
@@ -16,6 +16,7 @@ export default function ProjectScreenshotSection({screenshots}) {
                             eyebrow={"SCREENSHOTS"}
                             title={"Screenshots"}
                             titleId={"project-screenshots"}
+                            variant="dark"
                             description={"Take a look at some key views and features from my projects."}/>
                     </div>
 

@@ -1,0 +1,7 @@
+@import './typography.css';
+@import './colors.css';
+
+.portfolio-page {
+    background: var(--portfolio-color-page-background);
+    color: var(--portfolio-color-text);
+}

@@ -38,10 +38,7 @@ export default function Navigation() {
 
                 <div className="nav-container">
                     <NavLink to="/" className="nav-brand">
-                        <div className="nav-logo-mark"><span>J</span></div>
-                        <span className="type-nav-logo nav-name-full">Josiah Stoltzfus</span>
-                        <div className="nav-divider" aria-hidden="true"/>
-                        <span className="type-nav-subtitle nav-subtitle">Software Developer</span>
+                        <span className="nav-name-full">JOSIAH STOLTZFUS</span>
                     </NavLink>
 
                     <div className="nav-menu-button-desktop-container">

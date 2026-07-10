@@ -6,14 +6,11 @@ export default function NavMenuItem({title, description, icon, trailingIcon, isE
 
     return (
         <div className="nav-menu-item">
-            {icon &&
-                <div className="nav-menu-item-icon" aria-hidden="true">
-                    <Icon />
-                </div>}
+            {icon && <Icon className="nav-menu-item-icon" aria-hidden="true" />}
 
             <div className="nav-menu-item-content">
-                <span className="type-nav-link nav-menu-item-title">{title}</span>
-                <span className="type-nav-link-subtitle nav-menu-item-description">{description}</span>
+                <span className="text-nav-link nav-menu-item-title">{title}</span>
+                <span className="text-nav-link-subtitle nav-menu-item-description">{description}</span>
             </div>
 
             {trailingIcon && (

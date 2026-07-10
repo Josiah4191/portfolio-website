@@ -2,15 +2,14 @@
     z-index: 100;
     position: absolute;
     right: 10px;
-    min-width: 420px;
+    min-width: 400px;
     max-height: calc(100dvh - (var(--space-xl) * 2));
     padding: var(--space-md);
     overflow: hidden;
     overflow-y: auto;
 
-    background-color: var(--color-surface);
-    border-radius: var(--radius-md);
-    box-shadow: var(--surface-card);
+    background: var(--portfolio-color-surface-background);
+    border: 1px solid var(--color-text);
     opacity: 0;
 
     display: flex;
@@ -55,11 +54,8 @@
     position: relative;
     min-height: 0;
     max-height: 0;
-    padding: 0 var(--space-md);
+    margin-left: var(--space-lg);
     overflow: hidden;
-
-    background: var(--color-subsurface);
-    border-radius: var(--radius-md);
 
     display: flex;
     flex-direction: column;
@@ -71,44 +67,13 @@
     max-height: 1000px;
 }
 
-.desktop-nav-submenu::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
-    opacity: 0;
-
-    transition: opacity 0.6s ease-in-out;
-}
-
-.desktop-nav-submenu.is-open::before {
-    opacity: 1;
-}
-
 .desktop-nav-submenu > li {
     position: relative;
-}
-
-.desktop-nav-submenu > li:not(:last-child)::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 1px;
-
-    background-color: var(--color-border);
 }
 
 /* Hover Effects */
 @media (hover: hover) and (pointer: fine) {
     .desktop-nav-link:hover .nav-menu-item-title {
-        color: var(--color-hover-text);
-    }
-
-    .desktop-nav-link:hover .nav-menu-item-trailing-icon {
-        transform: translateX(4px);
+        color: var(--color-accent);
     }
 }

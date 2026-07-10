@@ -17,6 +17,7 @@ import {
     callOutUno
 } from "../services/unoApi.js";
 import {BookOpen, Play} from "lucide-react";
+import UnoToolbar from "../UnoToolbar.jsx";
 
 export default function UnoGamePage() {
     const [gameState, setGameState] = useState(null);
@@ -179,10 +180,10 @@ export default function UnoGamePage() {
     }, [gameState, gameId])
 
     return (
-        <main className="uno-game-page" aria-labelledby="uno-game-title">
+        <main className="uno-page" aria-labelledby="uno-game-title">
             <h1 id="uno-game-title" className="sr-only">UNO</h1>
 
-            <GameToolbar>
+            <UnoToolbar>
                 {gameState && (
                     <>
                         <GameButton
@@ -198,7 +199,7 @@ export default function UnoGamePage() {
                             onClick={() => setOpenRules(!openRules)}>Rules</GameButton>
                     </>
                 )}
-            </GameToolbar>
+            </UnoToolbar>
 
             <UnoRulesModal
                 isOpen={openRules}

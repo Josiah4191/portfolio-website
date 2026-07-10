@@ -7,7 +7,7 @@ import PortfolioCarouselButton from "../../../../shared/components/PortfolioCaro
 
 export default function Stack() {
     return (
-        <section className="section" aria-labelledby="stack-title">
+        <section className="section stack-section" aria-labelledby="stack-title">
             <div className="grid page-margin">
 
                 <div className="stack-section-header">
@@ -15,6 +15,7 @@ export default function Stack() {
                         eyebrow="TECHNOLOGIES"
                         title="My Stack"
                         titleId="stack-title"
+                        variant="dark"
                         description="Here are the technologies and tools I use to build modern, responsive, and scalable web applications."/>
                 </div>
 

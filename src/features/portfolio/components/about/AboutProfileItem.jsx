@@ -9,11 +9,11 @@ export default function AboutProfileItem({title, details, icon}) {
             </div>
 
             <div>
-                <h3 className="type-card-subtitle">{title}</h3>
-                <ul className="type-card-body">
+                <h3 className="text-card-subtitle">{title}</h3>
+                <ul>
                     {details.map((detail) =>
                         <li
-                            className="about-profile-item-detail"
+                            className="text-card-body about-profile-item"
                             key={detail}>
                                 {detail}
                         </li>

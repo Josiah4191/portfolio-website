@@ -7,10 +7,8 @@
     width: 42px;
     border-radius: 50%;
     cursor: pointer;
-    color: var(--color-accent);
+    color: var(--color-text-muted);
     font-size: var(--font-size-2xl);
-    background: var(--color-surface);
-    box-shadow: var(--surface-icon-wrapper);
 
     position: absolute;
     top: 50%;
@@ -35,16 +33,19 @@
     right: -50px;
 }
 
+.portfolio-carousel-light {
+    color: var(--color-text-light);
+}
+
+.portfolio-carousel-dark {
+    color: var(--color-text-muted);
+}
+
 /* Hover Effects */
 @media (hover: hover) and (pointer: fine) {
-    .portfolio-carousel-button:not(:disabled) {
-        opacity: 1;
-    }
-
     .portfolio-carousel-button:hover:not(:disabled) {
-        background: var(--color-accent-soft);
+        background: rgb(255 255 255 / 0.15);
     }
-
 }
 
 @media (max-width: 480px) {

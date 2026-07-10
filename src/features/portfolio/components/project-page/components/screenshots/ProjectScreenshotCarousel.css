@@ -14,9 +14,7 @@
     width: 56px;
     height: 56px;
 
-    background: var(--color-surface);
     border-radius: 50%;
-    box-shadow: var(--surface-icon-wrapper);
 
     display: grid;
     place-items: center;
@@ -27,20 +25,18 @@
 }
 
 .project-screenshot-carousel-previous-button {
-    left: -28px;
+    left: -60px;
 }
 
 .project-screenshot-carousel-next-button {
-    right: -28px;
+    right: -60px;
 }
 
 .project-screenshot-carousel-icon {
     width: 40px;
     height: 40px;
 
-    color: var(--color-accent);
-    font-weight: var(--font-weight-semibold);
-    stroke-width: 2.4;
+    color: var(--color-text-light);
 }
 
 .project-screenshot-carousel-dots {
@@ -49,21 +45,20 @@
 }
 
 .project-screenshot-carousel-dot {
-    width: 12px;
-    height: 12px;
+    width: 20px;
+    height: 8px;
 
-    background-color: var(--color-border);
-    border-radius: 9999px;
+    background-color: rgb(255 255 255 / 0.15);
 }
 
 .project-screenshot-carousel-dot.active {
-    background-color: var(--color-accent);
+    background-color: var(--color-accent-light);
 }
 
 /* Hover Effects */
 @media (hover: hover) and (pointer: fine) {
     .project-screenshot-carousel-button:hover {
-        background: var(--color-accent-soft);
+        background: rgb(255 255 255 / 0.15);
     }
 }
 
@@ -72,38 +67,19 @@
     .project-screenshot-carousel {
         width: 100%;
     }
-
 }
 
 @media (max-width: 768px) {
-    .project-screenshot-carousel-button {
-        height: 40px;
-        width: 40px;
-    }
-
     .project-screenshot-carousel-icon {
-        height: 30px;
-        width: 30px;
+        height: 32px;
+        width: 32px;
     }
 
     .project-screenshot-carousel-previous-button {
-        left: 24px;
+        left: 20px;
     }
 
     .project-screenshot-carousel-next-button {
-        right: 24px;
+        right: 20px;
     }
-}
-
-@media (max-width: 480px) {
-    .project-screenshot-carousel-button {
-        height: 34px;
-        width: 34px;
-    }
-
-    .project-screenshot-carousel-icon {
-        height: 24px;
-        width: 24px;
-    }
-
 }

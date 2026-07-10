@@ -1,3 +1,7 @@
+.project-section {
+    background: var(--color-text);
+}
+
 .projects-section-header {
     grid-column: 1/-1;
 }
@@ -8,10 +12,11 @@
 
 .projects-section-track {
     width: max-content;
-    padding: var(--space-sm);
+    padding-inline: var(--space-sm);
+    padding-block: var(--space-md);
 
     display: flex;
-    gap: var(--space-sm);
+    gap: var(--space-lg);
 }
 
 

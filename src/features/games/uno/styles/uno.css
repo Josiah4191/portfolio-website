@@ -1,0 +1,52 @@
+@import "./colors.css";
+@import "./players.css";
+@import "./cards.css";
+
+.uno-page {
+    background: var(--uno-background);
+    color: var(--uno-color-text);
+
+    --color-text: var(--uno-color-text);
+    --color-text-muted: var(--uno-color-text-muted);
+    --color-text-subtle: var(--uno-color-text-subtle);
+
+    --color-accent: var(--uno-accent);
+    --color-accent-light: var(--uno-accent-light);
+    --color-accent-extra-light: var(--uno-accent-extra-light);
+    --color-accent-dark: var(--uno-accent-dark);
+}
+
+/*========== Media Queries ==========*/
+@media (max-width: 500px) {
+    .uno-page {
+        /* Cards */
+        --uno-card-width: 76px;
+        --uno-card-height: 111px;
+        --uno-card-gap: var(--space-xs);
+        --uno-card-gap-center: var(--space-sm);
+        --uno-card-font-size: var(--font-size-xl);
+        --uno-card-font-size-corner: var(--font-size-sm);
+        --uno-card-padding: 3px;
+        --uno-card-border-radius: 8px;
+        --uno-card-icon-size: 12px;
+        --uno-card-icon-size-lg: 24px;
+
+        /* Players */
+        --uno-player-font-size: var(--font-size-sm);
+        --uno-player-card-count-label-font-size: var(--font-size-sm);
+
+        /* Other Media Queries:
+            Reduced gap size in UnoGameBoard
+            Reduced gap size in UnoOpponentArea
+            Reduced gap size in UnoPlayerActionBar
+            Reduced padding and mini card size in UnoPlayerBadge
+            Reduced various sizes in UnoGameMenu
+            Changed display type in UnoActionButton
+            Hide card corner values in UnoCard
+            Hide Portfolio text in GameToolbar
+            Reduce button sizing and remove button labels in UnoGamePage
+            Reduce gap, padding, and font sizing in UnoRulesPanel
+            Adjust grid layout in WildColorPanel
+         */
+    }
+}

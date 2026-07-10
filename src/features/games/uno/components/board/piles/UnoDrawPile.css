@@ -37,7 +37,7 @@
 
 @media (hover: hover) and (pointer: fine) {
     .uno-draw-pile-card.uno-draw-pile-card-is-drawable:hover {
-        --uno-card-hover-ring-color: var(--game-accent-light);
+        --uno-card-hover-ring-color: var(--uno-accent-light);
     }
 
     .uno-draw-pile-card:hover .game-tooltip {

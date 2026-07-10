@@ -18,6 +18,6 @@ export default function ProjectDetailsPage() {
     }
 
     return (
-        <ProjectPage project={project}/>
+        <ProjectPage className="portfolio-page" project={project}/>
     )
 }

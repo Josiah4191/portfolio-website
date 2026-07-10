@@ -1,3 +1,7 @@
+.project-screenshot-section {
+    background: var(--color-text);
+}
+
 .project-screenshot-section-header {
     grid-column: 1 / -1;
 }

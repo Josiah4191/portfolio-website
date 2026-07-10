@@ -1,0 +1,25 @@
+.game-toolbar.uno-toolbar {
+    background: var(--uno-header-background);
+    border: 1px solid rgb(255 255 255 / 0.08);
+    box-shadow:
+            inset 0 1px 0 rgb(255 255 255 / 0.12),
+            0 12px 28px rgb(0 0 0 / 0.45);
+}
+
+.game-toolbar.uno-toolbar:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+            90deg,
+            #1F7BFF,
+            #2FC9FF,
+            #32E68A,
+            #C7F23C,
+            #FFD23A,
+            #FF7A3D,
+            #FF4242
+    );
+}

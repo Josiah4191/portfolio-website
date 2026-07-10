@@ -15,9 +15,9 @@
 
     /* Page Layout */
     --section-spacing: 7.5rem;
-    --nav-section-spacing: 1rem;
+    --nav-section-spacing: 1.5rem;
     --page-margin: 10rem;
-    --nav-margin: 3rem;
+    --nav-margin: 10rem;
     --grid-gutter: 2rem;
 
     /* Spacing Scale */
@@ -54,13 +54,14 @@
 @media (min-width: 1700px) {
     :root {
         --page-margin: 20rem;
+        --nav-margin: 20rem;
     }
 }
 
 @media (max-width: 1024px) {
     :root {
         --page-margin: 5rem;
-        --nav-margin: 2rem;
+        --nav-margin: 5rem;
         --grid-gutter: 2rem;
     }
 

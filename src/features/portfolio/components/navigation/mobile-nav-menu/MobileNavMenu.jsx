@@ -1,9 +1,6 @@
-// noinspection DuplicatedCode
 import './MobileNavMenu.css';
 import {PROJECTS} from "../../../data/projectData.js";
 import {
-    Folder,
-    FileText,
     ChevronRight,
     SquareArrowOutUpRight, User,
 } from "lucide-react";
@@ -32,9 +29,7 @@ export default function MobileNavMenu({isOpen, toggleProjectsMenu, isProjectsMen
                     className="mobile-nav-link">
                     <NavMenuItem
                         title="About"
-                        description="Learn more about me."
-                        icon={User}
-                        trailingIcon={ChevronRight}/>
+                        description="Learn more about me."/>
                 </NavLink>
             </div>
 
@@ -50,7 +45,6 @@ export default function MobileNavMenu({isOpen, toggleProjectsMenu, isProjectsMen
                     <NavMenuItem
                         title="All Projects"
                         description="Browse my projects."
-                        icon={Folder}
                         trailingIcon={ChevronRight}
                         isExpanded={isProjectsMenuOpen}/>
                 </button>
@@ -66,8 +60,7 @@ export default function MobileNavMenu({isOpen, toggleProjectsMenu, isProjectsMen
                                 onClick={closeMenu}>
                                 <NavMenuItem
                                     title={title}
-                                    description={navDescription}
-                                    trailingIcon={ChevronRight}/>
+                                    description={navDescription}/>
                             </NavLink>
                         </li>
                     ))}
@@ -86,7 +79,38 @@ export default function MobileNavMenu({isOpen, toggleProjectsMenu, isProjectsMen
                     <NavMenuItem
                         title="Resume"
                         description="View my resume."
-                        icon={FileText}
+                        trailingIcon={SquareArrowOutUpRight}/>
+                </a>
+            </div>
+
+            <div className="mobile-nav-divider" aria-hidden="true"/>
+
+            <div className="mobile-nav-section">
+                <a
+                    href="https://www.linkedin.com/in/josiah-stoltzfus/"
+                    onClick={closeMenu}
+                    target="_blank"
+                    className="mobile-nav-link"
+                    rel="noopener noreferrer">
+                    <NavMenuItem
+                        title="LinkedIn"
+                        description="Connect with me on LinkedIn."
+                        trailingIcon={SquareArrowOutUpRight}/>
+                </a>
+            </div>
+
+            <div className="mobile-nav-divider" aria-hidden="true"/>
+
+            <div className="mobile-nav-section">
+                <a
+                    href="https://github.com/josiah4191"
+                    onClick={closeMenu}
+                    target="_blank"
+                    className="mobile-nav-link"
+                    rel="noopener noreferrer">
+                    <NavMenuItem
+                        title="GitHub"
+                        description="View my GitHub profile."
                         trailingIcon={SquareArrowOutUpRight}/>
                 </a>
             </div>

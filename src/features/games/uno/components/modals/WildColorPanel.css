@@ -1,10 +1,11 @@
 .panel.wild-color-panel {
-    --panel-surface: var(--game-modal-surface-inner);
-    --panel-surface-light: var(--game-modal-surface-inner-light);
+    --panel-surface: var(--uno-modal-surface-inner);
+    --panel-surface-light: var(--uno-modal-surface-inner-light);
     --panel-sheen-opacity: 0.03;
 
     --panel-bottom-edge-color: transparent;
     border-bottom: 1px solid rgb(255 255 255 / 0.1);
+
 }
 
 .panel.wild-color-panel::before {
@@ -45,7 +46,7 @@
     left: 5px;
     right: 5px;
     height: 1px;
-    background: linear-gradient(90deg, transparent, var(--game-accent-extra-light), transparent);
+    background: linear-gradient(90deg, transparent, var(--uno-accent-extra-light), transparent);
 }
 
 .wild-color-options {
@@ -108,5 +109,18 @@
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .wild-color-options {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+    }
+}
+
+@media (max-width: 320px) {
+    .wild-color-options {
+        grid-template-columns: repeat(2, 1fr);
     }
 }

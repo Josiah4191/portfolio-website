@@ -1,8 +1,9 @@
 import {useState} from "react";
 import './WordSearchCategorySelect.css'
 
-export default function WordSearchCategorySelect({value, setValue, options}) {
+export default function WordSearchCategorySelect({puzzles, currentPuzzle, setSelectedPuzzle,}) {
     const [isOpen, setIsOpen] = useState(false);
+    const category = currentPuzzle.category;
 
     return (
         <div className={`word-search-dropdown-select`}>
@@ -14,7 +15,7 @@ export default function WordSearchCategorySelect({value, setValue, options}) {
                 }}
                 aria-expanded={isOpen}
                 aria-haspopup="listbox">
-                <span className="word-search-dropdown-text">{value.charAt(0).toUpperCase() + value.slice(1)}</span>
+                <span className="word-search-dropdown-text">{category.charAt(0).toUpperCase() + category.slice(1)}</span>
                 <span className={`word-search-dropdown-arrow ${isOpen ? "visible" : ""}`} aria-hidden="true">
                     ▾
                 </span>
@@ -27,17 +28,19 @@ export default function WordSearchCategorySelect({value, setValue, options}) {
                     onClick={() => setIsOpen(false)}/>}
 
             <ul className={`word-search-dropdown-menu ${isOpen ? "open" : ""}`}>
-                {options.map((option) => {
+                {puzzles.map((puzzle) => {
+                    const category = puzzle.category;
+                    const isSelected = puzzle === currentPuzzle;
                     return (
-                        <li key={option}>
+                        <li key={category}>
                             <button
                                 type="button"
-                                className={`word-search-dropdown-option ${option === value ? "selected" : ""}`}
+                                className={`word-search-dropdown-option ${isSelected ? "selected" : ""}`}
                                 onClick={(e) => {
                                     e.stopPropagation();
-                                    setValue(option);
+                                    setSelectedPuzzle(puzzle);
                                     setIsOpen(false);
-                                }}>{option.charAt(0).toUpperCase() + option.slice(1)}</button>
+                                }}>{category.charAt(0).toUpperCase() + category.slice(1)}</button>
                         </li>
                     )
                 })}

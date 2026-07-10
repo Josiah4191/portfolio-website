@@ -1,6 +1,6 @@
 .panel.game-over-panel {
-    --panel-surface: var(--game-modal-surface-inner);
-    --panel-surface-light: var(--game-modal-surface-inner-light);
+    --panel-surface: var(--uno-modal-surface-inner);
+    --panel-surface-light: var(--uno-modal-surface-inner-light);
 
     --panel-sheen-opacity: 0.03;
 
@@ -47,7 +47,7 @@
     left: 5px;
     right: 5px;
     height: 1px;
-    background: linear-gradient(90deg, transparent, var(--game-accent-extra-light), transparent);
+    background: linear-gradient(90deg, transparent, var(--uno-accent-extra-light), transparent);
 }
 
 .game-over-icon-wrapper {
@@ -58,9 +58,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid color-mix(in srgb, var(--game-accent) 50%, black);
+    border: 1px solid color-mix(in srgb, var(--uno-accent) 50%, black);
 
-    background: linear-gradient(to bottom, var(--game-accent-light), var(--game-accent));
+    background: linear-gradient(to bottom, var(--uno-accent-light), var(--uno-accent));
     box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.25),
     inset 0 -5px 30px rgb(0 0 0 / 0.4),
     inset 0 -1px 0 rgb(0 0 0 / 0.15),
@@ -75,7 +75,7 @@
 
 .game-over-title {
     background: linear-gradient(180deg, white, transparent 100%),
-    linear-gradient(180deg, var(--game-accent-light), var(--game-background-surface-light));
+    linear-gradient(180deg, var(--uno-accent-light), var(--uno-background-surface-light));
 
     background-clip: text;
     color: transparent;
@@ -99,7 +99,7 @@
 }
 
 .game-over-winner-name {
-    color: var(--game-accent-extra-light);
+    color: var(--uno-accent-extra-light);
 }
 
 .game-over-actions {

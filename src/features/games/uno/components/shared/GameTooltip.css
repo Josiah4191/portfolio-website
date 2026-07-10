@@ -57,7 +57,7 @@
     left: 5px;
     right: 5px;
     height: 1px;
-    background: linear-gradient(90deg, transparent, var(--game-accent-extra-light), transparent);
+    background: linear-gradient(90deg, transparent, var(--uno-accent-extra-light), transparent);
 }
 
 .game-tooltip-description {

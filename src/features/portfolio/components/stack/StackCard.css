@@ -1,39 +1,41 @@
 .stack-card {
-    width: 180px;
+    width: 200px;
     height: 100%;
-    padding: var(--space-md);
+    padding: var(--space-lg);
 
-    background-color: var(--color-surface);
-    box-shadow: var(--surface-icon);
-    border-radius: var(--radius-md);
+    background: var(--portfolio-color-surface-background);
 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: var(--space-md);
+    gap: var(--space-lg);
     text-align: center;
 
     scroll-snap-align: start;
     scroll-margin-left: var(--space-sm);
 }
 
-.stack-card-image-container {
-    padding: var(--space-md);
+.stack-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
 
-    background-color: var(--color-background);
-    border-radius: var(--radius-md);
-    box-shadow: var(--surface-icon-wrapper);
+.stack-card-title,
+.stack-card-description,
+.stack-card-type {
+    text-align: start;
+}
+
+.stack-card-description {
+    color: var(--color-text-muted);
+}
+
+.stack-card-type {
+    text-transform: capitalize;
 }
 
 .stack-card-image {
     width: 48px;
     height: 48px;
-}
-
-.stack-card-type {
-    padding: var(--space-xs) var(--space-md);
-
-    border-radius: var(--radius-pill);
-    box-shadow: var(--surface-icon-wrapper);
 }

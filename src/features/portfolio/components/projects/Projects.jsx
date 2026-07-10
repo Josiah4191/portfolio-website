@@ -7,7 +7,7 @@ import PortfolioCarouselButton from "../../../../shared/components/PortfolioCaro
 
 export default function Projects() {
     return (
-        <section id="projects" className="section" aria-labelledby="projects-title">
+        <section id="projects" className="section project-section" aria-labelledby="projects-title">
             <div className="grid page-margin">
 
                 <div className="projects-section-header">
@@ -15,6 +15,7 @@ export default function Projects() {
                         eyebrow="PROJECTS"
                         title="Projects"
                         titleId="projects-title"
+                        variant="dark"
                         description="A selection of projects I've built to explore full-stack development, interactive gameplay, and clean UI design."/>
                 </div>
 

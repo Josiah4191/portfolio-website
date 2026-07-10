@@ -1,9 +1,8 @@
-// noinspection DuplicatedCode
 import './DesktopNavMenu.css';
 
 import NavMenuItem from "../NavMenuItem.jsx";
 import {PROJECTS} from "../../../data/projectData.js";
-import {Folder, FileText, User, ChevronRight, SquareArrowOutUpRight} from "lucide-react";
+import {ChevronRight, SquareArrowOutUpRight} from "lucide-react";
 import {NavLink} from "react-router-dom";
 
 export default function DesktopNavMenu({isOpen, toggleProjectsMenu, isProjectsMenuOpen, closeMenu}) {
@@ -17,9 +16,7 @@ export default function DesktopNavMenu({isOpen, toggleProjectsMenu, isProjectsMe
                 <NavLink to="/#about" onClick={closeMenu} className="desktop-nav-link">
                     <NavMenuItem
                         title="About"
-                        description="Learn more about me."
-                        icon={User}
-                        trailingIcon={ChevronRight}/>
+                        description="Learn more about me."/>
                 </NavLink>
             </div>
 
@@ -35,20 +32,17 @@ export default function DesktopNavMenu({isOpen, toggleProjectsMenu, isProjectsMe
                     <NavMenuItem
                         title="All Projects"
                         description="Browse my projects."
-                        icon={Folder}
                         trailingIcon={ChevronRight}
                         isExpanded={isProjectsMenuOpen}/>
                 </button>
 
                 <ul id="desktop-projects-submenu" className={`desktop-nav-submenu ${isProjectsMenuOpen ? "is-open" : ""}`}>
-                    {PROJECTS.map(({title, route, navDescription, navIcon}) => (
+                    {PROJECTS.map(({title, route, navDescription}) => (
                         <li key={route}>
                             <NavLink to={route} onClick={closeMenu} className="desktop-nav-link">
                                 <NavMenuItem
                                     title={title}
-                                    description={navDescription}
-                                    icon={navIcon}
-                                    trailingIcon={ChevronRight}/>
+                                    description={navDescription}/>
                             </NavLink>
                         </li>
                     ))}
@@ -67,7 +61,38 @@ export default function DesktopNavMenu({isOpen, toggleProjectsMenu, isProjectsMe
                     <NavMenuItem
                         title="Resume"
                         description="View my resume."
-                        icon={FileText}
+                        trailingIcon={SquareArrowOutUpRight}/>
+                </a>
+            </div>
+
+            <div className="desktop-nav-divider" aria-hidden="true"/>
+
+            <div className="desktop-nav-section">
+                <a
+                    href="https://www.linkedin.com/in/josiah-stoltzfus/"
+                    onClick={closeMenu}
+                    target="_blank"
+                    className="desktop-nav-link"
+                    rel="noopener noreferrer">
+                    <NavMenuItem
+                        title="LinkedIn"
+                        description="Connect with me on LinkedIn."
+                        trailingIcon={SquareArrowOutUpRight}/>
+                </a>
+            </div>
+
+            <div className="desktop-nav-divider" aria-hidden="true"/>
+
+            <div className="desktop-nav-section">
+                <a
+                    href="https://github.com/josiah4191"
+                    onClick={closeMenu}
+                    target="_blank"
+                    className="desktop-nav-link"
+                    rel="noopener noreferrer">
+                    <NavMenuItem
+                        title="GitHub"
+                        description="View my GitHub profile."
                         trailingIcon={SquareArrowOutUpRight}/>
                 </a>
             </div>

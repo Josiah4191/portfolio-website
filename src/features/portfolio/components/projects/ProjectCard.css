@@ -4,9 +4,7 @@
 
     overflow: hidden;
 
-    background: var(--color-surface);
-    border-radius: var(--radius-md);
-    box-shadow: var(--surface-card);
+    background: var(--portfolio-color-surface-background);
 
     user-select: none;
     -webkit-user-select: none;
@@ -14,15 +12,16 @@
 
     display: flex;
     flex-direction: column;
+    gap: var(--space-md);
 
-    transition: transform 0.2s ease-in-out;
+    transition: filter 0.2s ease;
     cursor: pointer;
 
     scroll-snap-align: start;
     scroll-margin-left: var(--space-sm);
 }
 
-.project-card-top {
+.project-card-image-wrapper {
     width: 100%;
     aspect-ratio: 16 / 9;
     overflow: hidden;
@@ -35,10 +34,30 @@
     object-position: top;
 }
 
-.project-card-badges {
-    padding: var(--space-md);
+.project-card-text-wrapper {
+    flex: 1;
+    padding-inline: var(--space-md);
 
-    border-top: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.project-card-text {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.project-card-summary {
+    color: var(--color-text-muted);
+}
+
+.project-card-badges {
+    padding-inline: var(--space-md);
+    padding-bottom: var(--space-md);
 
     display: flex;
     gap: var(--space-md);
@@ -51,24 +70,24 @@
 
 .project-card-type {
     align-self: flex-start;
-    padding: var(--space-xs) var(--space-md);
 
-    background-color: var(--color-background);
-    border: 1px solid var(--color-border);
+    color: var(--color-accent);
+
     border-radius: var(--radius-pill);
 }
 
-.project-card-body {
-    flex: 1;
-    padding: var(--space-md);
+.section-header-divider.project-card-divider {
+    width: 28px;
+}
 
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-md);
+.project-card-divider {
+    width: 100%;
+    height: 2px;
+    background: var(--color-border);
 }
 
 @media (hover: hover) and (pointer: fine) {
     .project-card:hover {
-        transform: translateY(-4px);
+        filter: brightness(0.92);
     }
 }

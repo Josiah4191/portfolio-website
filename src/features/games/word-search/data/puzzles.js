@@ -1,6 +1,7 @@
-export const CATEGORIES = [
+export const PUZZLES = [
     {
         category: "Fruits",
+        theme: "fruits-theme",
         words: [
             "Apple",
             "Banana",
@@ -18,6 +19,7 @@ export const CATEGORIES = [
     },
     {
         category: "Cities",
+        theme: "cities-theme",
         words: [
             "Omaha",
             "Lincoln",
@@ -35,6 +37,7 @@ export const CATEGORIES = [
     },
     {
         category: "Ocean Animals",
+        theme: "ocean-animals-theme",
         words: [
             "Crab",
             "Dolphin",
@@ -52,6 +55,7 @@ export const CATEGORIES = [
     },
     {
         category: "Space",
+        theme: "space-theme",
         words: [
             "Asteroid",
             "Comet",
@@ -69,6 +73,7 @@ export const CATEGORIES = [
     },
     {
         category: "Weather",
+        theme: "weather-theme",
         words: [
             "Cloud",
             "Fog",
@@ -86,6 +91,7 @@ export const CATEGORIES = [
     },
     {
         category: "Musical Instruments",
+        theme: "musical-instruments-theme",
         words: [
             "Banjo",
             "Bass",
@@ -103,6 +109,7 @@ export const CATEGORIES = [
     },
     {
         category: "Fantasy Creatures",
+        theme: "fantasy-creatures-theme",
         words: [
             "Dragon",
             "Elf",
@@ -120,6 +127,7 @@ export const CATEGORIES = [
     },
     {
         category: "Sports",
+        theme: "sports-theme",
         words: [
             "Archery",
             "Baseball",
@@ -137,6 +145,7 @@ export const CATEGORIES = [
     },
     {
         category: "Colors",
+        theme: "colors-theme",
         words: [
             "Black",
             "Blue",
@@ -154,6 +163,7 @@ export const CATEGORIES = [
     },
     {
         category: "Insects",
+        theme: "insects-theme",
         words: [
             "Ant",
             "Bee",
@@ -171,6 +181,7 @@ export const CATEGORIES = [
     },
     {
         category: "Jobs",
+        theme: "jobs-theme",
         words: [
             "Baker",
             "Barber",

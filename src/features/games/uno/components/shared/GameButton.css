@@ -12,8 +12,8 @@
     --game-button-icon-color: var(--color-text);
     --game-button-icon-fill: transparent;
 
-    --game-button-surface: var(--game-accent);
-    --game-button-surface-light: var(--game-accent-light);
+    --game-button-surface: var(--uno-accent);
+    --game-button-surface-light: var(--uno-accent-light);
 
     --game-button-sheen-opacity: 0.08;
 

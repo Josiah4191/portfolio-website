@@ -7,8 +7,6 @@
 .sliding-carousel-viewport {
     width: 100%;
     min-width: 0;
-    border-right: 2px solid var(--color-border);
-    border-left: 2px solid var(--color-border);
 
     overflow-x: auto;
     scrollbar-width: none;

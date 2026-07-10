@@ -1,35 +1,18 @@
-.game-nav-section {
+.game-toolbar {
     position: relative;
+    height: 80px;
 
-    background: var(--game-header-background);
-    border: 1px solid rgb(255 255 255 / 0.08);
-    box-shadow:
-            inset 0 1px 0 rgb(255 255 255 / 0.12),
-            0 12px 28px rgb(0 0 0 / 0.45);
-}
-
-.game-nav-section:before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 1px;
-    background: linear-gradient(
-            90deg,
-            #1F7BFF,
-            #2FC9FF,
-            #32E68A,
-            #C7F23C,
-            #FFD23A,
-            #FF7A3D,
-            #FF4242
-    );
+    display: flex;
 }
 
 .game-toolbar-content {
-    margin-left: var(--nav-margin);
-    margin-right: var(--nav-margin);
+    width: 100%;
+    margin-left: 3rem;
+    margin-right: 3rem;
+
     display: flex;
+    gap: var(--space-md);
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -38,8 +21,12 @@
     gap: var(--space-md);
 }
 
-.game-nav-logo-label {
+.game-nav-label {
     font-size: var(--font-size-base-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text);
+
+    transition: color 0.2s ease;
 }
 
 .game-toolbar-link {
@@ -48,34 +35,15 @@
     gap: var(--space-md);
 }
 
-.game-nav-logo-mark {
-    width: 36px;
-    height: 36px;
-
-    background-color: var(--portfolio-color-surface);
-    border-radius: var(--radius-sm);
-    box-shadow: var(--surface-icon-wrapper);
-    font-weight: var(--font-weight-bold);
-    font-size: var(--font-size-md);
-    color: var(--portfolio-color-accent);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-@media (max-width: 600px) {
-    .game-nav-logo-label {
-        display: none;
+@media (max-width: 540px) {
+    .game-toolbar-content {
+        margin-left: 2rem;
+        margin-right: 2rem;
     }
 }
 
 @media (hover: hover) and (pointer: fine) {
-    .game-toolbar-link:hover .game-nav-logo-label {
-        color: var(--portfolio-color-hover-text);
-    }
-
-    .game-toolbar-link:hover .game-nav-logo-mark {
-        background-color: var(--portfolio-color-accent-soft);
+    .game-toolbar-link:hover .game-nav-label {
+        color: var(--color-accent-light);
     }
 }

@@ -1,0 +1,38 @@
+.word-search-page {
+    /* Page */
+    --word-search-background: #F9F8F6;
+
+    /* Panel */
+    --word-search-panel: #F2EDE8;
+
+    /* Text */
+    --word-search-text: #4E3523;
+    --word-search-text-muted: #8A6546;
+    --word-search-text-subtle: #B49A84;
+
+    /* Border */
+    --word-search-border: #D9CFC7;
+    --word-search-border-light: #E4DDD8;
+
+    /* Accent */
+    --word-search-accent: #667A57;
+    --word-search-accent-light: #809973;
+
+    /* Shadows */
+    --word-search-shadow: 0 2px 6px rgb(74 47 31 / 0.03),
+    0 10px 24px rgb(74 47 31 / 0.05),
+    0 24px 48px rgb(74 47 31 / 0.06);
+
+    --color-text: var(--word-search-text);
+    --color-text-muted: var(--word-search-text-muted);
+    --color-text-subtle: var(--word-search-text-subtle);
+
+    --color-accent: var(--word-search-accent);
+    --color-accent-light: var(--word-search-accent-light);
+
+    --color-border: var(--word-search-border);
+    --color-border-light: var(--word-search-border-light);
+
+    background: var(--word-search-background);
+    color: var(--word-search-text);
+}

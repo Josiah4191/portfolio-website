@@ -8,7 +8,6 @@ import {
     Puzzle,
     MousePointer,
     Grid3X3,
-    Gauge,
     Smartphone,
     CheckCircle,
     Blocks,

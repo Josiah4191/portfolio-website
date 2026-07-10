@@ -1,0 +1,22 @@
+.uno-page {
+    /*========== Cards ==========*/
+    --uno-card-inset-highlight-color: rgb(255 255 255 / .5);
+    --uno-card-inset-shadow-color: rgb(0 0 0 / .1);
+    --uno-card-shadow-color: rgb(0 0 0 / 0.25);
+    --uno-card-shadow-blur: 16px;
+    --uno-card-shadow-offset: 4px;
+    --uno-card-hover-ring-color: transparent;
+
+    --uno-card-width: 110px;
+    --uno-card-height: 160px;
+    --uno-card-padding: 4px;
+    --uno-card-border-radius: 8px;
+    --uno-card-gap: var(--space-sm);
+    --uno-card-gap-center: var(--space-md);
+    --uno-card-text-color: var(--color-text);
+    --uno-card-font-size: var(--font-size-2xl);
+    --uno-card-font-size-corner: var(--font-size-lg);
+    --uno-card-icon-size: 20px;
+    --uno-card-icon-size-lg: 40px;
+    --uno-card-font-family: "Archivo Black", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}

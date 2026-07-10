@@ -7,16 +7,17 @@ export default function ProjectCard({project}) {
     return (
         <Link className="project-card" to={route}>
 
-            <div className="project-card-top">
+            <div className="project-card-image-wrapper">
                 <img className="project-card-image" src={preview.image} alt={preview.alt}/>
             </div>
 
-            <div className="project-card-body">
-                <span className="type-label project-card-type">{projectType}</span>
+            <div className="project-card-text-wrapper">
+                <div className="project-card-text">
+                    <h3 className="text-card-title">{title}</h3>
+                    <p className="text-card-body project-card-summary">{summary}</p>
+                </div>
 
-                <h3 className="type-card-title">{title}</h3>
-
-                <p className="type-card-body">{summary}</p>
+                <span className="text-label project-card-type">{projectType}</span>
             </div>
 
             <div className="project-card-badges">

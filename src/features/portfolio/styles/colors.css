@@ -1,0 +1,77 @@
+.portfolio-page {
+    /* Page */
+    --portfolio-color-page-background: #E6ECF1;
+
+    --portfolio-section-surface: #E9EEF2;
+
+    /* Surface */
+    --portfolio-color-surface-light: #F4F7FA;
+    --portfolio-color-surface: #EDF2F6;
+    --portfolio-color-surface-background: linear-gradient(180deg, var(--portfolio-color-surface-light), var(--portfolio-color-surface));
+    --portfolio-color-surface-shadow: 0 4px 10px rgba(15, 23, 42, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.65);
+
+    --portfolio-color-surface-light-dark: #E0E6EC;
+    --portfolio-color-surface-dark:       #D5DDE5;
+    --portfolio-color-surface-background-dark: linear-gradient(180deg, var(--portfolio-color-surface-light-dark), var(--portfolio-color-surface-dark));
+    --portfolio-color-surface-shadow-dark: 0 10px 24px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55);
+
+    /* Accent */
+    --cobalt-050: #DCE6F3;
+    --cobalt-100: #BED0EA;
+    --cobalt-200: #9FB8E1;
+    --cobalt-300: #7898D0;
+    --cobalt-400: #5578B7;
+    --cobalt-500: #42639E;
+    --portfolio-color-accent-extra-light: var(--cobalt-200);
+    --portfolio-color-accent-light: var(--cobalt-300);
+    --portfolio-color-accent: var(--cobalt-400);
+    --portfolio-color-accent-dark: var(--cobalt-500);
+
+    /* Text */
+    --portfolio-color-text: #2E343B;
+    --portfolio-color-text-muted: #58616D;
+    --portfolio-color-text-subtle: #7B8693;
+
+    /*========== Technology Type ==========*/
+    --color-type-frontend-text: #5B82C5;
+    --color-type-backend-text: #5C9470;
+    --color-type-full-stack-text: #7A68B7;
+    --color-type-framework-text: #5A958D;
+    --color-type-database-text: #B18456;
+    --color-type-markup-text: #C26A6A;
+    --color-type-styling-text: #5A89B5;
+    --color-type-design-text: #BC7094;
+
+    /*========== Code Editor ==========*/
+    --code-editor-header: var(--portfolio-color-text);
+    --code-editor-background: #20252D;
+
+    --code-keyword:     #F2B54A;
+    --code-function:    #E6D36D;
+    --code-component:   #7CB7FF;
+    --code-key:         #D58BFF;
+    --code-value:       #86E28A;
+    --code-punctuation: #A7B0BC;
+    --code-identifier:  #E8EDF5;
+    --code-comment:     #7F92A8;
+
+    --mac-red: #FF5F57;
+    --mac-yellow: #FEBC2E;
+    --mac-green: #28C840;
+}
+
+.portfolio-page {
+    --color-border: rgb(0 0 0 / .15);
+    --color-text: var(--portfolio-color-text);
+    --color-text-light: #B9C2CC;
+    --color-text-extra-light: var(--portfolio-color-page-background);
+    --color-text-muted: var(--portfolio-color-text-muted);
+    --color-text-subtle: var(--portfolio-color-text-subtle);
+
+    --color-accent: var(--portfolio-color-accent);
+    --color-accent-light: var(--portfolio-color-accent-light);
+    --color-accent-extra-light: var(--portfolio-color-accent-extra-light);
+    --color-accent-dark: var(--portfolio-color-accent-dark);
+}

@@ -7,27 +7,6 @@ import uno_preview from '../assets/screenshots/uno/uno-preview.png'
 import add_items from '../assets/screenshots/squirrel-csharp/add-items-csharp.png'
 import hero_section from '../assets/screenshots/portfolio/hero-section.png'
 
-import {
-    Gamepad2,
-    Globe,
-    Squirrel,
-    CodeXml,
-    Server,
-    MonitorSmartphone,
-    Blocks,
-    Grid3X3,
-    Shuffle,
-    Play,
-    MousePointer2,
-    Search,
-    Palette,
-    PanelsTopLeft,
-    Layers3,
-    Database,
-    FolderTree,
-    LayoutTemplate, Rocket,
-} from "lucide-react";
-
 export const PROJECTS = [
         {
             slug: 'uno',
@@ -41,7 +20,6 @@ export const PROJECTS = [
                 "The project focuses on clean game-state management, REST API design, and interactive gameplay systems. It serves as both a " +
                 "portfolio piece and a deeper exploration of full-stack architecture, domain-driven design, and interactive UI development."
             ],
-            navIcon: Gamepad2,
             navDescription: "Card game built with Java",
             projectType: "Full-Stack Web Application",
             route: "/projects/uno",
@@ -57,50 +35,25 @@ export const PROJECTS = [
             features: FEATURES_MAP["uno"],
             links: [
                 {
+                    label: "Play Game",
+                    summary: "Play the live game in your browser",
+                    url: "/uno"
+                },
+                {
                     label: "React App",
                     summary: "View the source code on GitHub",
-                    icon: CodeXml,
                     url: "https://github.com/Josiah4191/uno-game-client",
                 },
                 {
                     label: "Spring API",
                     summary: "View the source code on GitHub",
-                    icon: CodeXml,
                     url: "https://github.com/Josiah4191/uno-game-api",
-                },
-                {
-                    label: "Play Game",
-                    summary: "Play the live game in your browser",
-                    icon: Play,
-                    url: "/uno"
                 },
             ],
             preview: {
                 image: uno_preview,
                 alt: "UNO gameboard showing players, cards, draw pile, and discard pile.",
-            },
-            highlights: [
-                {
-                    title: "Complete Gameplay",
-                    description: "Play a full game against computer players.",
-                    icon: Gamepad2,
-                },
-                {
-                    title: "Spring Boot API",
-                    description: "Java backend with REST endpoints.",
-                    icon: Server,
-                },
-                {
-                    title: "Responsive Design",
-                    description: "Works across desktop and mobile.",
-                    icon: MonitorSmartphone,
-                },
-                {
-                    title: "Clean Architecture",
-                    description: "Built with reusable components and classes.",
-                    icon: Blocks,
-                },
-            ]
+            }
         },
         {
             slug: 'word-search',
@@ -112,7 +65,6 @@ export const PROJECTS = [
                 "The project focuses on game-style front-end development, reusable React components, and responsive design while serving as a platform " +
                 "for future gameplay and puzzle-generation features."
             ],
-            navIcon: Search,
             navDescription: "Puzzle game built with JavaScript",
             projectType: "Frontend Web Game",
             route: "/projects/word-search",
@@ -126,44 +78,20 @@ export const PROJECTS = [
             features: FEATURES_MAP["word-search"],
             links: [
                 {
-                    label: "React App",
-                    summary: "View the source code on GitHub",
-                    icon: CodeXml,
-                    url: "https://github.com/Josiah4191/word-search-rebuild"
-                },
-                {
                     label: "Play Game",
                     summary: "Play the live game in your browser",
-                    icon: Play,
                     url: "/word-search"
+                },
+                {
+                    label: "React App",
+                    summary: "View the source code on GitHub",
+                    url: "https://github.com/Josiah4191/word-search-rebuild"
                 }
             ],
             preview: {
                 image: word_search_board,
                 alt: "Word Search game board with a letter grid and word list.",
-            },
-            highlights: [
-                {
-                    title: "Canvas Rendering",
-                    description: "Puzzle board drawn with Canvas.",
-                    icon: Grid3X3,
-                },
-                {
-                    title: "Random Puzzles",
-                    description: "Generates a new puzzle each game.",
-                    icon: Shuffle,
-                },
-                {
-                    title: "Drag Selection",
-                    description: "Highlight words by dragging.",
-                    icon: MousePointer2,
-                },
-                {
-                    title: "Responsive Design",
-                    description: "Works across desktop and mobile.",
-                    icon: MonitorSmartphone,
-                },
-            ]
+            }
         },
         {
             slug: 'portfolio',
@@ -176,7 +104,6 @@ export const PROJECTS = [
                 "The project also served as an opportunity to practice component architecture, routing, responsive design systems, dropdown navigation, " +
                 "hover interactions, and overall visual consistency."
             ],
-            navIcon: Globe,
             navDescription: "This website built with React",
             projectType: "Portfolio Website",
             route: "/projects/portfolio",
@@ -193,36 +120,13 @@ export const PROJECTS = [
                 {
                     label: "React App",
                     summary: "View the source code on GitHub",
-                    icon: CodeXml,
                     url: "https://github.com/Josiah4191/portfolio-website",
                 }
             ],
             preview: {
                 image: hero_section,
                 alt: "Portfolio homepage showing the hero section and featured projects.",
-            },
-            highlights: [
-                {
-                    title: "Responsive Layout",
-                    description: "Built for desktop and mobile.",
-                    icon: MonitorSmartphone,
-                },
-                {
-                    title: "Reusable Components",
-                    description: "Shared React components throughout.",
-                    icon: Blocks,
-                },
-                {
-                    title: "Project Pages",
-                    description: "Detailed pages for every project.",
-                    icon: PanelsTopLeft,
-                },
-                {
-                    title: "Clean Design",
-                    description: "Simple layout with consistent styling.",
-                    icon: Palette,
-                },
-            ]
+            }
         },
         {
             slug: 'squirrel-tracker-java',
@@ -234,7 +138,6 @@ export const PROJECTS = [
                 "The project is a modern rework of the original C# version and focuses on REST APIs, client-server communication, " +
                 "routing, dynamic front-end rendering, and full-stack architecture using Java and React."
             ],
-            navIcon: Squirrel,
             navDescription: "Full stack app built with Java",
             projectType: "Full-Stack Web Application",
             route: "/projects/squirrel-tracker-java",
@@ -251,42 +154,18 @@ export const PROJECTS = [
                 {
                     label: "React App",
                     summary: "View the live demo in your browser",
-                    icon: CodeXml,
                     url: "https://github.com/Josiah4191/squirrel-frontend",
                 },
                 {
                     label: "Spring API",
                     summary: "View the source code on GitHub",
-                    icon: CodeXml,
                     url: "https://github.com/Josiah4191/squirrel-backend",
                 },
             ],
             preview: {
                 image: manage_squirrels,
                 alt: "Squirrel Tracker application showing the squirrel management page."
-            },
-            highlights: [
-                {
-                    title: "Full CRUD",
-                    description: "Manage squirrels and food.",
-                    icon: FolderTree,
-                },
-                {
-                    title: "Spring Boot API",
-                    description: "Connects React to the backend.",
-                    icon: Server,
-                },
-                {
-                    title: "PostgreSQL",
-                    description: "Stores application data.",
-                    icon: Database,
-                },
-                {
-                    title: "React Frontend",
-                    description: "Responsive user interface.",
-                    icon: MonitorSmartphone,
-                },
-            ]
+            }
         },
         {
             slug: 'squirrel-tracker-csharp',
@@ -299,7 +178,6 @@ export const PROJECTS = [
                 "The project was built to practice back-end web development concepts such as routing, controllers, database " +
                 "interaction, and server-side rendering while learning how full-stack applications are structured and connected."
             ],
-            navIcon: CodeXml,
             navDescription: "Windows app built with C#",
             projectType: "Full-Stack MVC Application",
             route: "/projects/squirrel-tracker-csharp",
@@ -314,36 +192,13 @@ export const PROJECTS = [
                 {
                     label: ".NET MVC",
                     summary: "View the source code on GitHub",
-                    icon: CodeXml,
                     url: "https://github.com/Josiah4191/squirrel-backend-dotnet",
                 }
             ],
             preview: {
                 image: add_items,
                 alt: "Squirrel Tracker application showing the add items page."
-            },
-            highlights: [
-                {
-                    title: "Full CRUD",
-                    description: "Manage squirrels and food.",
-                    icon: FolderTree,
-                },
-                {
-                    title: "ASP.NET Core MVC",
-                    description: "Server-rendered web application.",
-                    icon: LayoutTemplate,
-                },
-                {
-                    title: "SQL Database",
-                    description: "Stores application data.",
-                    icon: Database,
-                },
-                {
-                    title: "MVC Architecture",
-                    description: "Organized into separate layers.",
-                    icon: Layers3,
-                },
-            ]
+            }
         }
     ]
 ;

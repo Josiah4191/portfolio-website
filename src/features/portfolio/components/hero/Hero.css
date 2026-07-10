@@ -9,16 +9,15 @@
     grid-column: 1 / 7;
 }
 
-.hero-links-wrapper {
-    grid-column: 1 / 7;
-}
-
 .hero-code-editor-wrapper {
     grid-column: 7/-1;
-    grid-row: 1/3;
 
     display: flex;
     align-items: center;
+}
+
+.hero-links-wrapper {
+    grid-column: 1 / -1;
 }
 
 @media (max-width: 1150px) {
@@ -30,7 +29,7 @@
 
     .hero-code-editor-wrapper {
         grid-column: 1/-1;
-        grid-row: auto;
+        grid-row: 3;
     }
 }
 

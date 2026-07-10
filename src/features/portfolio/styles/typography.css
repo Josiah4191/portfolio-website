@@ -1,0 +1,278 @@
+.portfolio-page {
+    /*================================*/
+    /* Pages                          */
+    /*================================*/
+    --text-page-title-size: var(--font-size-3xl);
+    --text-page-title-weight: var(--font-weight-bold);
+    --text-page-title-line-height: 1.1;
+    --text-page-title-letter-spacing: 0;
+
+    --text-page-body-size: var(--font-size-base-lg);
+    --text-page-body-weight: var(--font-weight-semibold);
+    --text-page-body-line-height: 1.6;
+    --text-page-body-letter-spacing: 0;
+
+    --text-page-eyebrow-size: var(--font-size-base);
+    --text-page-eyebrow-weight: var(--font-weight-semibold);
+    --text-page-eyebrow-line-height: 1.3;
+    --text-page-eyebrow-letter-spacing: 0.04em;
+
+    /*================================*/
+    /* Sections                       */
+    /*================================*/
+    --text-section-title-size: var(--font-size-2xl);
+    --text-section-title-weight: var(--font-weight-semibold);
+    --text-section-title-line-height: 1.1;
+    --text-section-title-letter-spacing: 0;
+
+    --text-section-subtitle-size: var(--font-size-base-lg);
+    --text-section-subtitle-weight: var(--font-weight-semibold);
+    --text-section-subtitle-line-height: 1.6;
+    --text-section-subtitle-letter-spacing: 0;
+
+    --text-section-body-size: var(--font-size-base);
+    --text-section-body-weight: var(--font-weight-medium);
+    --text-section-body-line-height: 1.6;
+    --text-section-body-letter-spacing: 0;
+
+    /*================================*/
+    /* Cards                          */
+    /*================================*/
+    --text-card-title-size: var(--font-size-md);
+    --text-card-title-weight: var(--font-weight-semibold);
+    --text-card-title-line-height: 1.3;
+    --text-card-title-letter-spacing: 0;
+
+    --text-card-subtitle-size: var(--font-size-base);
+    --text-card-subtitle-weight: var(--font-weight-semibold);
+    --text-card-subtitle-line-height: 1.3;
+    --text-card-subtitle-letter-spacing: 0;
+
+    --text-card-body-size: var(--font-size-sm);
+    --text-card-body-weight: var(--font-weight-medium);
+    --text-card-body-line-height: 1.6;
+    --text-card-body-letter-spacing: 0;
+
+    /*================================*/
+    /* Labels                         */
+    /*================================*/
+    --text-label-size: var(--font-size-sm);
+    --text-label-weight: var(--font-weight-semibold);
+    --text-label-line-height: 1.3;
+    --text-label-letter-spacing: 0.04em;
+
+    --text-badge-size: var(--font-size-sm);
+    --text-badge-weight: var(--font-weight-semibold);
+    --text-badge-line-height: 1.3;
+    --text-badge-letter-spacing: 0;
+
+    --text-eyebrow-size: var(--font-size-sm);
+    --text-eyebrow-weight: var(--font-weight-semibold);
+    --text-eyebrow-line-height: 1.3;
+    --text-eyebrow-letter-spacing: 0.04em;
+
+    /*================================*/
+    /* Buttons / Links                */
+    /*================================*/
+    --text-button-size: var(--font-size-base);
+    --text-button-weight: var(--font-weight-medium);
+    --text-button-line-height: 1;
+    --text-button-letter-spacing: 0;
+
+    --text-link-size: var(--font-size-base);
+    --text-link-weight: var(--font-weight-semibold);
+    --text-link-line-height: 1.3;
+    --text-link-letter-spacing: 0;
+
+    /*================================*/
+    /* Navigation                     */
+    /*================================*/
+    --text-nav-link-size: var(--font-size-sm);
+    --text-nav-link-weight: var(--font-weight-semibold);
+    --text-nav-link-line-height: 1.3;
+    --text-nav-link-letter-spacing: 0;
+
+    --text-nav-link-subtitle-size: var(--font-size-sm);
+    --text-nav-link-subtitle-weight: var(--font-weight-regular);
+    --text-nav-link-subtitle-line-height: 1.3;
+    --text-nav-link-subtitle-letter-spacing: 0;
+}
+
+/*================================*/
+/* Pages                          */
+/*================================*/
+.text-page-title {
+    font-size: var(--text-page-title-size);
+    font-weight: var(--text-page-title-weight);
+    line-height: var(--text-page-title-line-height);
+    letter-spacing: var(--text-page-title-letter-spacing);
+}
+
+.text-page-body {
+    font-size: var(--text-page-body-size);
+    font-weight: var(--text-page-body-weight);
+    line-height: var(--text-page-body-line-height);
+    letter-spacing: var(--text-page-body-letter-spacing);
+}
+
+.text-page-eyebrow {
+    font-size: var(--text-page-eyebrow-size);
+    font-weight: var(--text-page-eyebrow-weight);
+    line-height: var(--text-page-eyebrow-line-height);
+    letter-spacing: var(--text-page-eyebrow-letter-spacing);
+    text-transform: uppercase;
+}
+
+/*================================*/
+/* Sections                       */
+/*================================*/
+.text-section-title {
+    font-size: var(--text-section-title-size);
+    font-weight: var(--text-section-title-weight);
+    line-height: var(--text-section-title-line-height);
+    letter-spacing: var(--text-section-title-letter-spacing);
+}
+
+.text-section-subtitle {
+    font-size: var(--text-section-subtitle-size);
+    font-weight: var(--text-section-subtitle-weight);
+    line-height: var(--text-section-subtitle-line-height);
+    letter-spacing: var(--text-section-subtitle-letter-spacing);
+}
+
+.text-section-body {
+    font-size: var(--text-section-body-size);
+    font-weight: var(--text-section-body-weight);
+    line-height: var(--text-section-body-line-height);
+    letter-spacing: var(--text-section-body-letter-spacing);
+}
+
+/*================================*/
+/* Cards                          */
+/*================================*/
+.text-card-title {
+    font-size: var(--text-card-title-size);
+    font-weight: var(--text-card-title-weight);
+    line-height: var(--text-card-title-line-height);
+    letter-spacing: var(--text-card-title-letter-spacing);
+}
+
+.text-card-subtitle {
+    font-size: var(--text-card-subtitle-size);
+    font-weight: var(--text-card-subtitle-weight);
+    line-height: var(--text-card-subtitle-line-height);
+    letter-spacing: var(--text-card-subtitle-letter-spacing);
+}
+
+.text-card-body {
+    font-size: var(--text-card-body-size);
+    font-weight: var(--text-card-body-weight);
+    line-height: var(--text-card-body-line-height);
+    letter-spacing: var(--text-card-body-letter-spacing);
+}
+
+/*================================*/
+/* Labels / Badges                */
+/*================================*/
+.text-label {
+    font-size: var(--text-label-size);
+    font-weight: var(--text-label-weight);
+    line-height: var(--text-label-line-height);
+    letter-spacing: var(--text-label-letter-spacing);
+}
+
+.text-badge {
+    font-size: var(--text-badge-size);
+    font-weight: var(--text-badge-weight);
+    line-height: var(--text-badge-line-height);
+    letter-spacing: var(--text-badge-letter-spacing);
+}
+
+.text-eyebrow {
+    font-size: var(--text-eyebrow-size);
+    font-weight: var(--text-eyebrow-weight);
+    line-height: var(--text-eyebrow-line-height);
+    letter-spacing: var(--text-eyebrow-letter-spacing);
+    text-transform: uppercase;
+}
+
+/*================================*/
+/* Buttons / Links                */
+/*================================*/
+.text-button {
+    font-size: var(--text-button-size);
+    font-weight: var(--text-button-weight);
+    line-height: var(--text-button-line-height);
+    letter-spacing: var(--text-button-letter-spacing);
+}
+
+.text-link {
+    font-size: var(--text-link-size);
+    font-weight: var(--text-link-weight);
+    line-height: var(--text-link-line-height);
+    letter-spacing: var(--text-link-letter-spacing);
+}
+
+/*================================*/
+/* Navigation                     */
+/*================================*/
+.text-nav-link {
+    font-size: var(--text-nav-link-size);
+    font-weight: var(--text-nav-link-weight);
+    line-height: var(--text-nav-link-line-height);
+    letter-spacing: var(--text-nav-link-letter-spacing);
+}
+
+.text-nav-link-subtitle {
+    font-size: var(--text-nav-link-subtitle-size);
+    font-weight: var(--text-nav-link-subtitle-weight);
+    line-height: var(--text-nav-link-subtitle-line-height);
+    letter-spacing: var(--text-nav-link-subtitle-letter-spacing);
+}
+
+@media (max-width: 768px) {
+    .portfolio-page {
+        /* Page Hero */
+        --text-page-title-size: var(--font-size-2xl-lg);
+        --text-page-text-size: var(--font-size-base-lg);
+        --text-page-eyebrow-size: var(--font-size-sm);
+
+        /* Section */
+        --text-section-title-size: var(--font-size-xl-lg);
+        --text-section-page-title-size: var(--font-size-2xl);
+        --text-section-subtitle-size: var(--font-size-base-lg);
+
+        /* Button */
+        --text-button-size: var(--font-size-sm);
+        --text-button-weight: var(--font-weight-bold);
+
+        /* Card */
+        --text-card-title-size: var(--font-size-base-lg);
+
+        /* Label */
+        --text-label-size: var(--font-size-xs);
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-page {
+        /* Page Hero */
+        --text-page-title-size: var(--font-size-2xl);
+
+        /* Section */
+        --text-section-subtitle-size: var(--font-size-base);
+        --text-section-page-title-size: var(--font-size-xl-lg);
+        --text-section-text-size: var(--font-size-sm);
+
+        /* Badge */
+        --text-badge-size: var(--font-size-xs);
+    }
+}
+
+@supports (font-variation-settings: "cv11" 1) {
+    /* single story a */
+    header, footer {
+        font-family: 'InterVariable', sans-serif;
+        font-feature-settings: "cv11" 1;
+    }
+}

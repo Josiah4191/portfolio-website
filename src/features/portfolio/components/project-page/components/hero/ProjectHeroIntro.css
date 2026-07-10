@@ -10,33 +10,32 @@
     align-items: center;
 }
 
-.project-hero-back-link-text {
-    transition: color 0.2s ease-in-out;
+.project-hero-back-icon,
+.project-hero-back-link-label {
+    color: var(--color-accent);
 }
 
 .project-hero-back-icon {
-    color: var(--color-accent);
-
     transition: transform 0.2s ease-in-out;
 }
 
 .project-hero-heading {
     display: flex;
-    flex-direction: column;
+    align-items: center;
     gap: var(--space-md);
 }
 
 .project-hero-type {
     align-self: flex-start;
-    padding: var(--space-sm) var(--space-md);
 
-    background-color: var(--color-subsurface);
-    border-radius: var(--radius-pill);
-    box-shadow: var(--surface-icon-wrapper);
-    color: var(--color-text-muted);
+    color: var(--color-accent);
 }
 
 .project-hero-description {
+    max-width: 75ch;
+
+    color: var(--color-text-muted);
+
     display: flex;
     flex-direction: column;
     gap: var(--space-md);
@@ -44,11 +43,12 @@
 
 /* Hover Effects */
 @media (hover: hover) and (pointer: fine) {
-    .project-hero-back-link:hover .project-hero-back-link-text {
-        color: var(--color-hover-text);
+    .project-hero-back-link:hover .project-hero-back-link-label {
+        color: var(--color-accent-dark);
     }
 
     .project-hero-back-link:hover .project-hero-back-icon {
         transform: translateX(-4px);
+        color: var(--color-accent-dark);
     }
 }

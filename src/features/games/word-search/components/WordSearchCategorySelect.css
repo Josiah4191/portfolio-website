@@ -1,6 +1,6 @@
 .word-search-dropdown-select {
     position: relative;
-    flex: 1;
+
     display: flex;
     cursor: pointer;
 }
@@ -10,17 +10,13 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 2px;
+    height: 1px;
     width: 100%;
     transform: scaleX(0);
     transform-origin: left;
     background-color: var(--color-border);
     text-decoration: none;
     transition: transform 0.2s ease;
-}
-
-.word-search-dropdown-select:hover::before {
-    transform: scaleX(1);
 }
 
 .word-search-dropdown-arrow {
@@ -34,8 +30,6 @@
 
 .word-search-dropdown-button {
     cursor: pointer;
-    font-size: var(--font-size-xl);
-    font-weight: var(--font-weight-regular);
     overflow: hidden;
     text-overflow: ellipsis;
 
@@ -45,11 +39,11 @@
     gap: var(--space-sm);
 }
 
-.word-search-dropdown-button:hover .word-search-dropdown-arrow {
-    opacity: 1;
-}
-
 .word-search-dropdown-text {
+    font-family: "Cormorant Garamond", Georgia, "serif";
+    font-size: var(--font-size-2xl-lg);
+    font-weight: var(--font-weight-bold);
+
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -74,7 +68,7 @@
     z-index: 10;
     border: 1px solid var(--color-border);
     width: 100%;
-    background: var(--color-surface);
+    background: var(--word-search-panel);
     overflow: hidden;
     color: var(--color-text-muted);
 
@@ -89,16 +83,17 @@
 
 .word-search-dropdown-option {
     width: 100%;
-    text-align: left;
-    padding: var(--space-sm);
-}
 
-.word-search-dropdown-option:hover {
-    background: var(--color-border);
+    text-align: left;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-base-lg);
+
+    padding: var(--space-sm);
+
 }
 
 .word-search-dropdown-option.selected {
-    border: 1px solid var(--color-text);
+    background: var(--color-border);
 }
 
 .word-search-dropdown-menu li:last-child .word-search-dropdown-option.selected {
@@ -111,5 +106,26 @@
         flex: 1 1 0;
         min-width: 0;
     }
+}
+
+@media (max-width: 480px) {
+    .word-search-dropdown-text {
+        font-size: var(--font-size-xl-lg);
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .word-search-dropdown-option:hover {
+        background: var(--color-border-light);
+    }
+
+    .word-search-dropdown-button:hover .word-search-dropdown-arrow {
+        opacity: 1;
+    }
+
+    .word-search-dropdown-select:hover::before {
+        transform: scaleX(1);
+    }
+
 }
 

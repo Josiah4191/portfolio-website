@@ -1,0 +1,55 @@
+.portfolio-links-list {
+    display: flex;
+    gap: var(--space-lg);
+}
+
+.portfolio-link-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-link {
+    width: 160px;
+    padding-block: var(--space-md);
+
+    background: var(--color-accent);
+    color: var(--portfolio-color-page-background);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    transition: background-color 0.2s ease;
+}
+
+.portfolio-link-icon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.link-divider {
+    width: 2px;
+    height: 100%;
+    background: var(--color-text);
+}
+
+/* Hover Effects */
+@media (hover: hover) and (pointer: fine) {
+    .portfolio-link:hover {
+        background: var(--color-accent-dark);
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-links-list {
+        gap: var(--space-md);
+        flex-direction: column;
+    }
+
+    .portfolio-link {
+        width: 100%;
+    }
+
+}
