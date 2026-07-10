@@ -77,7 +77,7 @@ export default function HeroCodeEditor() {
                         <span className="code-editor-punctuation">{"]}"}</span>
 
                         {"\n            "}
-                        <span className="code-editor-key">currentlyBuilding</span>
+                        <span className="code-editor-key">recentlyBuilt</span>
                 <span className="code-editor-punctuation">=</span>
                 <span className="code-editor-punctuation">{"{["}</span>
 
@@ -95,6 +95,16 @@ export default function HeroCodeEditor() {
                         <span className="code-editor-punctuation">"</span>
                 <span className="code-editor-value">Word Search</span>
                 <span className="code-editor-punctuation">"</span>
+
+                        {"\n            "}
+                        <span className="code-editor-key">currentlyBuilding</span>
+                <span className="code-editor-punctuation">=</span>
+                <span className="code-editor-punctuation">{"{["}</span>
+
+                        {"\n                "}
+                        <span className="code-editor-punctuation">"</span>
+                <span className="code-editor-value">Church Website</span>
+                <span className="code-editor-punctuation">",</span>
 
                         {"\n            "}
                         <span className="code-editor-punctuation">{"]}"}</span>

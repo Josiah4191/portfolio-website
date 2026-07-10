@@ -5,7 +5,7 @@ import PortfolioLinks from "../../../../../../shared/components/PortfolioLinks.j
 export default function ProjectHero({title, description, badges, links, projectType}) {
     return (
         <section className="project-hero-section" aria-labelledby="project-hero-title">
-            <div className="grid page-margin">
+            <div className="grid page-margin project-hero-grid">
 
                 <div className="project-hero-left-side">
                     <ProjectHeroIntro titleId="project-hero-title" title={title} description={description} badges={badges} projectType={projectType}/>
