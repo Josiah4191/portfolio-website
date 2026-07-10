@@ -12,11 +12,11 @@ export default function Hero() {
             },
             {
                 label: "LinkedIn",
-                url: "https://www.linkedin.com/in/josiah-m-4191/"
+                url: "https://www.linkedin.com/in/josiahstoltzfus"
             },
             {
                 label: "Resume",
-                url: "/resume.pdf"
+                url: "/Resume.pdf"
             },
         ]
 
