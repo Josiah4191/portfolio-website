@@ -20,3 +20,51 @@ The site showcases software development projects, UI design work, and full-stack
 - HTML
 - CSS
 - Figma
+
+---
+
+# UNO
+
+## Overview
+
+UNO is a modern recreation of the classic card game built with React and Spring Boot.
+
+## Features
+
+- Single-player gameplay against computer opponents
+- Responsive interface
+- Card animations
+- Modern user interface
+- Core UNO gameplay
+
+## Technologies
+
+- React
+- JavaScript
+- HTML
+- CSS
+- Java
+- Spring Boot
+- Figma
+
+---
+
+# Word Search
+
+## Overview
+
+The project focuses on generating word search puzzles and it is built using React.
+
+## Features
+
+- Dynamic word search puzzle generation
+- Multiple puzzle categories
+- Responsive interface for desktop and mobile
+- Canvas-based puzzle rendering
+
+## Technologies
+
+- React
+- JavaScript
+- HTML
+- CSS
