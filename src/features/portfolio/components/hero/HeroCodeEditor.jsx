@@ -94,7 +94,7 @@ export default function HeroCodeEditor() {
                         {"\n                "}
                         <span className="code-editor-punctuation">"</span>
                 <span className="code-editor-value">Word Search</span>
-                <span className="code-editor-punctuation">"</span>
+                <span className="code-editor-punctuation">",</span>
 
                         {"\n            "}
                         <span className="code-editor-key">currentlyBuilding</span>
