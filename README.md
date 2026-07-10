@@ -1,28 +1,22 @@
 # Portfolio Website
 
-Personal portfolio website built with React, Vite, JavaScript, HTML, and CSS.
+Personal portfolio website built with React, JavaScript, HTML, and CSS.
 
-The site showcases software development projects, UI design work, and full-stack applications including Java Spring Boot, ASP.NET Core MVC, React, and JavaFX projects.
+## Overview
+
+The site showcases software development projects, UI design work, and full-stack applications built with technologies including React, Java, Spring Boot, and ASP.NET Core MVC.
 
 ## Features
 
-- Responsive layout for desktop and mobile
-- Project showcase pages with screenshots and descriptions
-- Reusable React components
-- Themed styling using CSS variables
-- Mobile navigation menu and dropdowns
-- Clean modern UI design
+- Responsive design for desktop, tablet, and mobile devices
+- Dedicated project pages for each featured application
+- Direct links to live applications and GitHub repositories
+- Organized presentation of software projects and technical skills
 
 ## Technologies
 
 - React
-- Vite
 - JavaScript
 - HTML
 - CSS
-
-## Running Locally
-
-```bash
-npm install
-npm run dev
+- Figma
