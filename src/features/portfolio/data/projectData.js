@@ -42,7 +42,7 @@ export const PROJECTS = [
                 {
                     label: "React App",
                     summary: "View the source code on GitHub",
-                    url: "https://github.com/Josiah4191/uno-game-client",
+                    url: "https://github.com/Josiah4191/portfolio-website/tree/main/src/features/games/uno",
                 },
                 {
                     label: "Spring API",
@@ -85,7 +85,7 @@ export const PROJECTS = [
                 {
                     label: "React App",
                     summary: "View the source code on GitHub",
-                    url: "https://github.com/Josiah4191/word-search-rebuild"
+                    url: "https://github.com/Josiah4191/portfolio-website/tree/main/src/features/games/word-search"
                 }
             ],
             preview: {
