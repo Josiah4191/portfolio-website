@@ -85,7 +85,7 @@ export default function DesktopNavMenu({isOpen, toggleProjectsMenu, isProjectsMe
 
             <div className="desktop-nav-section">
                 <a
-                    href="https://github.com/josiah4191"
+                    href="https://github.com/josiahstoltzfus"
                     onClick={closeMenu}
                     target="_blank"
                     className="desktop-nav-link"

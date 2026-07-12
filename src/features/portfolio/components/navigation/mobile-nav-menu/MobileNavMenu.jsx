@@ -103,7 +103,7 @@ export default function MobileNavMenu({isOpen, toggleProjectsMenu, isProjectsMen
 
             <div className="mobile-nav-section">
                 <a
-                    href="https://github.com/josiah4191"
+                    href="https://github.com/josiahstoltzfus"
                     onClick={closeMenu}
                     target="_blank"
                     className="mobile-nav-link"

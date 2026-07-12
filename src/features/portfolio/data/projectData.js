@@ -31,7 +31,7 @@ export const PROJECTS = [
             {
                 label: "React App",
                 summary: "View the source code on GitHub",
-                url: "https://github.com/Josiah4191/portfolio-website",
+                url: "https://github.com/josiahstoltzfus/portfolio-website",
             }
         ],
         preview: {
@@ -70,12 +70,12 @@ export const PROJECTS = [
                 {
                     label: "React App",
                     summary: "View the source code on GitHub",
-                    url: "https://github.com/Josiah4191/portfolio-website/tree/main/src/features/games/uno",
+                    url: "https://github.com/josiahstoltzfus/portfolio-website/tree/main/src/features/games/uno",
                 },
                 {
                     label: "Spring API",
                     summary: "View the source code on GitHub",
-                    url: "https://github.com/Josiah4191/uno-game-api",
+                    url: "https://github.com/josiahstoltzfus/uno-game-api",
                 },
             ],
             preview: {
@@ -111,7 +111,7 @@ export const PROJECTS = [
                 {
                     label: "React App",
                     summary: "View the source code on GitHub",
-                    url: "https://github.com/Josiah4191/portfolio-website/tree/main/src/features/games/word-search"
+                    url: "https://github.com/josiahstoltzfus/portfolio-website/tree/main/src/features/games/word-search"
                 }
             ],
             preview: {
@@ -143,12 +143,12 @@ export const PROJECTS = [
                 {
                     label: "React App",
                     summary: "View the live demo in your browser",
-                    url: "https://github.com/Josiah4191/squirrel-frontend",
+                    url: "https://github.com/josiahstoltzfus/squirrel-frontend",
                 },
                 {
                     label: "Spring API",
                     summary: "View the source code on GitHub",
-                    url: "https://github.com/Josiah4191/squirrel-backend",
+                    url: "https://github.com/josiahstoltzfus/squirrel-backend",
                 },
             ],
             preview: {

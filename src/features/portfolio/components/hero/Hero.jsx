@@ -8,7 +8,7 @@ export default function Hero() {
         [
             {
                 label: "GitHub",
-                url: "https://github.com/josiah4191"
+                url: "https://github.com/josiahstoltzfus"
             },
             {
                 label: "LinkedIn",
