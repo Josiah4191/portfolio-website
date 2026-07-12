@@ -1,13 +1,8 @@
-/* Squirrel C# Screenshots */
-import add_items from '../assets/screenshots/squirrel-csharp/add-items-csharp.png'
-import items_csharp from '../assets/screenshots/squirrel-csharp/items-csharp.png'
-import squirrels_csharp from '../assets/screenshots/squirrel-csharp/squirrels-csharp.png'
-
 /* Squirrel Java Screenshots */
-import edit_stash_java from '../assets/screenshots/squirrel-java/edit-stash-java.png'
-import manage_items_java from '../assets/screenshots/squirrel-java/manage-items-java.png'
-import edit_squirrels from '../assets/screenshots/squirrel-java/edit-squirrels-java.png'
-import manage_squirrels from '../assets/screenshots/squirrel-java/manage-squirrels-java.png'
+import edit_stash_java from '../assets/screenshots/squirrel/edit-stash.png'
+import manage_items_java from '../assets/screenshots/squirrel/manage-items.png'
+import edit_squirrels from '../assets/screenshots/squirrel/edit-squirrels.png'
+import manage_squirrels from '../assets/screenshots/squirrel/manage-squirrels.png'
 
 /* Portfolio Screenshots */
 import hero_section from '../assets/screenshots/portfolio/hero-section.png'
@@ -31,21 +26,21 @@ export const SCREENSHOT_MAP = {
             image: word_search_board,
             alt: "Word Search game board with a letter grid and word list.",
             title: "Game Board",
-            description: "Search the grid and highlight hidden words.",
+            description: "Find hidden words by dragging across the grid.",
         },
         {
             id: "word-search-categories",
             image: word_search_categories,
             alt: "Word Search category selection screen showing available puzzle themes.",
             title: "Puzzle Categories",
-            description: "Browse themed word lists before starting.",
+            description: "Choose from different puzzle categories.",
         },
         {
             id: "word-search-highlight",
             image: word_search_highlight,
             alt: "Word Search game with a found word highlighted in the puzzle grid.",
             title: "Word Highlighting",
-            description: "Found words are highlighted directly in the grid.",
+            description: "Found words are highlighted as you play.",
         }
     ],
     "portfolio": [
@@ -54,74 +49,51 @@ export const SCREENSHOT_MAP = {
             image: hero_section,
             alt: "Portfolio homepage hero section with an introduction and featured content.",
             title: "Hero Section",
-            description: "Clean introduction with a clear call to action.",
+            description: "A simple introduction to who I am and what I build.",
         },
         {
             id: "mobile-view",
             image: mobile_view,
             alt: "Portfolio website displayed in a mobile layout.",
             title: "Responsive Layout",
-            description: "Optimized experience across mobile devices.",
+            description: "The portfolio adapts to different screen sizes.",
         },
         {
             id: "project-section",
             image: project_section,
             alt: "Portfolio project page showing project details and screenshots.",
-            title: "Project Showcase",
-            description: "Detailed pages highlighting features and design.",
+            title: "Project Pages",
+            description: "Each project has its own page with screenshots and details.",
         }
     ],
-    "squirrel-csharp": [
-        {
-            id: "add-items",
-            image: add_items,
-            alt: "Form for adding a new item to the squirrel inventory.",
-            title: "Add Items",
-            description: "Create new stash items with validation.",
-        },
-        {
-            id: "items-csharp",
-            image: items_csharp,
-            alt: "Items management page listing stored inventory items.",
-            title: "Item Management",
-            description: "Browse, edit, and remove stored items.",
-        },
-        {
-            id: "squirrels-csharp",
-            image: squirrels_csharp,
-            alt: "Squirrel management page listing squirrel records.",
-            title: "Squirrel Management",
-            description: "Manage squirrels and their stored supplies.",
-        }
-    ],
-    "squirrel-java": [
+    "squirrel": [
         {
             id: "manage-squirrels",
             image: manage_squirrels,
             alt: "Squirrel management page displaying existing squirrel records.",
             title: "Manage Squirrels",
-            description: "View and organize squirrel records.",
+            description: "View, add, edit, and remove squirrels.",
         },
         {
             id: "edit-stash-java",
             image: edit_stash_java,
             alt: "Form for editing a squirrel's stash.",
             title: "Edit Stash",
-            description: "Update stored items and quantities.",
+            description: "Update a squirrel's stored food supplies.",
         },
         {
             id: "manage-items-java",
             image: manage_items_java,
             alt: "Items management page for the Java version of the application.",
             title: "Manage Items",
-            description: "Maintain the application's item catalog.",
+            description: "Add, edit, and remove available food items.",
         },
         {
             id: "edit-squirrels",
             image: edit_squirrels,
             alt: "Form for editing squirrel information.",
-            title: "Edit Squirrels",
-            description: "Modify squirrel information and details.",
+            title: "Edit Squirrel",
+            description: "Update a squirrel's information.",
         }
     ],
     "uno": [
@@ -130,21 +102,21 @@ export const SCREENSHOT_MAP = {
             image: start_game,
             alt: "UNO game setup screen for selecting players and starting a new game.",
             title: "Game Setup",
-            description: "Choose players and start a new match.",
+            description: "Choose the number of computer opponents and start a new game.",
         },
         {
             id: "game-board",
             image: game_board,
             alt: "UNO game board showing the player's hand, draw pile, discard pile, and opponents.",
             title: "Game Board",
-            description: "Play cards with smooth animations and effects.",
+            description: "Play against computer opponents using the full game interface.",
         },
         {
             id: "rules",
             image: rules,
             alt: "UNO rules screen explaining gameplay and controls.",
             title: "Rules",
-            description: "Quick reference for gameplay and controls.",
+            description: "View the rules at any time during the game.",
         }
     ],
 }

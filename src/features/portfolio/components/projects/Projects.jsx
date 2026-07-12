@@ -16,7 +16,7 @@ export default function Projects() {
                         title="Projects"
                         titleId="projects-title"
                         variant="dark"
-                        description="A selection of projects I've built to explore full-stack development, interactive gameplay, and clean UI design."/>
+                        description="Here are some of the projects I've built."/>
                 </div>
 
                 <div className="projects-section-carousel">

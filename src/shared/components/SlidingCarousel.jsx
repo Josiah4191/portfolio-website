@@ -14,6 +14,8 @@ export default function SlidingCarousel({
 
     const [isAtStart, setIsAtStart] = useState(true);
     const [isAtEnd, setIsAtEnd] = useState(false);
+    const [hasOverflow, setHasOverflow] = useState(false);
+    const shouldShowButtons = showButtons && ButtonComponent && hasOverflow;
 
     function scrollByAmount(direction) {
         const track = trackRef.current;
@@ -36,40 +38,25 @@ export default function SlidingCarousel({
 
         if (!track) return;
 
+        const hasScrollableContent= track.scrollWidth > track.clientWidth;
+
+        setHasOverflow(hasScrollableContent);
         setIsAtStart(track.scrollLeft <= 0);
         setIsAtEnd(track.scrollLeft + track.clientWidth >= track.scrollWidth - 1);
     }
 
-    function handleWheel(event) {
-        const track = trackRef.current;
-
-        if (!track) {
-            return;
-        }
-
-        const scrollAmount = Math.round(event.deltaY);
-
-        event.preventDefault();
-
-        track.scrollLeft += scrollAmount;
-    }
-
     useEffect(() => {
-        const track = trackRef.current;
+        updateButtonState();
 
-        if (!track) return;
+        window.addEventListener("resize", updateButtonState);
 
-        track.addEventListener("wheel", handleWheel, {passive: false});
-
-        return () => {
-            track.removeEventListener("wheel", handleWheel);
-        }
+        return () => window.removeEventListener("resize", updateButtonState)
     }, []);
 
     return (
         <section aria-label={ariaLabel} className={`${className}`}>
             <div className="sliding-carousel">
-                {showButtons && ButtonComponent &&
+                {shouldShowButtons &&
                     <Button
                         direction="left"
                         disabled={isAtStart}
@@ -88,7 +75,7 @@ export default function SlidingCarousel({
                     </ul>
                 </div>
 
-                {showButtons && ButtonComponent &&
+                {shouldShowButtons &&
                     <Button
                         direction="right"
                         disabled={isAtEnd}

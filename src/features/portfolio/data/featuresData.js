@@ -10,212 +10,142 @@ import {
     Grid3X3,
     Smartphone,
     CheckCircle,
-    Blocks,
     Navigation,
     Sparkles,
     FolderOpen,
     Palette,
     Database,
-    Route,
-    Pencil,
-    Layout,
-    Cookie,
-    FileText,
-    FolderTree,
+    Route, FolderTree, Pencil, Cookie, MapPin, Paintbrush, CheckCheck, ClipboardCheck, BadgeCheck, ShieldCheck,
+    ScrollText, BookOpen, Hammer, Blocks, Construction, Sprout,
 } from "lucide-react";
 
 export const FEATURES_MAP = {
     "uno": [
         {
-            title: "Spring Boot Backend",
-            description: "REST API powering game actions and state management.",
-            icon: Server
-        },
-        {
-            title: "React Frontend",
-            description: "Responsive browser-based gameplay built with React.",
-            icon: Monitor
-        },
-        {
             title: "Computer Opponents",
-            description: "Computer-controlled players with automated turn logic.",
+            description: "Play against computer-controlled opponents.",
             icon: Bot
         },
         {
             title: "Complete UNO Rules",
-            description: "Supports wilds, skips, reverses, draw cards, and UNO callouts.",
-            icon: Trophy
+            description: "Includes wild cards, skips, reverses, draw cards, and UNO callouts.",
+            icon: ClipboardCheck
         },
         {
-            title: "Clean Architecture",
-            description: "Frontend and backend responsibilities remain clearly separated.",
-            icon: Layers
+            title: "Responsive Design",
+            description: "Works well on desktop and mobile devices.",
+            icon: Smartphone
         },
         {
-            title: "Extensible Foundation",
-            description: "Designed to support future features and expansion.",
-            icon: Network
+            title: "Game State",
+            description: "Keeps track of turns, cards, and the current game.",
+            icon: Server
+        },
+        {
+            title: "Original Design",
+            description: "A custom interface designed specifically for this project.",
+            icon: Palette
+        },
+        {
+            title: "Built to Grow",
+            description: "Designed to make it easier to add new features later.",
+            icon: Sprout
         },
     ],
     "word-search": [
         {
-            title: "Procedural Generation",
-            description: "Creates unique puzzles from categorized word banks.",
+            title: "Puzzle Generation",
+            description: "Generates a new puzzle every time you play.",
             icon: Puzzle
         },
         {
-            title: "Interactive Selection",
-            description: "Drag across letters to discover hidden words.",
+            title: "Drag Selection",
+            description: "Drag across letters to find hidden words.",
             icon: MousePointer
         },
         {
             title: "Canvas Rendering",
-            description: "Custom HTML Canvas system for puzzle visualization.",
-            icon: Grid3X3
+            description: "Draws the game board using the HTML Canvas API.",
+            icon: Paintbrush
         },
         {
             title: "Responsive Design",
-            description: "Optimized for both desktop and mobile devices.",
+            description: "Works well on desktop and mobile devices.",
             icon: Smartphone
         },
         {
             title: "Progress Tracking",
-            description: "Highlights discovered words and tracks completion.",
+            description: "Keeps track of the words you've found.",
             icon: CheckCircle
         },
         {
-            title: "Reusable Architecture",
-            description: "Built with reusable React components and UI patterns.",
-            icon: Blocks
+            title: "Original Design",
+            description: "A custom interface designed specifically for this project.",
+            icon: Palette
         }
     ],
     "portfolio": [
         {
             title: "Responsive Design",
-            description: "Optimized for desktop, tablet, and mobile devices.",
+            description: "Works well on desktop, tablet, and mobile devices.",
             icon: Smartphone
         },
         {
-            title: "Reusable Components",
-            description: "Built with reusable React components and shared UI patterns.",
-            icon: Blocks
-        },
-        {
-            title: "Project Navigation",
-            description: "Desktop and mobile navigation for browsing projects.",
-            icon: Navigation
-        },
-        {
-            title: "Polished Interactions",
-            description: "Subtle animations, hover effects, and smooth transitions.",
-            icon: Sparkles
-        },
-        {
-            title: "Project Showcases",
-            description: "Dedicated project pages with screenshots, links, and details.",
+            title: "Project Pages",
+            description: "Each project has its own page with screenshots, links, and details.",
             icon: FolderOpen
         },
         {
-            title: "Design System",
-            description: "Consistent spacing, colors, typography, and visual styling.",
+            title: "Project Navigation",
+            description: "Makes it easy to browse projects and pages.",
+            icon: Navigation
+        },
+        {
+            title: "Thoughtful Details",
+            description: "Includes subtle animations, hover effects, and smooth transitions.",
+            icon: Sparkles
+        },
+        {
+            title: "Original Design",
+            description: "A custom interface designed specifically for this project.",
             icon: Palette
+        },
+        {
+            title: "Interactive Demos",
+            description: "Play projects like UNO and Word Search directly in the browser.",
+            icon: Monitor
         }
     ],
-
-    "squirrel-csharp": [
+    "squirrel": [
         {
-            title: "CRUD Operations",
-            description: "Create, edit, and delete squirrels and stash locations.",
+            title: "Squirrels",
+            description: "Add, edit, and remove squirrels.",
             icon: Pencil
         },
         {
-            title: "SQL Database",
-            description: "Stores food supplies and squirrel data in a relational database.",
-            icon: Database
+            title: "Stash Locations",
+            description: "Manage stash locations.",
+            icon: MapPin
         },
         {
-            title: "ASP.NET MVC",
-            description: "Server-rendered pages built with ASP.NET MVC Core.",
-            icon: Layout
-        },
-        {
-            title: "MVC Architecture",
-            description: "Uses controllers, routing, and separation of concerns.",
-            icon: Layers
-        },
-        {
-            title: "Relational Models",
-            description: "Connected database entities with full CRUD functionality.",
-            icon: Network
-        },
-        {
-            title: "Sessions & Cookies",
-            description: "Explores user tracking with sessions and browser cookies.",
+            title: "Food Supplies",
+            description: "Keep track of stored food supplies.",
             icon: Cookie
-        }
-    ],
-    "squirrel-java": [
-        {
-            title: "React Frontend",
-            description: "Interactive user interface built with React components.",
-            icon: Monitor
         },
         {
-            title: "Spring Boot API",
-            description: "REST API powering application data and business logic.",
-            icon: Server
+            title: "Page Navigation",
+            description: "Move between different areas of the application.",
+            icon: Navigation
         },
         {
-            title: "PostgreSQL Database",
-            description: "Persistent storage for application data and records.",
-            icon: Database
+            title: "Responsive Design",
+            description: "Works well on desktop and mobile devices.",
+            icon: Smartphone
         },
         {
-            title: "Client-Side Routing",
-            description: "Page navigation and routing with React Router.",
-            icon: Route
-        },
-        {
-            title: "Reusable Components",
-            description: "Data-driven UI built from reusable React components.",
-            icon: Blocks
-        },
-        {
-            title: "Full-Stack Development",
-            description: "Combines frontend, backend, and database technologies.",
-            icon: Network
-        }
-    ],
-    "birdhouse": [
-        {
-            title: "Spring Boot API",
-            description: "REST API built with Spring Boot.",
-            icon: Server
-        },
-        {
-            title: "PostgreSQL Database",
-            description: "Persistent data storage using PostgreSQL.",
-            icon: Database
-        },
-        {
-            title: "Layered Architecture",
-            description: "Organized with controller, service, and repository layers.",
-            icon: Layers
-        },
-        {
-            title: "Entity Modeling",
-            description: "Structured entities and relational database mappings.",
-            icon: Network
-        },
-        {
-            title: "API Documentation",
-            description: "Interactive API documentation with Swagger/OpenAPI.",
-            icon: FileText
-        },
-        {
-            title: "Project Organization",
-            description: "Clean backend structure focused on maintainability.",
-            icon: FolderTree
+            title: "Original Design",
+            description: "A custom interface designed specifically for this project.",
+            icon: Palette
         }
     ],
 }

@@ -13,7 +13,7 @@ export default function About() {
                         eyebrow="ABOUT ME"
                         title="About"
                         titleId="about-title"
-                        description="I'm a passionate developer who loves building practical, user-friendly web applications."/>
+                        description="I'm a software developer who enjoys building software and learning new technologies."/>
 
                     <div className="about-divider" aria-hidden="true"/>
 
@@ -21,22 +21,20 @@ export default function About() {
                         <p>
                             I recently graduated from <span
                             className="about-text-emphasis">Greenville Technical College</span> with an associate degree
-                            in Programming and Software Development, and I’ll be <span className="about-text-emphasis">pursuing a bachelor’s degree
-                            </span> as I continue
+                            in Programming and Software Development, and I’ll be pursuing a bachelor’s degree as I continue
                             growing as a software developer.
                         </p>
 
                         <p>
-                            I’ve developed a <span
-                            className="about-text-emphasis">genuine passion for web development</span> and enjoy the
-                            entire process of
-                            building modern web applications—from designing intuitive user interfaces to developing the
-                            backend systems that power them. I enjoy creating clean, maintainable software and
-                            continuously refining both my technical skills and the user experience.
+                            I enjoy building websites and web applications because I like working on both the frontend and the backend.
+                            One of my favorite parts of the process is organizing a project and finding ways to make the code cleaner,
+                            simpler, and easier to work with.
                         </p>
 
                         <p>
-                            My current focus is <span className="about-text-emphasis">full-stack web development with React, Java, and Spring Boot</span>. Through personal projects, I’m continuing to strengthen my understanding of software architecture, problem solving, and building applications that are both practical and enjoyable to use.
+                            My current focus is <span className="about-text-emphasis">full-stack web development with React, Java, and
+                            Spring Boot</span>. I'm looking forward to building more software, taking on real-world projects, and
+                            continuing to grow as a developer.
                         </p>
 
 

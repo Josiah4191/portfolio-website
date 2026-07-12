@@ -248,9 +248,6 @@
 
         /* Card */
         --text-card-title-size: var(--font-size-base-lg);
-
-        /* Label */
-        --text-label-size: var(--font-size-xs);
     }
 }
 

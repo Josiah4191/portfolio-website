@@ -4,6 +4,7 @@ import {PROJECTS} from "../data/projectData.js";
 
 export default function ProjectDetailsPage() {
     const {projectId} = useParams();
+    console.log(projectId);
     const project = PROJECTS.find(p => p.slug === projectId);
 
     if (!project) {

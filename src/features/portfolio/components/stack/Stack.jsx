@@ -16,7 +16,7 @@ export default function Stack() {
                         title="My Stack"
                         titleId="stack-title"
                         variant="dark"
-                        description="Here are the technologies and tools I use to build modern, responsive, and scalable web applications."/>
+                        description="Here are some of the technologies I've used while building software."/>
                 </div>
 
                 <div className="stack-section-carousel">

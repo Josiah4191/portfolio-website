@@ -17,7 +17,7 @@ export default function ProjectScreenshotSection({screenshots}) {
                             title={"Screenshots"}
                             titleId={"project-screenshots"}
                             variant="dark"
-                            description={"Take a look at some key views and features from my projects."}/>
+                            description={"Here are a few screenshots from the project."}/>
                     </div>
 
                     <div className="page-margin project-screenshot-section-carousel-wrapper">

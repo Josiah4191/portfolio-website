@@ -15,7 +15,7 @@ export default function ProjectFeaturesSection({features}) {
                             eyebrow={"FEATURES"}
                             title={"Features"}
                             titleId={"project-features"}
-                            description={"Here are some of the key features you’ll find in this project."}/>
+                            description={"Here are some of the features you’ll find in this project."}/>
                     </div>
 
                     <div className="project-features-section-features-wrapper">

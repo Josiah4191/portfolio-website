@@ -1,10 +1,10 @@
 import {
     GraduationCap,
     Code2,
-    Rocket,
     AppWindowMac,
-    MonitorSmartphone,
-    Lightbulb
+    Hammer,
+    Blocks,
+    Compass
 } from "lucide-react";
 
 export const ABOUT_CARDS = [
@@ -17,35 +17,33 @@ export const ABOUT_CARDS = [
         ],
     },
     {
-        title: "Focus",
+        title: "Current Focus",
         icon: Code2,
         items: [
-            "Full Stack Web Development",
-            "Responsive Web Applications",
+            "Full-stack web development",
+            "React, Java & Spring Boot",
         ],
     },
     {
-        title: "What I Do",
-        icon: Rocket,
+        title: "What I Enjoy",
+        icon: Hammer,
         items: [
-            "Build practical applications",
-            "Explore new technologies",
-            "Solve real-world problems",
+            "I enjoy finding elegant ways to represent real-world concepts in software.",
         ],
     },
     {
-        title: "Full-stack Development",
+        title: "Why Full-Stack",
         icon: AppWindowMac,
-        description: "Building complete web applications from front to back.",
+        description: "I care about understanding how everything works together.",
     },
     {
-        title: "Responsive Design",
-        icon: MonitorSmartphone,
-        description: "Creating user-friendly experiences across all devices.",
+        title: "How I Think",
+        icon: Blocks,
+        description: "I enjoy organizing projects and making them easier to understand and maintain.",
     },
     {
-        title: "Always Learning",
-        icon: Lightbulb,
-        description: "Continuously exploring new technologies.",
+        title: "What I'm Working Toward",
+        icon: Compass,
+        description: "I hope to  build software that has a meaningful impact on the people who use it.",
     },
 ];

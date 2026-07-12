@@ -9,6 +9,7 @@ import Net from '../assets/badges/net-badge.svg'
 import Spring from '../assets/badges/spring-badge.svg'
 import SQL from '../assets/badges/sql-badge.svg'
 import PostgreSQL from '../assets/badges/postgresql-badge.svg'
+import Python from '../assets/badges/python-badge.svg'
 
 export const BADGES = [
     {
@@ -28,65 +29,72 @@ export const BADGES = [
     {
         id: "javascript",
         label: "JavaScript",
-        description: "Core language of the web for dynamic functionality",
+        description: "Programming language for the web",
         type: "Frontend",
         image: JavaScript
     },
     {
         id: "html",
         label: "HTML",
-        description: "Standard markup language for web pages",
+        description: "Markup language for web pages",
         type: "Markup",
         image: HTML
     },
     {
         id: "css",
         label: "CSS",
-        description: "Stylesheet language for beautiful and responsive design",
+        description: "Styles web pages and user interfaces",
         type: "Styling",
         image: CSS
     },
     {
         id: "csharp",
         label: "C#",
-        description: "Object-oriented language for building modern applications",
+        description: "Object-oriented programming language",
         type: "Backend",
         image: Csharp
     },
     {
         id: "figma",
         label: "Figma",
-        description: "Collaborative interface design and prototyping tool",
+        description: "Interface design and prototyping tool",
         type: "Design",
         image: Figma
     },
     {
         id: "net",
         label: ".Net",
-        description: "Framework for building cross-platform applications",
+        description: "Framework for building applications",
         type: "Framework",
         image: Net
     },
     {
         id: "spring",
         label: "Spring",
-        description: "Framework for building Java-based backend applications",
+        description: "Framework for Java applications",
         type: "Framework",
         image: Spring
     },
     {
         id: "sql",
         label: "SQL",
-        description: "Query language for managing relational databases",
+        description: "Language for working with relational databases",
         type: "Database",
         image: SQL
     },
     {
         id: "postgresql",
         label: "PostgreSQL",
-        description: "Open-source relational database management system",
+        description: "Relational database management system",
         type: "Database",
         image: PostgreSQL
+    },
+    {
+        id: "python",
+        label: "Python",
+        description: "General-purpose programming language",
+        type: "Backend",
+        image: Python
     },
 ]
 
