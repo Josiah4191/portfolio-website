@@ -33,8 +33,8 @@ export default function About() {
 
                         <p>
                             My current focus is <span className="about-text-emphasis">full-stack web development with React, Java, and
-                            Spring Boot</span>. I'm looking forward to building more software, taking on real-world projects, and
-                            continuing to grow as a developer.
+                            Spring Boot</span>. I'm looking forward to taking on real-world projects, building software that's meaningful
+                            to people who use it, and continuing to grow as a developer.
                         </p>
 
 
