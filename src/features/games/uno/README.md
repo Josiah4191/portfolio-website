@@ -1,7 +1,7 @@
 
 # UNO
 
-**Live Demo:** https://josiahstoltzfus.dev/games/uno
+**Live Demo:** https://josiahstoltzfus.dev/uno
 
 ## Overview
 
