@@ -1,5 +1,7 @@
 # Word Search
 
+**Live Demo:** https://josiahstoltzfus.dev/word-search
+
 ## Overview
 
 The project focuses on generating word search puzzles and it is built using React.
