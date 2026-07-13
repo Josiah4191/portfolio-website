@@ -5,6 +5,7 @@ import ProjectDetailsPage from "../features/portfolio/pages/ProjectDetailsPage.j
 import WordSearchPage from "../features/games/word-search/pages/WordSearchPage.jsx";
 import UnoGamePage from "../features/games/uno/pages/UnoGamePage.jsx";
 import GameLayout from "../features/games/GameLayout.jsx";
+import ResumeRedirect from "../features/portfolio/pages/ResumeRedirect.jsx";
 
 const router = createBrowserRouter(
     [
@@ -36,6 +37,10 @@ const router = createBrowserRouter(
                 {index: true, element: <WordSearchPage/>},
             ]
         },
+        {
+            path: "/resume",
+            element: <ResumeRedirect />
+        }
     ]
 );
 

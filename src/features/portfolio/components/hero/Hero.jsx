@@ -16,7 +16,7 @@ export default function Hero() {
             },
             {
                 label: "Resume",
-                url: "/Resume.pdf"
+                url: "/resume"
             },
         ]
 

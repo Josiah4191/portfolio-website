@@ -53,7 +53,7 @@ export default function DesktopNavMenu({isOpen, toggleProjectsMenu, isProjectsMe
 
             <div className="desktop-nav-section">
                 <a
-                    href="/Resume.pdf"
+                    href="/resume"
                     onClick={closeMenu}
                     target="_blank"
                     className="desktop-nav-link"

@@ -71,7 +71,7 @@ export default function MobileNavMenu({isOpen, toggleProjectsMenu, isProjectsMen
 
             <div className="mobile-nav-section">
                 <a
-                    href="/Resume.pdf"
+                    href="/resume"
                     onClick={closeMenu}
                     className="mobile-nav-link"
                     target="_blank"
