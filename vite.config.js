@@ -11,6 +11,7 @@ export default defineConfig({
       input: {
         main: resolve(import.meta.dirname, "index.html"),
         uno: resolve(import.meta.dirname, "uno.html"),
+        wordSearch: resolve(import.meta.dirname, "word-search.html"),
       },
     },
   },
