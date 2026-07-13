@@ -1,0 +1,11 @@
+.resume-redirect {
+    min-height: 100dvh;
+
+    background: var(--portfolio-color-page-background);
+    color: var(--color-text);
+    font-weight: var(--font-weight-semibold);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

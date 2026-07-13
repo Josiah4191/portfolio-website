@@ -39,7 +39,7 @@ const router = createBrowserRouter(
         },
         {
             path: "/resume",
-            element: <ResumeRedirect />
+            element: <ResumeRedirect/>,
         }
     ]
 );

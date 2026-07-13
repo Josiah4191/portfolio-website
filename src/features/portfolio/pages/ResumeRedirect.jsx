@@ -1,9 +1,18 @@
-import { useEffect } from "react";
+import './ResumeRedirect.css';
+import '../styles/colors.css';
+import {useEffect} from "react";
 
 export default function ResumeRedirect() {
+
     useEffect(() => {
         window.location.replace("/josiah-stoltzfus-resume.pdf");
     }, []);
 
-    return <p>Opening resume</p>;
+    return (
+        <div className="portfolio-page resume-redirect">
+            <p>
+                Opening resume...
+            </p>
+        </div>
+    );
 }
