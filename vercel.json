@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/projects/uno",
+      "destination": "/uno.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/"
     }
